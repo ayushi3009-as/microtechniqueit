@@ -186,8 +186,8 @@ export default function AboutClient() {
           <div style={{ display: 'flex', flexDirection: 'column', gap: '64px' }}>
             
             {/* Mission Row */}
-            <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} style={{ display: 'flex', flexWrap: 'wrap', gap: '64px', alignItems: 'center' }}>
-              <div style={{ flex: '1 1 400px', padding: '64px', backgroundColor: '#ffffff', borderRadius: '24px', border: '1px solid #ececec', boxShadow: '0 4px 20px rgba(0,0,0,0.02)' }}>
+            <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} style={{ display: 'flex', flexWrap: 'wrap', gap: '64px', alignItems: 'center', padding: '64px', backgroundColor: '#ffffff', borderRadius: '24px', border: '1px solid #ececec', boxShadow: '0 4px 20px rgba(0,0,0,0.02)' }}>
+              <div style={{ flex: '1 1 400px' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '24px' }}>
                   <span style={{ fontSize: '64px', fontWeight: 800, color: '#e2e8f0', lineHeight: 1 }}>01</span>
                   <h2 style={{ fontSize: '48px', fontWeight: 700, color: '#0f172a', margin: 0 }}>Mission</h2>
