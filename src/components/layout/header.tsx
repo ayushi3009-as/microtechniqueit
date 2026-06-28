@@ -80,11 +80,11 @@ export function Header() {
       <div className="sticky top-0 z-50 pt-4 px-4 pb-4 pointer-events-none">
         <header className="mx-auto max-w-7xl bg-white/90 backdrop-blur-md border border-slate-200 shadow-sm rounded-2xl pointer-events-auto">
           <div className="container-custom">
-            <div className="flex items-center h-16">
+            <div className="relative flex items-center justify-between h-16 w-full">
               
               {/* Logo */}
-              <div className="flex-1 flex items-center">
-                <Link href="/" className="flex items-center gap-2.5 shrink-0">
+              <div className="shrink-0 relative z-10">
+                <Link href="/" className="flex items-center gap-2.5">
                   <Image src="/logo.jpeg" alt="Microtechnique IT" width={32} height={32} className="rounded-md" />
                   <span className="text-base font-bold text-foreground font-heading">
                     Microtechnique<span className="text-primary">IT</span>
@@ -92,8 +92,8 @@ export function Header() {
                 </Link>
               </div>
 
-              {/* Desktop Nav */}
-              <nav className="hidden lg:flex items-center justify-center gap-8 flex-none">
+              {/* Desktop Nav - Absolutely Centered */}
+              <nav className="hidden lg:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 items-center gap-8 z-10">
                 {navItems.map((item) => (
                   <div
                     key={item.label}
@@ -129,8 +129,8 @@ export function Header() {
                 ))}
               </nav>
 
-              {/* Mobile Toggle / Empty Right Side on Desktop */}
-              <div className="flex-1 flex items-center justify-end">
+              {/* Mobile Toggle */}
+              <div className="shrink-0 relative z-10">
                 <button
                   onClick={() => setMobileOpen(!mobileOpen)}
                   className="lg:hidden p-2 rounded-lg hover:bg-slate-100 transition-colors text-slate-900"
