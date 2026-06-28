@@ -118,12 +118,12 @@ export default function ProductsClient() {
                   From flagship ERPs to industry-specific point-of-sale solutions, we build world-class software that solves complex problems with elegant simplicity.
                 </p>
                 <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-                  <button style={{ padding: '1rem 2rem', backgroundColor: '#38bdf8', color: '#0f172a', borderRadius: '0.75rem', fontWeight: 600, fontSize: '1rem', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                  <button onClick={() => { document.getElementById('products-list')?.scrollIntoView({ behavior: 'smooth' }) }} style={{ padding: '1rem 2rem', backgroundColor: '#38bdf8', color: '#0f172a', borderRadius: '0.75rem', fontWeight: 600, fontSize: '1rem', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '0.5rem', textDecoration: 'none' }}>
                     Explore Products <ChevronRight style={{ width: '20px', height: '20px' }} />
                   </button>
-                  <button style={{ padding: '1rem 2rem', backgroundColor: 'transparent', color: '#f8fafc', borderRadius: '0.75rem', fontWeight: 600, fontSize: '1rem', border: '1px solid rgba(0,0,0,0.2)', cursor: 'pointer' }}>
+                  <Link href="/contact" style={{ padding: '1rem 2rem', backgroundColor: '#ffffff', color: '#0f172a', borderRadius: '0.75rem', fontWeight: 600, fontSize: '1rem', border: '1px solid #cbd5e1', cursor: 'pointer', textDecoration: 'none' }}>
                     View Pricing
-                  </button>
+                  </Link>
                 </div>
               </motion.div>
             </div>
@@ -133,32 +133,11 @@ export default function ProductsClient() {
                 initial={{ opacity: 0, scale: 0.9 }} 
                 animate={{ opacity: 1, scale: 1 }} 
                 transition={{ duration: 0.8, delay: 0.2 }}
-                style={{ width: '100%', height: '100%', position: 'relative' }}
+                style={{ width: '100%', height: '100%', position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
               >
-                {/* Floating Card 1 */}
-                <div className="floating-card-1 card-bg" style={{ position: 'absolute', top: '10%', right: '10%', width: '280px', padding: '1.5rem', borderRadius: '1rem', zIndex: 3, boxShadow: '0 25px 50px -12px rgba(0,0,0,0.5)' }}>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1rem' }}>
-                    <div style={{ width: '40px', height: '40px', borderRadius: '50%', background: 'linear-gradient(135deg, #38bdf8, #3b82f6)' }} />
-                    <div>
-                      <div style={{ fontWeight: 600, fontSize: '0.875rem' }}>System Active</div>
-                      <div style={{ fontSize: '0.75rem', color: '#64748b' }}>All services operational</div>
-                    </div>
-                  </div>
-                  <div style={{ height: '8px', background: 'rgba(0,0,0,0.1)', borderRadius: '4px', overflow: 'hidden' }}>
-                    <div style={{ width: '85%', height: '100%', backgroundColor: '#38bdf8' }} />
-                  </div>
-                </div>
-                
-                {/* Floating Card 2 */}
-                <div className="floating-card-2 card-bg" style={{ position: 'absolute', bottom: '20%', left: '5%', width: '240px', padding: '1.5rem', borderRadius: '1rem', zIndex: 2, boxShadow: '0 25px 50px -12px rgba(0,0,0,0.5)' }}>
-                   <div style={{ fontWeight: 600, fontSize: '1.25rem', marginBottom: '0.5rem' }}>+124%</div>
-                   <div style={{ fontSize: '0.875rem', color: '#64748b' }}>Efficiency Gain</div>
-                   <img src="/abstract-graphic.png" alt="Graph" style={{ width: '100%', marginTop: '1rem', borderRadius: '0.5rem', opacity: 0.8 }} onError={(e) => e.currentTarget.style.display = 'none'} />
-                </div>
-                
                 {/* Main Graphic */}
                 <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', width: '70%', height: '70%', background: 'radial-gradient(circle, rgba(129, 140, 248, 0.2) 0%, transparent 70%)', zIndex: 1, borderRadius: '50%' }} />
-                <img src="/product-mockup.png" alt="Software Dashboard" style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', width: '80%', objectFit: 'contain', zIndex: 1, borderRadius: '1rem', boxShadow: '0 20px 40px rgba(0,0,0,0.5)' }} onError={(e) => { e.currentTarget.style.display = 'none'; e.currentTarget.parentElement!.style.background = 'url(/abstract-graphic.png) center/cover'; }} />
+                <img src="/product-mockup.png" alt="Software Dashboard" style={{ position: 'relative', width: '90%', objectFit: 'contain', zIndex: 2, borderRadius: '1rem', boxShadow: '0 20px 40px rgba(0,0,0,0.15)' }} onError={(e) => { e.currentTarget.style.display = 'none'; e.currentTarget.parentElement!.style.background = 'url(/abstract-graphic.png) center/cover'; }} />
               </motion.div>
             </div>
           </div>
@@ -166,7 +145,7 @@ export default function ProductsClient() {
       </section>
 
       {/* Asymmetric Product Sections */}
-      <section style={{ padding: '6rem 0', backgroundColor: 'transparent' }}>
+      <section id="products-list" style={{ padding: '6rem 0', backgroundColor: 'transparent' }}>
         <div className="container" style={{ display: 'flex', flexDirection: 'column', gap: '8rem' }}>
           
           {products.map((product, index) => {
