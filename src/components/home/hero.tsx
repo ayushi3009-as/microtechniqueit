@@ -11,9 +11,9 @@ const highlights = [
 
 export function HeroSection() {
   return (
-    <section className="pt-28 pb-20 lg:pt-36 lg:pb-28" style={{ background: 'linear-gradient(180deg, #eff6ff 0%, #f5f3ff 40%, #fafbfc 100%)' }}>
-      <div className="container-custom">
-        <div className="max-w-3xl mx-auto text-center">
+    <section className="pb-20 lg:pb-28 w-full" style={{ minHeight: '80vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', background: 'linear-gradient(180deg, #eff6ff 0%, #f5f3ff 40%, #fafbfc 100%)' }}>
+      <div className="container-custom w-full mt-8" style={{ margin: '0 auto' }}>
+        <div className="max-w-3xl mx-auto text-center" style={{ margin: '0 auto', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
           {/* Badge */}
           <div className="badge mb-6 mx-auto w-fit">
             Your Partner in Digital Transformation

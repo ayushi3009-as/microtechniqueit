@@ -86,7 +86,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning className={`${inter.variable} ${dmSans.variable}`}>
-      <body className="min-h-screen bg-background text-foreground antialiased flex flex-col">
+      <head>
+        <link rel="stylesheet" href="/tailwind.css?v=3" />
+      </head>
+      <body className="min-h-screen bg-background text-foreground antialiased flex flex-col pt-16">
         <Providers>
           <Header />
           <main className="min-h-screen">{children}</main>

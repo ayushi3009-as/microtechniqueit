@@ -1,5 +1,8 @@
 @import "tailwindcss";
-@source "../";
+@source "../components";
+@source "../../src/components";
+@source "./src/components";
+@source "src/components";
 
 /* ─── Theme Tokens ─── */
 @theme inline {

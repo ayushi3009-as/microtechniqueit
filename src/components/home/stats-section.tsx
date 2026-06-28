@@ -12,8 +12,8 @@ const stats = [
 export function StatsSection() {
   return (
     <section className="section-padding">
-      <div className="container-custom">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="container-custom" style={{ marginTop: '30px', marginBottom: '30px' }}>
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '24px' }}>
           {stats.map((stat) => (
             <div key={stat.label} className="text-center p-6 rounded-2xl bg-pastel-blue">
               <stat.icon className="h-5 w-5 text-primary mx-auto mb-3" />
