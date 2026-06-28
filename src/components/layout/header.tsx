@@ -77,10 +77,9 @@ export function Header() {
       </div>
 
       {/* MAIN NAVBAR */}
-      <div className="sticky top-0 z-50 pt-4 px-4 pb-4 pointer-events-none">
-        <header className="mx-auto max-w-7xl bg-white/90 backdrop-blur-md border border-slate-200 shadow-sm rounded-2xl pointer-events-auto">
-          <div className="container-custom">
-            <div className="flex items-center h-16">
+      <header className="sticky top-0 z-40 w-full bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
+        <div className="container-custom">
+          <div className="flex items-center h-16">
               
               {/* Logo */}
               <div className="flex-1 flex items-center">
@@ -161,7 +160,6 @@ export function Header() {
             </div>
           )}
         </header>
-      </div>
     </>
   );
 }
