@@ -80,10 +80,10 @@ export function Header() {
       <div className="sticky top-0 z-50 pt-4 px-4 pb-4 pointer-events-none">
         <header className="mx-auto max-w-7xl bg-white/90 backdrop-blur-md border border-slate-200 shadow-sm rounded-2xl pointer-events-auto">
           <div className="container-custom">
-            <div className="flex items-center justify-between h-16 w-full">
+            <div className="relative flex items-center justify-between h-16 w-full">
               
-              {/* Logo - Fixed Width Wrapper for balance */}
-              <div className="w-[240px] shrink-0 flex items-center justify-start">
+              {/* Logo */}
+              <div className="shrink-0 relative z-20">
                 <Link href="/" className="flex items-center gap-2.5">
                   <Image src="/logo.jpeg" alt="Microtechnique IT" width={32} height={32} className="rounded-md" />
                   <span className="text-base font-bold text-foreground font-heading whitespace-nowrap">
@@ -92,45 +92,47 @@ export function Header() {
                 </Link>
               </div>
 
-              {/* Desktop Nav - Centered Flex */}
-              <nav className="hidden xl:flex flex-1 items-center justify-center gap-4 px-4">
-                {navItems.map((item) => (
-                  <div
-                    key={item.label}
-                    className="relative group"
-                    onMouseEnter={() => item.children && setOpenDropdown(item.label)}
-                    onMouseLeave={() => setOpenDropdown(null)}
-                  >
-                    <Link
-                      href={item.href}
-                      className="flex items-center gap-1.5 px-3 py-2 text-sm font-semibold text-slate-600 hover:text-slate-900 transition-colors rounded-lg hover:bg-slate-50 whitespace-nowrap"
+              {/* Desktop Nav - Absolute Center Wrapper */}
+              <div className="hidden xl:flex absolute inset-0 items-center justify-center pointer-events-none z-10">
+                <nav className="flex items-center gap-5 px-4 pointer-events-auto">
+                  {navItems.map((item) => (
+                    <div
+                      key={item.label}
+                      className="relative group"
+                      onMouseEnter={() => item.children && setOpenDropdown(item.label)}
+                      onMouseLeave={() => setOpenDropdown(null)}
                     >
-                      {item.label}
-                      {item.children && <ChevronDown className="h-3.5 w-3.5 text-slate-400 group-hover:text-slate-900 transition-colors" />}
-                    </Link>
+                      <Link
+                        href={item.href}
+                        className="flex items-center gap-1.5 px-3 py-2 text-sm font-semibold text-slate-600 hover:text-slate-900 transition-colors rounded-lg hover:bg-slate-50 whitespace-nowrap"
+                      >
+                        {item.label}
+                        {item.children && <ChevronDown className="h-3.5 w-3.5 text-slate-400 group-hover:text-slate-900 transition-colors" />}
+                      </Link>
 
-                    {/* Dropdown */}
-                    {item.children && openDropdown === item.label && (
-                      <div className="absolute top-full left-1/2 -translate-x-1/2 pt-3 w-64 z-50">
-                        <div className="bg-white rounded-2xl border border-slate-100 shadow-xl p-2 grid gap-1">
-                          {item.children.map((child) => (
-                            <Link
-                              key={child.href}
-                              href={child.href}
-                              className="block px-4 py-2.5 text-sm font-medium text-slate-600 hover:text-indigo-600 hover:bg-indigo-50 rounded-xl transition-colors"
-                            >
-                              {child.label}
-                            </Link>
-                          ))}
+                      {/* Dropdown */}
+                      {item.children && openDropdown === item.label && (
+                        <div className="absolute top-full left-1/2 -translate-x-1/2 pt-3 w-64 z-50">
+                          <div className="bg-white rounded-2xl border border-slate-100 shadow-xl p-2 grid gap-1">
+                            {item.children.map((child) => (
+                              <Link
+                                key={child.href}
+                                href={child.href}
+                                className="block px-4 py-2.5 text-sm font-medium text-slate-600 hover:text-indigo-600 hover:bg-indigo-50 rounded-xl transition-colors"
+                              >
+                                {child.label}
+                              </Link>
+                            ))}
+                          </div>
                         </div>
-                      </div>
-                    )}
-                  </div>
-                ))}
-              </nav>
+                      )}
+                    </div>
+                  ))}
+                </nav>
+              </div>
 
-              {/* Mobile Toggle / Empty Right Side - Fixed Width Wrapper for balance */}
-              <div className="w-[240px] shrink-0 flex items-center justify-end">
+              {/* Mobile Toggle */}
+              <div className="shrink-0 relative z-20">
                 <button
                   onClick={() => setMobileOpen(!mobileOpen)}
                   className="xl:hidden p-2 rounded-lg hover:bg-slate-100 transition-colors text-slate-900"
