@@ -187,7 +187,7 @@ export default function AboutClient() {
             
             {/* Mission Row */}
             <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} style={{ display: 'flex', flexWrap: 'wrap', gap: '64px', alignItems: 'center' }}>
-              <div style={{ flex: '1 1 400px' }}>
+              <div style={{ flex: '1 1 400px', padding: '64px', backgroundColor: '#ffffff', borderRadius: '24px', border: '1px solid #ececec', boxShadow: '0 4px 20px rgba(0,0,0,0.02)' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '24px' }}>
                   <span style={{ fontSize: '64px', fontWeight: 800, color: '#e2e8f0', lineHeight: 1 }}>01</span>
                   <h2 style={{ fontSize: '48px', fontWeight: 700, color: '#0f172a', margin: 0 }}>Mission</h2>
@@ -222,7 +222,7 @@ export default function AboutClient() {
       <section style={{ padding: '140px 0', backgroundColor: '#0f172a', color: '#ffffff' }}>
         <div className="container-custom" style={{ maxWidth: '1320px', margin: '0 auto' }}>
           <div style={{ textAlign: 'center', marginBottom: '80px' }}>
-            <h2 style={{ fontSize: '48px', fontWeight: 700, marginBottom: '24px' }}>Impact in <span style={{ color: '#38bdf8' }}>Numbers</span></h2>
+            <h2 style={{ fontSize: '48px', fontWeight: 700, marginBottom: '24px', color: '#ffffff' }}>Impact in <span style={{ color: '#38bdf8' }}>Numbers</span></h2>
             <p style={{ fontSize: '20px', color: '#94a3b8', maxWidth: '600px', margin: '0 auto' }}>We measure our success by the scale of our impact and the reliability of our systems.</p>
           </div>
           
