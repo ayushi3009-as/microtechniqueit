@@ -42,7 +42,7 @@ In 2026, the enterprises pulling ahead are those who treat software as a strateg
     category: 'Software Development',
     tags: ['Custom Software', 'Enterprise Solutions', 'Digital Transformation', 'ROI'],
     readTime: '6 min read',
-    image: '/images/blog/blog-hero.png',
+    image: '/images/blog/blog_custom_software.png',
     seo: {
       metaTitle: 'Why Custom Software Beats Off-the-Shelf in 2026 | Microtechnique IT Blog',
       metaDescription:
@@ -100,7 +100,7 @@ On a recent e-commerce project, these optimisations moved our Lighthouse Perform
     category: 'Web Development',
     tags: ['Next.js', 'Performance', 'Core Web Vitals', 'SEO', 'Lighthouse'],
     readTime: '8 min read',
-    image: '/images/blog/blog-hero.png',
+    image: '/images/blog/blog_nextjs_performance.png',
     seo: {
       metaTitle: 'Next.js Performance Guide: Core Web Vitals 100 Score | Microtechnique IT',
       metaDescription:
@@ -164,7 +164,7 @@ You don't need a data science team or massive budgets to start with AI. Begin wi
     category: 'Artificial Intelligence',
     tags: ['AI', 'Machine Learning', 'Business Automation', 'Digital Transformation', 'India'],
     readTime: '7 min read',
-    image: '/images/blog/blog-hero.png',
+    image: '/images/blog/blog_ai_business.png',
     seo: {
       metaTitle: 'AI Transforming Indian Businesses: 5 Practical Use Cases | Microtechnique IT',
       metaDescription:
@@ -222,7 +222,7 @@ Post-migration, implement cost monitoring (AWS Cost Explorer, Azure Cost Managem
     category: 'Cloud Computing',
     tags: ['Cloud Migration', 'AWS', 'Azure', 'Infrastructure', 'DevOps'],
     readTime: '9 min read',
-    image: '/images/blog/blog-hero.png',
+    image: '/images/blog/blog_cloud_migration.png',
     seo: {
       metaTitle: 'Cloud Migration Roadmap for Indian Enterprises | Microtechnique IT',
       metaDescription:
@@ -285,7 +285,7 @@ GST compliance shouldn't be a full-time job. With the right accounting software,
     category: 'Business & Finance',
     tags: ['GST Compliance', 'Accounting Software', 'ERP', 'Tax Automation', 'India'],
     readTime: '7 min read',
-    image: '/images/blog/blog-hero.png',
+    image: '/images/blog/blog_gst_automation.png',
     seo: {
       metaTitle: 'GST Compliance Automation with Accounting Software | Microtechnique IT',
       metaDescription:
@@ -366,7 +366,7 @@ Track these KPIs monthly:
     category: 'Digital Marketing',
     tags: ['Local SEO', 'SEO Strategy', 'Digital Marketing', 'Surat', 'Gujarat'],
     readTime: '8 min read',
-    image: '/images/blog/blog-hero.png',
+    image: '/images/blog/blog_local_seo.png',
     seo: {
       metaTitle: 'Local SEO Strategy for Surat & Gujarat Businesses | Microtechnique IT',
       metaDescription:
