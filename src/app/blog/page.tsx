@@ -18,8 +18,8 @@ export default function BlogPage() {
       <style dangerouslySetInnerHTML={{ __html: `
         .blog-page-container {
           font-family: var(--font-sans, system-ui, -apple-system, sans-serif);
-          background-color: #050505;
-          color: #f1f5f9;
+          background-color: #ffffff;
+          color: #0f172a;
           min-height: 100vh;
         }
         
@@ -73,7 +73,7 @@ export default function BlogPage() {
         .blog-hero-desc {
           font-size: 1.25rem;
           line-height: 1.6;
-          color: #94a3b8;
+          color: #64748b;
           max-width: 480px; /* Narrow paragraph */
         }
 
@@ -104,7 +104,7 @@ export default function BlogPage() {
           transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
           position: relative;
           z-index: 2;
-          border: 1px solid rgba(255, 255, 255, 0.1);
+          border: 1px solid rgba(0,0,0,0.1);
         }
 
         .blog-hero-img:hover {
@@ -119,7 +119,7 @@ export default function BlogPage() {
           font-size: 1.75rem;
           font-weight: 700;
           margin-bottom: 40px;
-          color: #f8fafc;
+          color: #0f172a;
           display: flex;
           align-items: center;
           gap: 16px;
@@ -138,7 +138,7 @@ export default function BlogPage() {
           background: linear-gradient(145deg, #111318, #0a0b0e);
           border-radius: 40px;
           padding: 60px;
-          border: 1px solid rgba(255, 255, 255, 0.05);
+          border: 1px solid rgba(0,0,0,0.05);
           transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
           text-decoration: none;
           color: inherit;
@@ -162,7 +162,7 @@ export default function BlogPage() {
           align-items: center;
           gap: 20px;
           font-size: 0.9rem;
-          color: #94a3b8;
+          color: #64748b;
           flex-wrap: wrap;
         }
 
@@ -188,7 +188,7 @@ export default function BlogPage() {
           font-size: 2.75rem;
           line-height: 1.15;
           font-weight: 800;
-          color: #f8fafc;
+          color: #0f172a;
           transition: color 0.3s ease;
           letter-spacing: -0.02em;
         }
@@ -274,11 +274,11 @@ export default function BlogPage() {
         .cat-btn {
           padding: 10px 24px;
           border-radius: 100px;
-          background: rgba(255, 255, 255, 0.03);
-          color: #94a3b8;
+          background: rgba(0,0,0,0.02);
+          color: #64748b;
           font-weight: 600;
           font-size: 0.9rem;
-          border: 1px solid rgba(255, 255, 255, 0.05);
+          border: 1px solid rgba(0,0,0,0.05);
           cursor: pointer;
           transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
           white-space: nowrap;
@@ -286,7 +286,7 @@ export default function BlogPage() {
 
         .cat-btn:hover {
           background: rgba(255, 255, 255, 0.08);
-          color: #f8fafc;
+          color: #0f172a;
         }
 
         .cat-btn.active {
@@ -309,7 +309,7 @@ export default function BlogPage() {
         .grid-card {
           background: #0f1115;
           border-radius: 28px;
-          border: 1px solid rgba(255, 255, 255, 0.05);
+          border: 1px solid rgba(0,0,0,0.05);
           overflow: hidden;
           transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease, border-color 0.4s ease;
           display: flex;
@@ -382,7 +382,7 @@ export default function BlogPage() {
           font-size: 1.5rem;
           line-height: 1.35;
           font-weight: 700;
-          color: #f8fafc;
+          color: #0f172a;
           margin-bottom: 16px;
           display: -webkit-box;
           -webkit-line-clamp: 2;
@@ -398,7 +398,7 @@ export default function BlogPage() {
         .card-excerpt {
           font-size: 1rem;
           line-height: 1.6;
-          color: #94a3b8;
+          color: #64748b;
           margin-bottom: 28px;
           display: -webkit-box;
           -webkit-line-clamp: 3;

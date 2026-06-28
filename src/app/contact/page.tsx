@@ -12,7 +12,7 @@ export default function ContactPage() {
       <style dangerouslySetInnerHTML={{
         __html: `
           .contact-page-wrapper {
-            background-color: #0f172a;
+            background-color: #ffffff;
             color: #0f172a;
             font-family: inherit;
             overflow: hidden;
