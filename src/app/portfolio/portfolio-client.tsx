@@ -203,8 +203,8 @@ export default function PortfolioClient() {
                   className={`project-card ${cardClass}`}
                 >
                   <div className="card-img-container">
-                    <img src="/portfolio-mockup.png" alt={item.title} className="project-img" />
-                    <div style={{ position: 'absolute', top: '24px', left: '24px', background: 'rgba(0,0,0,0.6)', backdropFilter: 'blur(12px)', padding: '8px 16px', borderRadius: '30px', fontSize: '13px', fontWeight: '600', border: '1px solid rgba(255,255,255,0.1)' }}>
+                    <img src={item.image} alt={item.title} className="project-img" />
+                    <div style={{ position: 'absolute', top: '24px', left: '24px', background: 'rgba(0,0,0,0.6)', backdropFilter: 'blur(12px)', padding: '8px 16px', borderRadius: '30px', fontSize: '13px', fontWeight: '600', border: '1px solid rgba(255,255,255,0.1)', color: '#fff' }}>
                       {item.industry}
                     </div>
                   </div>

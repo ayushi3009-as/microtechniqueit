@@ -21,7 +21,7 @@ export const portfolioItems: readonly PortfolioItem[] = [
     ],
     technologies: ['Next.js', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS', 'Stripe'],
     timeline: '16 weeks',
-    image: '/images/portfolio/styleverse-ecommerce.webp',
+    image: '/images/portfolio/styleverse-ecommerce.png',
     seo: {
       metaTitle: 'StyleVerse E-Commerce Platform Case Study | Microtechnique IT',
       metaDescription:
@@ -49,7 +49,7 @@ export const portfolioItems: readonly PortfolioItem[] = [
     ],
     technologies: ['.NET', 'React', 'SQL Server', 'Azure', 'SignalR', 'Twilio'],
     timeline: '24 weeks',
-    image: '/images/portfolio/medcare-healthcare.webp',
+    image: '/images/portfolio/medcare-healthcare.png',
     seo: {
       metaTitle: 'MedCare Hospital Management System | Microtechnique IT',
       metaDescription:
@@ -77,7 +77,7 @@ export const portfolioItems: readonly PortfolioItem[] = [
     ],
     technologies: ['React', 'Node.js', 'MongoDB', 'Socket.io', 'AWS', 'React Native'],
     timeline: '14 weeks',
-    image: '/images/portfolio/spiceroute-restaurant.webp',
+    image: '/images/portfolio/spiceroute-restaurant.png',
     seo: {
       metaTitle: 'SpiceRoute Restaurant POS System | Microtechnique IT',
       metaDescription:
@@ -105,7 +105,7 @@ export const portfolioItems: readonly PortfolioItem[] = [
     ],
     technologies: ['.NET', 'SQL Server', 'React', 'Azure', 'OCR/AI', 'React Native'],
     timeline: '18 weeks',
-    image: '/images/portfolio/diamondstar-inventory.webp',
+    image: '/images/portfolio/diamondstar-inventory.png',
     seo: {
       metaTitle: 'Diamond Inventory & Trading System | Microtechnique IT',
       metaDescription:
@@ -133,7 +133,7 @@ export const portfolioItems: readonly PortfolioItem[] = [
     ],
     technologies: ['React', 'Node.js', 'PostgreSQL', 'Redis', 'Google Maps API', 'AWS', 'React Native'],
     timeline: '20 weeks',
-    image: '/images/portfolio/swiftship-logistics.webp',
+    image: '/images/portfolio/swiftship-logistics.png',
     seo: {
       metaTitle: 'SwiftShip Logistics Fleet Management Dashboard | Microtechnique IT',
       metaDescription:
@@ -161,7 +161,7 @@ export const portfolioItems: readonly PortfolioItem[] = [
     ],
     technologies: ['Next.js', 'Node.js', 'PostgreSQL', 'WebRTC', 'AWS', 'Razorpay'],
     timeline: '22 weeks',
-    image: '/images/portfolio/edunova-education.webp',
+    image: '/images/portfolio/edunova-education.png',
     seo: {
       metaTitle: 'EduNova Education Portal & LMS | Microtechnique IT',
       metaDescription:
