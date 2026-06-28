@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@source "../../src";
 @source ".";
 
 @source "../components";
@@ -218,5 +219,6 @@ input, select, textarea {
 .font-heading {
   font-family: var(--font-heading);
 }
+
 
 
