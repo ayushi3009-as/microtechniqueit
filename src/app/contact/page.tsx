@@ -44,7 +44,7 @@ export default function ContactPage() {
             font-weight: 800;
             line-height: 1.1;
             margin-bottom: 24px;
-            background: linear-gradient(to right, #ffffff, #a5b4fc);
+            background: linear-gradient(to right, #0f172a, #4f46e5);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             letter-spacing: -0.02em;
@@ -185,13 +185,13 @@ export default function ContactPage() {
 
           /* Form Styles */
           .premium-form-container {
-            background: rgba(15, 15, 20, 0.7);
+            background: #ffffff;
             backdrop-filter: blur(24px);
             -webkit-backdrop-filter: blur(24px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(0, 0, 0, 0.05);
             border-radius: 32px;
             padding: 50px;
-            box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.6);
+            box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.05);
             position: relative;
           }
           .premium-form-container::after {
@@ -227,8 +227,8 @@ export default function ContactPage() {
           .input-wrap input, 
           .input-wrap textarea {
             width: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: #f8fafc;
+            border: 1px solid rgba(0, 0, 0, 0.1);
             border-radius: 18px;
             color: #0f172a;
             font-size: 1rem;
@@ -325,21 +325,21 @@ export default function ContactPage() {
             font-size: 2.25rem;
             margin-bottom: 40px;
             font-weight: 700;
-            background: linear-gradient(to right, #ffffff, #cbd5e1);
+            background: linear-gradient(to right, #0f172a, #475569);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             letter-spacing: -0.01em;
           }
           .faq-card {
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid rgba(255, 255, 255, 0.08);
+            background: rgba(0, 0, 0, 0.02);
+            border: 1px solid rgba(0, 0, 0, 0.05);
             border-radius: 20px;
             margin-bottom: 16px;
             transition: all 0.3s ease;
           }
           .faq-card:hover {
             border-color: rgba(99, 102, 241, 0.3);
-            background: rgba(255, 255, 255, 0.04);
+            background: rgba(0, 0, 0, 0.04);
           }
           .faq-card details {
             width: 100%;
@@ -353,7 +353,7 @@ export default function ContactPage() {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            color: #f1f5f9;
+            color: #0f172a;
           }
           .faq-card summary::-webkit-details-marker {
             display: none;
@@ -388,7 +388,7 @@ export default function ContactPage() {
           .trust-banner {
             padding: 80px 5% 100px;
             text-align: center;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            border-top: 1px solid rgba(0, 0, 0, 0.05);
             background: linear-gradient(to bottom, transparent, rgba(99, 102, 241, 0.02));
           }
           .trust-title {
