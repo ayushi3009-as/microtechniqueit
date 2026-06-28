@@ -249,39 +249,82 @@ export default function AboutClient() {
 
       {/* SECTION 4: VALUES (BENTO GRID) */}
       <section style={{ padding: '140px 0' }}>
+        <style dangerouslySetInnerHTML={{__html: `
+          .values-bento {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+          }
+          .bento-card {
+            padding: 40px;
+            background-color: #ffffff;
+            border-radius: 20px;
+            border: 1px solid #ececec;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.3s;
+          }
+          @media (min-width: 768px) {
+            .values-bento {
+              grid-template-columns: repeat(2, 1fr);
+            }
+            .bento-wide-tablet {
+              grid-column: span 2;
+            }
+          }
+          @media (min-width: 1024px) {
+            .values-bento {
+              grid-template-columns: repeat(3, 1fr);
+              grid-auto-rows: minmax(250px, auto);
+            }
+            .bento-large {
+              grid-column: span 2;
+              grid-row: span 2;
+            }
+            .bento-tall {
+              grid-row: span 2;
+            }
+            .bento-wide {
+              grid-column: span 2;
+            }
+            .bento-normal {
+              grid-column: span 1;
+              grid-row: span 1;
+            }
+          }
+        `}} />
         <div className="container-custom" style={{ maxWidth: '1320px', margin: '0 auto' }}>
           <div style={{ marginBottom: '80px' }}>
             <h2 style={{ fontSize: '48px', fontWeight: 700, color: '#0f172a', marginBottom: '24px' }}>Principles that <span style={{ background: 'linear-gradient(135deg, #4f46e5, #0ea5e9)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>guide us</span></h2>
             <p style={{ fontSize: '20px', color: '#64748b', maxWidth: '600px' }}>These core values shape every decision we make, every solution we build, and every relationship we nurture.</p>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '24px' }}>
-            {values.map((val, idx) => (
-              <motion.div
-                key={val.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: idx * 0.1 }}
-                whileHover={{ y: -5, boxShadow: '0 20px 40px -10px rgba(0,0,0,0.1)' }}
-                style={{ 
-                  gridColumn: val.size === 'large' ? 'span 2' : 'span 1',
-                  padding: '40px', 
-                  backgroundColor: '#ffffff', 
-                  borderRadius: '20px', 
-                  border: '1px solid #ececec',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  transition: 'all 0.3s'
-                }}
-              >
-                <div style={{ width: '56px', height: '56px', borderRadius: '16px', backgroundColor: '#eff6ff', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '24px', color: '#4f46e5' }}>
-                  <val.icon size={28} />
-                </div>
-                <h3 style={{ fontSize: '24px', fontWeight: 700, color: '#0f172a', marginBottom: '16px' }}>{val.title}</h3>
-                <p style={{ fontSize: '18px', lineHeight: '1.7', color: '#64748b' }}>{val.description}</p>
-              </motion.div>
-            ))}
+          <div className="values-bento">
+            {values.map((val, idx) => {
+              // Assign bento classes based on index to create a unique layout
+              let bentoClass = 'bento-normal';
+              if (idx === 0) bentoClass = 'bento-large bento-wide-tablet';
+              else if (idx === 1) bentoClass = 'bento-tall';
+              else if (idx === 5) bentoClass = 'bento-wide bento-wide-tablet';
+              
+              return (
+                <motion.div
+                  key={val.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: idx * 0.1 }}
+                  whileHover={{ y: -5, boxShadow: '0 20px 40px -10px rgba(0,0,0,0.1)' }}
+                  className={`bento-card ${bentoClass}`}
+                >
+                  <div style={{ width: '56px', height: '56px', borderRadius: '16px', backgroundColor: '#eff6ff', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '24px', color: '#4f46e5' }}>
+                    <val.icon size={28} />
+                  </div>
+                  <h3 style={{ fontSize: '24px', fontWeight: 700, color: '#0f172a', marginBottom: '16px' }}>{val.title}</h3>
+                  <p style={{ fontSize: '18px', lineHeight: '1.7', color: '#64748b' }}>{val.description}</p>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </section>
