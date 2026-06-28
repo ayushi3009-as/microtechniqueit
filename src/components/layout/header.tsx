@@ -80,20 +80,20 @@ export function Header() {
       <div className="sticky top-0 z-50 pt-4 px-4 pb-4 pointer-events-none">
         <header className="mx-auto max-w-7xl bg-white/90 backdrop-blur-md border border-slate-200 shadow-sm rounded-2xl pointer-events-auto">
           <div className="container-custom">
-            <div className="flex items-center justify-between h-16 w-full" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%', height: '64px' }}>
+            <div className="flex items-center h-16">
               
-              {/* Logo - Fixed Width using inline style to bypass Tailwind compilation issues */}
-              <div className="shrink-0 flex items-center" style={{ width: '240px', flexShrink: 0 }}>
-                <Link href="/" className="flex items-center gap-2.5">
+              {/* Logo */}
+              <div className="flex-1 flex items-center">
+                <Link href="/" className="flex items-center gap-2.5 shrink-0">
                   <Image src="/logo.jpeg" alt="Microtechnique IT" width={32} height={32} className="rounded-md" />
-                  <span className="text-base font-bold text-foreground font-heading whitespace-nowrap">
+                  <span className="text-base font-bold text-foreground font-heading">
                     Microtechnique<span className="text-primary">IT</span>
                   </span>
                 </Link>
               </div>
 
-              {/* Desktop Nav - Centered strictly between the sidebars */}
-              <nav className="hidden xl:flex flex-1 items-center justify-center gap-6 px-4" style={{ flex: 1, display: 'flex', justifyContent: 'center' }}>
+              {/* Desktop Nav */}
+              <nav className="hidden lg:flex items-center justify-center gap-8 flex-none">
                 {navItems.map((item) => (
                   <div
                     key={item.label}
@@ -103,7 +103,7 @@ export function Header() {
                   >
                     <Link
                       href={item.href}
-                      className="flex items-center gap-1.5 px-3 py-2 text-sm font-semibold text-slate-600 hover:text-slate-900 transition-colors rounded-lg hover:bg-slate-50 whitespace-nowrap"
+                      className="flex items-center gap-1.5 px-3 py-2 text-sm font-semibold text-slate-600 hover:text-slate-900 transition-colors rounded-lg hover:bg-slate-50"
                     >
                       {item.label}
                       {item.children && <ChevronDown className="h-3.5 w-3.5 text-slate-400 group-hover:text-slate-900 transition-colors" />}
@@ -129,11 +129,11 @@ export function Header() {
                 ))}
               </nav>
 
-              {/* Right Side - Matches Logo Width using inline style to balance the center */}
-              <div className="shrink-0 flex items-center justify-end" style={{ width: '240px', flexShrink: 0 }}>
+              {/* Mobile Toggle / Empty Right Side on Desktop */}
+              <div className="flex-1 flex items-center justify-end">
                 <button
                   onClick={() => setMobileOpen(!mobileOpen)}
-                  className="xl:hidden p-2 rounded-lg hover:bg-slate-100 transition-colors text-slate-900"
+                  className="lg:hidden p-2 rounded-lg hover:bg-slate-100 transition-colors text-slate-900"
                   aria-label="Toggle menu"
                 >
                   {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
