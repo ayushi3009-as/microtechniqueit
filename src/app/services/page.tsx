@@ -184,11 +184,11 @@ export default function ServicesPage() {
       <section style={{ padding: '6rem 0' }}>
         <div className="container" style={{ maxWidth: '1320px', margin: '0 auto', padding: '0 1.5rem' }}>
           <div style={{ position: 'relative', borderRadius: '1.5rem', overflow: 'hidden', backgroundColor: '#e0e7ff', border: '1px solid rgba(99, 102, 241, 0.1)', padding: '4rem 2rem', textAlign: 'center' }}>
-            <div className="relative z-10">
-              <h2 className="text-3xl lg:text-4xl font-heading font-bold text-foreground mb-4">
+            <div className="relative z-10" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+              <h2 style={{ fontSize: '2.5rem', fontWeight: 800, color: '#0f172a', marginBottom: '1rem', textAlign: 'center' }}>
                 Need a Custom Solution?
               </h2>
-              <p className="text-lg text-muted-foreground max-w-xl mx-auto mb-8">
+              <p style={{ fontSize: '1.125rem', color: '#64748b', maxWidth: '600px', margin: '0 auto 2rem auto', textAlign: 'center', lineHeight: 1.6 }}>
                 Every business is unique. Let&apos;s discuss how we can tailor our services to your specific needs.
               </p>
               <Link

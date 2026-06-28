@@ -92,9 +92,10 @@ export default function ProductsClient() {
           }
             
           .card-bg {
-            background: rgba(30, 41, 59, 0.7);
+            background: rgba(255, 255, 255, 0.8);
             backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
           }
         `
       }} />
@@ -242,9 +243,9 @@ export default function ProductsClient() {
                       <p style={{ color: '#64748b', fontSize: '0.875rem' }}>Auto TDS, PF & ESIC</p>
                     </div>
                     
-                    <div className="card-bg hover-lift" style={{ padding: '2rem', borderRadius: '1.5rem', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', background: 'linear-gradient(135deg, #1e293b, #0f172a)' }}>
+                    <div className="card-bg hover-lift" style={{ padding: '2rem', borderRadius: '1.5rem', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', background: 'linear-gradient(135deg, #f8fafc, #f1f5f9)' }}>
                       <Link href={`/products/${product.slug}`} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1rem', color: '#0f172a', textDecoration: 'none' }}>
-                        <div style={{ width: '48px', height: '48px', borderRadius: '50%', backgroundColor: '#38bdf8', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#0f172a' }}>
+                        <div style={{ width: '48px', height: '48px', borderRadius: '50%', backgroundColor: '#38bdf8', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#ffffff' }}>
                           <ArrowRight style={{ width: '24px', height: '24px' }} />
                         </div>
                         <span style={{ fontWeight: 600 }}>Explore Solution</span>
