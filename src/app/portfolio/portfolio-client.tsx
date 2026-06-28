@@ -18,7 +18,7 @@ export default function PortfolioClient() {
   }, [activeIndustry]);
 
   return (
-    <div className="portfolio-wrapper" style={{ backgroundColor: '#050505', color: '#ffffff', minHeight: '100vh', fontFamily: '"Inter", sans-serif' }}>
+    <div className="portfolio-wrapper" style={{ backgroundColor: '#ffffff', color: '#0f172a', minHeight: '100vh', fontFamily: '"Inter", sans-serif' }}>
       <style dangerouslySetInnerHTML={{__html: `
         .portfolio-wrapper * { box-sizing: border-box; }
         
@@ -48,7 +48,7 @@ export default function PortfolioClient() {
         }
 
         .project-card { 
-          background: #0d0d0d; 
+          background: #ffffff; 
           border: 1px solid rgba(255,255,255,0.08); 
           border-radius: 24px; 
           overflow: hidden; 
@@ -137,7 +137,7 @@ export default function PortfolioClient() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.5 }}
-              style={{ fontSize: '18px', color: '#a0a0a0', lineHeight: '1.6', maxWidth: '540px', marginBottom: '32px' }}
+              style={{ fontSize: '18px', color: '#64748b', lineHeight: '1.6', maxWidth: '540px', marginBottom: '32px' }}
             >
               We craft high-performance platforms that drive tangible growth. Explore our selected case studies where complex engineering challenges meet elegant storytelling and design.
             </motion.p>
@@ -150,7 +150,7 @@ export default function PortfolioClient() {
             style={{ position: 'relative', borderRadius: '32px', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.1)', boxShadow: '0 20px 40px rgba(0,0,0,0.5)' }}
           >
             <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgba(138,43,226,0.2), rgba(65,105,225,0.2))', mixBlendMode: 'overlay', zIndex: 1 }}></div>
-            <img src="/abstract-graphic.png" alt="Abstract Innovation" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block', minHeight: '400px' }} />
+            <img src="/abstract-graphic.png" alt="Abstract Innovation" style={{ width: '100%', height: 'auto', objectFit: 'contain', display: 'block', borderRadius: '32px' }} />
           </motion.div>
         </div>
       </section>
@@ -213,10 +213,10 @@ export default function PortfolioClient() {
                       <>
                         <div>
                           <h2 style={{ fontSize: '36px', fontWeight: '800', marginBottom: '20px', lineHeight: '1.2' }}>{item.title}</h2>
-                          <p style={{ color: '#a0a0a0', lineHeight: '1.7', marginBottom: '32px', fontSize: '16px' }}>{item.description}</p>
+                          <p style={{ color: '#64748b', lineHeight: '1.7', marginBottom: '32px', fontSize: '16px' }}>{item.description}</p>
                           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
                             {item.technologies.slice(0,5).map(tech => (
-                              <span key={tech} style={{ padding: '6px 14px', background: 'rgba(255,255,255,0.05)', borderRadius: '8px', fontSize: '13px', color: '#e0e0e0', fontWeight: '600' }}>{tech}</span>
+                              <span key={tech} style={{ padding: '6px 14px', background: 'rgba(255,255,255,0.05)', borderRadius: '8px', fontSize: '13px', color: '#334155', fontWeight: '600' }}>{tech}</span>
                             ))}
                           </div>
                         </div>
@@ -234,7 +234,7 @@ export default function PortfolioClient() {
                              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
                                {item.results.slice(0,2).map(res => (
                                  <div key={res.metric} style={{ background: 'rgba(255,255,255,0.03)', padding: '20px', borderRadius: '16px', border: '1px solid rgba(255,255,255,0.05)' }}>
-                                   <div style={{ fontSize: '28px', fontWeight: '800', color: '#fff', marginBottom: '6px' }}>{res.value}</div>
+                                   <div style={{ fontSize: '28px', fontWeight: '800', color: '#0f172a', marginBottom: '6px' }}>{res.value}</div>
                                    <div style={{ fontSize: '13px', color: '#888', fontWeight: '600' }}>{res.metric}</div>
                                  </div>
                                ))}
@@ -247,7 +247,7 @@ export default function PortfolioClient() {
                     {cardClass === 'card-landscape' && (
                       <>
                         <h2 style={{ fontSize: '26px', fontWeight: '800', marginBottom: '16px', lineHeight: '1.3' }}>{item.title}</h2>
-                        <p style={{ color: '#a0a0a0', fontSize: '15px', lineHeight: '1.6', marginBottom: '28px', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>{item.description}</p>
+                        <p style={{ color: '#64748b', fontSize: '15px', lineHeight: '1.6', marginBottom: '28px', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>{item.description}</p>
                         
                         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '24px', flex: 1 }}>
                           <div>
@@ -263,7 +263,7 @@ export default function PortfolioClient() {
                         <div style={{ display: 'flex', alignItems: 'center', gap: '20px', marginTop: '28px', paddingTop: '24px', borderTop: '1px solid rgba(255,255,255,0.05)' }}>
                           <div style={{ fontSize: '13px', color: '#888', fontWeight: '700', letterSpacing: '1px' }}>KEY RESULT</div>
                           <div style={{ display: 'flex', alignItems: 'baseline', gap: '10px' }}>
-                            <span style={{ fontSize: '26px', fontWeight: '800', color: '#fff' }}>{item.results[0].value}</span>
+                            <span style={{ fontSize: '26px', fontWeight: '800', color: '#0f172a' }}>{item.results[0].value}</span>
                             <span style={{ fontSize: '14px', color: '#20B2AA', fontWeight: '600' }}>{item.results[0].metric}</span>
                           </div>
                         </div>
@@ -274,12 +274,12 @@ export default function PortfolioClient() {
                       <>
                         <h2 style={{ fontSize: '22px', fontWeight: '800', marginBottom: '16px', lineHeight: '1.3' }}>{item.title}</h2>
                         <div style={{ flex: 1 }}>
-                          <p style={{ color: '#a0a0a0', fontSize: '15px', lineHeight: '1.6', marginBottom: '24px', display: '-webkit-box', WebkitLineClamp: 3, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>{item.description}</p>
+                          <p style={{ color: '#64748b', fontSize: '15px', lineHeight: '1.6', marginBottom: '24px', display: '-webkit-box', WebkitLineClamp: 3, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>{item.description}</p>
                         </div>
                         <div style={{ background: 'linear-gradient(to right, rgba(255,255,255,0.02), rgba(255,255,255,0.04))', padding: '24px', borderRadius: '20px', marginTop: 'auto', border: '1px solid rgba(255,255,255,0.03)' }}>
                           <h3 style={{ fontSize: '12px', textTransform: 'uppercase', letterSpacing: '1.5px', color: '#4169E1', marginBottom: '10px', fontWeight: '700' }}>Result Delivered</h3>
                           <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
-                            <span style={{ fontSize: '32px', fontWeight: '800', color: '#fff', lineHeight: '1' }}>{item.results[0].value}</span>
+                            <span style={{ fontSize: '32px', fontWeight: '800', color: '#0f172a', lineHeight: '1' }}>{item.results[0].value}</span>
                             <span style={{ fontSize: '14px', color: '#888', fontWeight: '600' }}>{item.results[0].metric}</span>
                           </div>
                         </div>
@@ -305,7 +305,7 @@ export default function PortfolioClient() {
             transition={{ duration: 0.6 }}
           >
             <h2 style={{ fontSize: 'clamp(36px, 5vw, 56px)', fontWeight: '800', marginBottom: '20px', position: 'relative', zIndex: 1, letterSpacing: '-0.02em' }}>Ready to Transform Your Business?</h2>
-            <p style={{ fontSize: '20px', color: '#a0a0a0', maxWidth: '640px', margin: '0 auto', position: 'relative', zIndex: 1, lineHeight: '1.6' }}>Let's build a solution tailored to your unique challenges. Our engineering team is ready to help you scale.</p>
+            <p style={{ fontSize: '20px', color: '#64748b', maxWidth: '640px', margin: '0 auto', position: 'relative', zIndex: 1, lineHeight: '1.6' }}>Let's build a solution tailored to your unique challenges. Our engineering team is ready to help you scale.</p>
             <a href="/contact" className="cta-btn" style={{ position: 'relative', zIndex: 1 }}>Start Your Project</a>
           </motion.div>
         </div>
