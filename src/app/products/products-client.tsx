@@ -8,7 +8,7 @@ import Link from 'next/link';
 
 export default function ProductsClient() {
   return (
-    <div style={{ backgroundColor: '#0f172a', color: '#f8fafc', minHeight: '100vh', fontFamily: 'Inter, sans-serif', overflow: 'hidden' }}>
+    <div style={{ backgroundColor: '#ffffff', color: '#0f172a', minHeight: '100vh', fontFamily: 'Inter, sans-serif', overflow: 'hidden' }}>
       <style dangerouslySetInnerHTML={{
         __html: `
           .container {
@@ -114,14 +114,14 @@ export default function ProductsClient() {
                   Powering India's <br/>
                   <span className="text-gradient">Digital Growth</span>
                 </h1>
-                <p style={{ fontSize: '1.125rem', color: '#94a3b8', marginBottom: '2.5rem', lineHeight: 1.6, maxWidth: '90%' }}>
+                <p style={{ fontSize: '1.125rem', color: '#64748b', marginBottom: '2.5rem', lineHeight: 1.6, maxWidth: '90%' }}>
                   From flagship ERPs to industry-specific point-of-sale solutions, we build world-class software that solves complex problems with elegant simplicity.
                 </p>
                 <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
                   <button style={{ padding: '1rem 2rem', backgroundColor: '#38bdf8', color: '#0f172a', borderRadius: '0.75rem', fontWeight: 600, fontSize: '1rem', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                     Explore Products <ChevronRight style={{ width: '20px', height: '20px' }} />
                   </button>
-                  <button style={{ padding: '1rem 2rem', backgroundColor: 'transparent', color: '#f8fafc', borderRadius: '0.75rem', fontWeight: 600, fontSize: '1rem', border: '1px solid rgba(255,255,255,0.2)', cursor: 'pointer' }}>
+                  <button style={{ padding: '1rem 2rem', backgroundColor: 'transparent', color: '#f8fafc', borderRadius: '0.75rem', fontWeight: 600, fontSize: '1rem', border: '1px solid rgba(0,0,0,0.2)', cursor: 'pointer' }}>
                     View Pricing
                   </button>
                 </div>
@@ -141,10 +141,10 @@ export default function ProductsClient() {
                     <div style={{ width: '40px', height: '40px', borderRadius: '50%', background: 'linear-gradient(135deg, #38bdf8, #3b82f6)' }} />
                     <div>
                       <div style={{ fontWeight: 600, fontSize: '0.875rem' }}>System Active</div>
-                      <div style={{ fontSize: '0.75rem', color: '#94a3b8' }}>All services operational</div>
+                      <div style={{ fontSize: '0.75rem', color: '#64748b' }}>All services operational</div>
                     </div>
                   </div>
-                  <div style={{ height: '8px', background: 'rgba(255,255,255,0.1)', borderRadius: '4px', overflow: 'hidden' }}>
+                  <div style={{ height: '8px', background: 'rgba(0,0,0,0.1)', borderRadius: '4px', overflow: 'hidden' }}>
                     <div style={{ width: '85%', height: '100%', backgroundColor: '#38bdf8' }} />
                   </div>
                 </div>
@@ -152,7 +152,7 @@ export default function ProductsClient() {
                 {/* Floating Card 2 */}
                 <div className="floating-card-2 card-bg" style={{ position: 'absolute', bottom: '20%', left: '5%', width: '240px', padding: '1.5rem', borderRadius: '1rem', zIndex: 2, boxShadow: '0 25px 50px -12px rgba(0,0,0,0.5)' }}>
                    <div style={{ fontWeight: 600, fontSize: '1.25rem', marginBottom: '0.5rem' }}>+124%</div>
-                   <div style={{ fontSize: '0.875rem', color: '#94a3b8' }}>Efficiency Gain</div>
+                   <div style={{ fontSize: '0.875rem', color: '#64748b' }}>Efficiency Gain</div>
                    <img src="/abstract-graphic.png" alt="Graph" style={{ width: '100%', marginTop: '1rem', borderRadius: '0.5rem', opacity: 0.8 }} onError={(e) => e.currentTarget.style.display = 'none'} />
                 </div>
                 
@@ -166,7 +166,7 @@ export default function ProductsClient() {
       </section>
 
       {/* Asymmetric Product Sections */}
-      <section style={{ padding: '6rem 0', backgroundColor: '#0b1120' }}>
+      <section style={{ padding: '6rem 0', backgroundColor: 'transparent' }}>
         <div className="container" style={{ display: 'flex', flexDirection: 'column', gap: '8rem' }}>
           
           {products.map((product, index) => {
@@ -178,7 +178,7 @@ export default function ProductsClient() {
                   <div style={{ flex: 1 }}>
                     <div style={{ display: 'inline-block', padding: '0.5rem 1rem', backgroundColor: 'rgba(56, 189, 248, 0.1)', color: '#38bdf8', borderRadius: '9999px', fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.05em', textTransform: 'uppercase', marginBottom: '1.5rem' }}>Flagship Product</div>
                     <h2 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1.5rem', lineHeight: 1.2 }}>{product.title}</h2>
-                    <p style={{ fontSize: '1.125rem', color: '#94a3b8', marginBottom: '2rem', lineHeight: 1.6 }}>{product.longDescription}</p>
+                    <p style={{ fontSize: '1.125rem', color: '#64748b', marginBottom: '2rem', lineHeight: 1.6 }}>{product.longDescription}</p>
                     
                     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1rem', marginBottom: '2.5rem' }}>
                       {product.features.slice(0, 4).map((feature, i) => (
@@ -208,7 +208,7 @@ export default function ProductsClient() {
                 <div key={product.id} className="asym-row-rev" style={{ display: 'flex', flexDirection: 'column', gap: '4rem', alignItems: 'center' }}>
                   <div style={{ flex: 1 }}>
                     <h2 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1.5rem', lineHeight: 1.2 }}>{product.title}</h2>
-                    <p style={{ fontSize: '1.125rem', color: '#94a3b8', marginBottom: '2rem', lineHeight: 1.6 }}>{product.description}</p>
+                    <p style={{ fontSize: '1.125rem', color: '#64748b', marginBottom: '2rem', lineHeight: 1.6 }}>{product.description}</p>
                     
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', marginBottom: '2.5rem' }}>
                       {product.features.slice(0, 4).map((feature, i) => (
@@ -221,7 +221,7 @@ export default function ProductsClient() {
                       ))}
                     </div>
                     
-                    <Link href={`/products/${product.slug}`} style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', padding: '0.875rem 1.5rem', backgroundColor: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '0.75rem', color: '#fff', fontWeight: 600, textDecoration: 'none' }}>
+                    <Link href={`/products/${product.slug}`} style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', padding: '0.875rem 1.5rem', backgroundColor: 'rgba(0,0,0,0.05)', border: '1px solid rgba(0,0,0,0.1)', borderRadius: '0.75rem', color: '#0f172a', fontWeight: 600, textDecoration: 'none' }}>
                       Learn More
                     </Link>
                   </div>
@@ -239,18 +239,18 @@ export default function ProductsClient() {
                 <div key={product.id} style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
                   <div style={{ textAlign: 'center', maxWidth: '600px', margin: '0 auto', marginBottom: '2rem' }}>
                     <h2 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>{product.title}</h2>
-                    <p style={{ color: '#94a3b8', fontSize: '1.125rem' }}>{product.description}</p>
+                    <p style={{ color: '#64748b', fontSize: '1.125rem' }}>{product.description}</p>
                   </div>
                   
                   <div className="bento-grid" style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
                     <div className="bento-main card-bg hover-lift" style={{ padding: '2.5rem', borderRadius: '1.5rem', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', minHeight: '300px' }}>
                       <div>
                         <h3 style={{ fontSize: '1.5rem', fontWeight: 600, marginBottom: '1rem' }}>Core Modules</h3>
-                        <p style={{ color: '#94a3b8', marginBottom: '2rem' }}>Experience full automation with integrated systems tailored for modern operations.</p>
+                        <p style={{ color: '#64748b', marginBottom: '2rem' }}>Experience full automation with integrated systems tailored for modern operations.</p>
                       </div>
                       <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
                         {product.modules?.slice(0, 3).map((mod, i) => (
-                           <div key={i} style={{ padding: '0.5rem 1rem', backgroundColor: 'rgba(255,255,255,0.05)', borderRadius: '2rem', fontSize: '0.875rem' }}>{mod.name}</div>
+                           <div key={i} style={{ padding: '0.5rem 1rem', backgroundColor: 'rgba(0,0,0,0.05)', borderRadius: '2rem', fontSize: '0.875rem' }}>{mod.name}</div>
                         ))}
                       </div>
                     </div>
@@ -260,11 +260,11 @@ export default function ProductsClient() {
                          <CheckCircle2 style={{ color: '#38bdf8', width: '32px', height: '32px' }} />
                       </div>
                       <h4 style={{ fontSize: '1.125rem', fontWeight: 600, marginBottom: '0.5rem' }}>Compliance Ready</h4>
-                      <p style={{ color: '#94a3b8', fontSize: '0.875rem' }}>Auto TDS, PF & ESIC</p>
+                      <p style={{ color: '#64748b', fontSize: '0.875rem' }}>Auto TDS, PF & ESIC</p>
                     </div>
                     
                     <div className="card-bg hover-lift" style={{ padding: '2rem', borderRadius: '1.5rem', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', background: 'linear-gradient(135deg, #1e293b, #0f172a)' }}>
-                      <Link href={`/products/${product.slug}`} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1rem', color: '#fff', textDecoration: 'none' }}>
+                      <Link href={`/products/${product.slug}`} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1rem', color: '#0f172a', textDecoration: 'none' }}>
                         <div style={{ width: '48px', height: '48px', borderRadius: '50%', backgroundColor: '#38bdf8', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#0f172a' }}>
                           <ArrowRight style={{ width: '24px', height: '24px' }} />
                         </div>
@@ -279,17 +279,17 @@ export default function ProductsClient() {
             // Product 4: Large Centered
             if (index === 3) {
               return (
-                <div key={product.id} className="centered-large" style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', textAlign: 'left', padding: '4rem', borderRadius: '2rem', background: 'radial-gradient(circle at top, rgba(30, 41, 59, 0.8), #0b1120)', border: '1px solid rgba(255,255,255,0.05)' }}>
+                <div key={product.id} className="centered-large" style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', textAlign: 'left', padding: '4rem', borderRadius: '2rem', background: 'radial-gradient(circle at top, rgba(30, 41, 59, 0.8), #0b1120)', border: '1px solid rgba(0,0,0,0.05)' }}>
                   <div className="centered-large-inner" style={{ maxWidth: '800px', display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
                     <div style={{ padding: '0.5rem 1rem', backgroundColor: 'rgba(129, 140, 248, 0.1)', color: '#818cf8', borderRadius: '9999px', fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.05em', textTransform: 'uppercase', marginBottom: '1.5rem' }}>Specialized</div>
                     <h2 style={{ fontSize: '3rem', fontWeight: 800, marginBottom: '1.5rem', lineHeight: 1.1 }}>{product.title}</h2>
-                    <p style={{ fontSize: '1.25rem', color: '#94a3b8', marginBottom: '3rem', lineHeight: 1.6 }}>{product.description}</p>
+                    <p style={{ fontSize: '1.25rem', color: '#64748b', marginBottom: '3rem', lineHeight: 1.6 }}>{product.description}</p>
                     
                     <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap', justifyContent: 'center', width: '100%', marginBottom: '3rem' }}>
                       {product.modules?.map((mod, i) => (
                         <div key={i} className="card-bg hover-lift" style={{ padding: '1.5rem', borderRadius: '1rem', flex: '1 1 200px', minWidth: '200px', textAlign: 'center' }}>
                           <div style={{ fontSize: '1.125rem', fontWeight: 600, marginBottom: '0.5rem' }}>{mod.name}</div>
-                          <p style={{ fontSize: '0.875rem', color: '#94a3b8' }}>{mod.description}</p>
+                          <p style={{ fontSize: '0.875rem', color: '#64748b' }}>{mod.description}</p>
                         </div>
                       ))}
                     </div>
@@ -309,11 +309,11 @@ export default function ProductsClient() {
       </section>
 
       {/* "Why Our Products" Comparison Checklist */}
-      <section style={{ padding: '6rem 0', backgroundColor: '#0f172a', borderTop: '1px solid rgba(255,255,255,0.05)' }}>
+      <section style={{ padding: '6rem 0', backgroundColor: '#f8fafc', borderTop: '1px solid rgba(0,0,0,0.05)' }}>
         <div className="container">
           <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
             <h2 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Why Choose Microtechnique</h2>
-            <p style={{ color: '#94a3b8', fontSize: '1.125rem', maxWidth: '600px', margin: '0 auto' }}>A unified ecosystem designed to eliminate friction and scale effortlessly.</p>
+            <p style={{ color: '#64748b', fontSize: '1.125rem', maxWidth: '600px', margin: '0 auto' }}>A unified ecosystem designed to eliminate friction and scale effortlessly.</p>
           </div>
           
           <div className="checklist-grid" style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '2rem' }}>
@@ -325,13 +325,13 @@ export default function ProductsClient() {
               { title: '24/7 Priority Support', desc: 'Local support teams available via phone, chat, and email whenever you need.' },
               { title: 'Seamless Integrations', desc: 'Connects perfectly with your existing payment gateways and hardware.' }
             ].map((item, i) => (
-              <div key={i} className="hover-lift" style={{ display: 'flex', gap: '1.25rem', padding: '1.5rem', borderRadius: '1rem', backgroundColor: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.05)' }}>
+              <div key={i} className="hover-lift" style={{ display: 'flex', gap: '1.25rem', padding: '1.5rem', borderRadius: '1rem', backgroundColor: 'rgba(0,0,0,0.02)', border: '1px solid rgba(0,0,0,0.05)' }}>
                 <div style={{ width: '32px', height: '32px', borderRadius: '50%', backgroundColor: 'rgba(56, 189, 248, 0.1)', color: '#38bdf8', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
                   <Check style={{ width: '16px', height: '16px' }} />
                 </div>
                 <div>
                   <h4 style={{ fontSize: '1.125rem', fontWeight: 600, marginBottom: '0.5rem' }}>{item.title}</h4>
-                  <p style={{ color: '#94a3b8', fontSize: '0.875rem', lineHeight: 1.5 }}>{item.desc}</p>
+                  <p style={{ color: '#64748b', fontSize: '0.875rem', lineHeight: 1.5 }}>{item.desc}</p>
                 </div>
               </div>
             ))}
@@ -349,7 +349,7 @@ export default function ProductsClient() {
           textAlign: 'center',
           background: 'linear-gradient(135deg, #1e1b4b 0%, #0f172a 50%, #082f49 100%)',
           boxShadow: '0 25px 50px -12px rgba(0,0,0,0.5)',
-          border: '1px solid rgba(255,255,255,0.1)',
+          border: '1px solid rgba(0,0,0,0.1)',
           position: 'relative',
           overflow: 'hidden'
         }}>
@@ -358,7 +358,7 @@ export default function ProductsClient() {
           <style dangerouslySetInnerHTML={{ __html: `@keyframes spin { 100% { transform: rotate(360deg); } }` }} />
           
           <div style={{ position: 'relative', zIndex: 1 }}>
-            <h2 style={{ fontSize: '3.5rem', fontWeight: 800, marginBottom: '1.5rem', color: '#fff', letterSpacing: '-0.02em' }}>
+            <h2 style={{ fontSize: '3.5rem', fontWeight: 800, marginBottom: '1.5rem', color: '#0f172a', letterSpacing: '-0.02em' }}>
               Ready to transform your business?
             </h2>
             <p style={{ fontSize: '1.25rem', color: '#cbd5e1', marginBottom: '3rem', maxWidth: '600px', margin: '0 auto 3rem auto' }}>
@@ -368,7 +368,7 @@ export default function ProductsClient() {
               <button className="hover-lift" style={{ padding: '1.25rem 3rem', backgroundColor: '#38bdf8', color: '#0f172a', borderRadius: '1rem', fontWeight: 700, fontSize: '1.125rem', border: 'none', cursor: 'pointer', display: 'inline-flex', alignItems: 'center', gap: '0.75rem', boxShadow: '0 10px 25px rgba(56, 189, 248, 0.3)' }}>
                 Start 15-Day Free Trial <ArrowRight style={{ width: '20px', height: '20px' }} />
               </button>
-              <button className="hover-lift" style={{ padding: '1.25rem 3rem', backgroundColor: 'rgba(255,255,255,0.05)', color: '#fff', borderRadius: '1rem', fontWeight: 700, fontSize: '1.125rem', border: '1px solid rgba(255,255,255,0.2)', cursor: 'pointer' }}>
+              <button className="hover-lift" style={{ padding: '1.25rem 3rem', backgroundColor: 'rgba(0,0,0,0.05)', color: '#0f172a', borderRadius: '1rem', fontWeight: 700, fontSize: '1.125rem', border: '1px solid rgba(0,0,0,0.2)', cursor: 'pointer' }}>
                 Schedule Demo
               </button>
             </div>

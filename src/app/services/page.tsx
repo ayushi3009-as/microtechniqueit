@@ -147,9 +147,9 @@ export default function ServicesPage() {
       </section>
 
       {/* Services Grid */}
-      <section className="section-padding">
-        <div className="container-custom">
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <section style={{ padding: '6rem 0' }}>
+        <div className="container" style={{ maxWidth: '1320px', margin: '0 auto', padding: '0 1.5rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '2rem' }}>
             {services.map((service) => (
               <Link
                 key={service.slug}
@@ -180,9 +180,9 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA */}
-      <section className="section-padding">
-        <div className="container-custom">
-          <div className="relative rounded-3xl overflow-hidden bg-pastel-blue border border-primary/10 p-12 lg:p-16 text-center">
+      <section style={{ padding: '6rem 0' }}>
+        <div className="container" style={{ maxWidth: '1320px', margin: '0 auto', padding: '0 1.5rem' }}>
+          <div style={{ position: 'relative', borderRadius: '1.5rem', overflow: 'hidden', backgroundColor: '#e0e7ff', border: '1px solid rgba(99, 102, 241, 0.1)', padding: '4rem 2rem', textAlign: 'center' }}>
             <div className="relative z-10">
               <h2 className="text-3xl lg:text-4xl font-heading font-bold text-foreground mb-4">
                 Need a Custom Solution?
@@ -192,10 +192,10 @@ export default function ServicesPage() {
               </p>
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 px-8 py-4 text-base font-semibold rounded-xl bg-primary text-white hover:opacity-90 transition-colors"
+                style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', padding: '1rem 2rem', fontSize: '1rem', fontWeight: 600, borderRadius: '0.75rem', backgroundColor: '#6366f1', color: '#ffffff', textDecoration: 'none', transition: 'opacity 0.2s' }}
               >
                 Get a Free Consultation
-                <ArrowRight className="h-4 w-4" />
+                <ArrowRight style={{ width: '16px', height: '16px' }} />
               </Link>
             </div>
           </div>
