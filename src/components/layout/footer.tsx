@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { Mail, Phone, MapPin } from 'lucide-react';
+import { Mail, Phone, MapPin, Linkedin, Twitter, Facebook, Instagram, Send } from 'lucide-react';
 
 const footerLinks = {
   Services: [
@@ -11,81 +11,136 @@ const footerLinks = {
     { label: 'Cloud Services', href: '/services/cloud-services' },
     { label: 'Digital Marketing', href: '/services/digital-marketing' },
   ],
-  Company: [
-    { label: 'About Us', href: '/about' },
-    { label: 'Portfolio', href: '/portfolio' },
-    { label: 'Case Studies', href: '/case-studies' },
-    { label: 'Careers', href: '/careers' },
-    { label: 'Blog', href: '/blog' },
-    { label: 'Partner Program', href: '/partner' },
-  ],
   Products: [
     { label: 'Microtechnique Accounts', href: '/products/microtechnique-accounts' },
     { label: 'Billing & Inventory', href: '/products/billing-inventory' },
     { label: 'Payroll Software', href: '/products/payroll-software' },
     { label: 'Industry Solutions', href: '/products/industry-specific-software' },
   ],
+  Company: [
+    { label: 'About Us', href: '/about' },
+    { label: 'Portfolio', href: '/portfolio' },
+    { label: 'Careers', href: '/careers' },
+    { label: 'Partner Program', href: '/partner' },
+  ],
+  Resources: [
+    { label: 'Blog', href: '/blog' },
+    { label: 'Case Studies', href: '/case-studies' },
+    { label: 'Documentation', href: '/docs' },
+    { label: 'Help Center', href: '/help' },
+  ],
 };
 
 export function Footer() {
   return (
-    <footer className="border-t border-border bg-white">
-      <div className="container-custom py-16" style={{ padding: '64px 0' }}>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10" style={{ display: 'flex', flexWrap: 'wrap', gap: '40px' }}>
-          {/* Brand */}
-          <div className="lg:col-span-2" style={{ flex: '1 1 300px' }}>
-            <Link href="/" className="flex items-center gap-2.5 mb-4">
-              <Image src="/logo.jpeg" alt="Microtechnique IT" width={32} height={32} className="rounded-md" />
-              <span className="text-base font-bold text-foreground font-heading">
-                Microtechnique<span className="text-primary">IT</span>
-              </span>
-            </Link>
-            <p className="text-sm text-muted-foreground leading-relaxed mb-6 max-w-sm">
-              A full-service technology company empowering businesses with innovative software solutions, digital transformation, and enterprise products.
-            </p>
-            <div className="space-y-3">
-              <a href="tel:+916355997080" className="flex items-center gap-2.5 text-sm text-muted-foreground hover:text-foreground transition-colors">
-                <Phone className="h-4 w-4" /> +91 6355997080
-              </a>
-              <a href="mailto:info@microtechniqueit.com" className="flex items-center gap-2.5 text-sm text-muted-foreground hover:text-foreground transition-colors">
-                <Mail className="h-4 w-4" /> info@microtechniqueit.com
-              </a>
-              <div className="flex items-start gap-2.5 text-sm text-muted-foreground">
-                <MapPin className="h-4 w-4 shrink-0 mt-0.5" />
-                <span>Office No. G-40, Star World Complex, Pal Gam, Surat – 394510</span>
+    <footer style={{ backgroundColor: '#0f172a', color: '#ffffff', paddingTop: '100px', borderTop: '1px solid rgba(255,255,255,0.1)' }}>
+      <div className="container-custom" style={{ maxWidth: '1320px', margin: '0 auto' }}>
+        
+        {/* TOP SECTION: Newsletter & Contact */}
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '64px', marginBottom: '80px', borderBottom: '1px solid rgba(255,255,255,0.1)', paddingBottom: '64px' }}>
+          
+          {/* Newsletter */}
+          <div style={{ flex: '1 1 400px' }}>
+            <h3 style={{ fontSize: '24px', fontWeight: 700, marginBottom: '16px' }}>Stay at the forefront of innovation.</h3>
+            <p style={{ fontSize: '16px', color: '#94a3b8', marginBottom: '24px', maxWidth: '400px' }}>Subscribe to our newsletter for insights on enterprise tech, AI, and digital transformation.</p>
+            <form style={{ display: 'flex', gap: '12px', maxWidth: '400px' }}>
+              <input 
+                type="email" 
+                placeholder="Enter your email address" 
+                style={{ flex: 1, height: '56px', padding: '0 20px', borderRadius: '12px', backgroundColor: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)', color: '#ffffff', outline: 'none' }} 
+              />
+              <button 
+                type="submit" 
+                style={{ height: '56px', padding: '0 24px', borderRadius: '12px', backgroundColor: '#38bdf8', color: '#0f172a', fontWeight: 600, border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '8px' }}
+              >
+                Subscribe <Send size={16} />
+              </button>
+            </form>
+          </div>
+
+          {/* Office & Contact */}
+          <div style={{ flex: '1 1 400px', display: 'flex', flexWrap: 'wrap', gap: '48px' }}>
+            <div>
+              <h4 style={{ fontSize: '14px', fontWeight: 600, color: '#94a3b8', marginBottom: '16px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Headquarters</h4>
+              <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px', color: '#e2e8f0', marginBottom: '12px' }}>
+                <MapPin size={20} style={{ color: '#38bdf8', flexShrink: 0, marginTop: '2px' }} />
+                <span style={{ fontSize: '15px', lineHeight: '1.6' }}>Office No. G-40, Star World Complex,<br />Pal Gam, Surat – 394510</span>
               </div>
             </div>
-          </div>
-
-          {/* Link Columns */}
-          {Object.entries(footerLinks).map(([title, links]) => (
-            <div key={title} style={{ flex: '1 1 150px' }}>
-              <h3 className="text-sm font-semibold text-foreground mb-4" style={{ marginBottom: '16px' }}>{title}</h3>
-              <ul className="space-y-2.5" style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
-                {links.map((link) => (
-                  <li key={link.href}>
-                    <Link href={link.href} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
+            <div>
+              <h4 style={{ fontSize: '14px', fontWeight: 600, color: '#94a3b8', marginBottom: '16px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Contact Us</h4>
+              <a href="tel:+916355997080" style={{ display: 'flex', alignItems: 'center', gap: '12px', color: '#e2e8f0', marginBottom: '12px', fontSize: '15px', textDecoration: 'none' }}>
+                <Phone size={20} style={{ color: '#38bdf8' }} /> +91 6355997080
+              </a>
+              <a href="mailto:info@microtechniqueit.com" style={{ display: 'flex', alignItems: 'center', gap: '12px', color: '#e2e8f0', fontSize: '15px', textDecoration: 'none' }}>
+                <Mail size={20} style={{ color: '#38bdf8' }} /> info@microtechniqueit.com
+              </a>
             </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Bottom Bar */}
-      <div className="border-t border-border">
-        <div className="container-custom py-5 flex flex-col sm:flex-row items-center justify-between gap-3" style={{ padding: '20px 0', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '12px' }}>
-          <p className="text-xs text-muted-foreground">
-            &copy; {new Date().getFullYear()} Microtechnique IT & Communication Solutions. All rights reserved.
-          </p>
-          <div className="flex items-center gap-4 text-xs text-muted-foreground">
-            <Link href="/about" className="hover:text-foreground transition-colors">Privacy Policy</Link>
-            <Link href="/about" className="hover:text-foreground transition-colors">Terms of Service</Link>
           </div>
         </div>
+
+        {/* MIDDLE SECTION: Links & Brand */}
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '64px', marginBottom: '80px' }}>
+          
+          {/* Brand & Awards */}
+          <div style={{ flex: '1 1 300px' }}>
+            <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '24px', textDecoration: 'none' }}>
+              <Image src="/logo.jpeg" alt="Microtechnique IT" width={40} height={40} style={{ borderRadius: '8px' }} />
+              <span style={{ fontSize: '20px', fontWeight: 800, color: '#ffffff' }}>
+                Microtechnique<span style={{ color: '#38bdf8' }}>IT</span>
+              </span>
+            </Link>
+            <p style={{ fontSize: '15px', color: '#94a3b8', lineHeight: '1.6', marginBottom: '32px' }}>
+              A full-service technology company empowering businesses with innovative software solutions and enterprise products.
+            </p>
+            
+            {/* Awards & Certs */}
+            <div style={{ display: 'flex', gap: '16px', marginBottom: '32px' }}>
+              <div style={{ padding: '8px 12px', borderRadius: '8px', backgroundColor: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)', fontSize: '12px', fontWeight: 600, color: '#e2e8f0' }}>ISO 9001:2015</div>
+              <div style={{ padding: '8px 12px', borderRadius: '8px', backgroundColor: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)', fontSize: '12px', fontWeight: 600, color: '#e2e8f0' }}>MSME Registered</div>
+            </div>
+
+            {/* Social Icons */}
+            <div style={{ display: 'flex', gap: '16px' }}>
+              <a href="#" style={{ width: '40px', height: '40px', borderRadius: '50%', backgroundColor: 'rgba(255,255,255,0.05)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#ffffff', transition: 'background-color 0.2s' }}><Linkedin size={18} /></a>
+              <a href="#" style={{ width: '40px', height: '40px', borderRadius: '50%', backgroundColor: 'rgba(255,255,255,0.05)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#ffffff', transition: 'background-color 0.2s' }}><Twitter size={18} /></a>
+              <a href="#" style={{ width: '40px', height: '40px', borderRadius: '50%', backgroundColor: 'rgba(255,255,255,0.05)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#ffffff', transition: 'background-color 0.2s' }}><Facebook size={18} /></a>
+              <a href="#" style={{ width: '40px', height: '40px', borderRadius: '50%', backgroundColor: 'rgba(255,255,255,0.05)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#ffffff', transition: 'background-color 0.2s' }}><Instagram size={18} /></a>
+            </div>
+          </div>
+
+          {/* Links Matrix */}
+          <div style={{ flex: '2 1 600px', display: 'flex', flexWrap: 'wrap', gap: '40px' }}>
+            {Object.entries(footerLinks).map(([category, links]) => (
+              <div key={category} style={{ flex: '1 1 150px' }}>
+                <h4 style={{ fontSize: '14px', fontWeight: 600, color: '#94a3b8', marginBottom: '24px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>{category}</h4>
+                <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '16px' }}>
+                  {links.map(link => (
+                    <li key={link.href}>
+                      <Link href={link.href} style={{ color: '#e2e8f0', fontSize: '15px', textDecoration: 'none', transition: 'color 0.2s' }}>
+                        {link.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+
+        </div>
+
+        {/* BOTTOM SECTION */}
+        <div style={{ padding: '32px 0', borderTop: '1px solid rgba(255,255,255,0.1)', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '24px' }}>
+          <div style={{ fontSize: '14px', color: '#94a3b8' }}>
+            &copy; {new Date().getFullYear()} Microtechnique IT & Communication Solutions. All rights reserved.
+          </div>
+          <div style={{ display: 'flex', gap: '32px' }}>
+            <Link href="/privacy" style={{ fontSize: '14px', color: '#94a3b8', textDecoration: 'none' }}>Privacy Policy</Link>
+            <Link href="/terms" style={{ fontSize: '14px', color: '#94a3b8', textDecoration: 'none' }}>Terms of Service</Link>
+            <Link href="/cookies" style={{ fontSize: '14px', color: '#94a3b8', textDecoration: 'none' }}>Cookie Policy</Link>
+          </div>
+        </div>
+
       </div>
     </footer>
   );
