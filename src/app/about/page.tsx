@@ -123,19 +123,19 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
+      <section className="relative pt-32 pb-20 overflow-hidden" style={{ paddingTop: '128px', paddingBottom: '80px', overflow: 'hidden', position: 'relative' }}>
         
         <div className="container-custom relative z-10">
-          <nav className="flex items-center gap-2 text-sm text-muted-foreground mb-8" aria-label="Breadcrumb">
+          <nav className="flex items-center gap-2 text-sm text-muted-foreground mb-8" aria-label="Breadcrumb" style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '32px' }}>
             <Link href="/" className="hover:text-primary transition-colors">Home</Link>
             <span>/</span>
             <span className="text-foreground">About</span>
           </nav>
-          <div className="max-w-4xl">
-            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium bg-primary/10 text-primary border border-primary/20 mb-6">
+          <div className="max-w-4xl" style={{ maxWidth: '896px' }}>
+            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium bg-primary/10 text-primary border border-primary/20 mb-6" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '8px 16px', borderRadius: '9999px', marginBottom: '24px', border: '1px solid rgba(79, 70, 229, 0.2)' }}>
               Our Story
             </span>
-            <h1 className="text-foreground mb-6 font-heading">
+            <h1 className="text-foreground mb-6 font-heading" style={{ marginBottom: '24px' }}>
               Empowering Businesses Through{' '}
               <span className="text-accent-gradient">Digital Excellence</span>
             </h1>
@@ -152,8 +152,8 @@ export default function AboutPage() {
       {/* Mission & Vision */}
       <section className="section-padding">
         <div className="container-custom">
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="card rounded-2xl p-8 lg:p-10">
+          <div className="grid md:grid-cols-2 gap-8" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '32px' }}>
+            <div className="card rounded-2xl p-8 lg:p-10" style={{ padding: '40px', backgroundColor: '#ffffff', borderRadius: '16px', border: '1px solid #e2e8f0' }}>
               <div className="p-3 rounded-xl bg-primary/10 text-primary w-fit mb-6">
                 <Target className="h-6 w-6" />
               </div>
@@ -165,7 +165,7 @@ export default function AboutPage() {
                 designed to deliver tangible ROI and long-term competitive advantage.
               </p>
             </div>
-            <div className="card rounded-2xl p-8 lg:p-10">
+            <div className="card rounded-2xl p-8 lg:p-10" style={{ padding: '40px', backgroundColor: '#ffffff', borderRadius: '16px', border: '1px solid #e2e8f0' }}>
               <div className="p-3 rounded-xl bg-accent/10 text-accent w-fit mb-6">
                 <Eye className="h-6 w-6" />
               </div>
@@ -184,9 +184,9 @@ export default function AboutPage() {
       {/* Stats */}
       <section className="py-16">
         <div className="container-custom">
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: '24px' }}>
             {stats.map((stat) => (
-              <div key={stat.label} className="text-center p-6 rounded-2xl border border-border hover:border-primary/30 transition-colors">
+              <div key={stat.label} className="text-center p-6 rounded-2xl border border-border hover:border-primary/30 transition-colors" style={{ padding: '24px', textAlign: 'center', borderRadius: '16px', border: '1px solid #e2e8f0' }}>
                 <stat.icon className="h-5 w-5 text-primary mx-auto mb-3" />
                 <div className="text-2xl font-bold font-heading text-accent-gradient mb-1">{stat.value}</div>
                 <div className="text-xs text-muted-foreground">{stat.label}</div>
@@ -211,11 +211,12 @@ export default function AboutPage() {
               and every relationship we nurture.
             </p>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px' }}>
             {values.map((value) => (
               <div
                 key={value.title}
                 className="card rounded-2xl p-8 hover:border-primary/30 transition-all duration-300 hover:-translate-y-1"
+                style={{ padding: '32px', backgroundColor: '#ffffff', borderRadius: '16px', border: '1px solid #e2e8f0' }}
               >
                 <div className="p-3 rounded-xl bg-primary/10 text-primary w-fit mb-5">
                   <value.icon className="h-5 w-5" />
@@ -275,9 +276,9 @@ export default function AboutPage() {
               Meet Our <span className="text-accent-gradient">Team</span>
             </h2>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-4xl mx-auto">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-4xl mx-auto" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '32px', maxWidth: '896px', margin: '0 auto' }}>
             {team.map((member) => (
-              <div key={member.name} className="card rounded-2xl p-8 text-center">
+              <div key={member.name} className="card rounded-2xl p-8 text-center" style={{ padding: '32px', textAlign: 'center', backgroundColor: '#ffffff', borderRadius: '16px', border: '1px solid #e2e8f0' }}>
                 <div className="h-20 w-20 rounded-full bg-gradient-to-br from-primary to-accent mx-auto mb-5 flex items-center justify-center">
                   <span className="text-2xl font-bold text-foreground">
                     {member.name.split(' ').map(n => n[0]).join('').slice(0, 2)}
@@ -289,7 +290,7 @@ export default function AboutPage() {
               </div>
             ))}
             {/* Join Us Card */}
-            <div className="card rounded-2xl p-8 text-center border-dashed border-2 border-border flex flex-col items-center justify-center">
+            <div className="card rounded-2xl p-8 text-center border-dashed border-2 border-border flex flex-col items-center justify-center" style={{ padding: '32px', textAlign: 'center', border: '2px dashed #e2e8f0', borderRadius: '16px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
               <div className="h-20 w-20 rounded-full bg-muted mx-auto mb-5 flex items-center justify-center">
                 <Users className="h-8 w-8 text-muted-foreground" />
               </div>
@@ -311,8 +312,8 @@ export default function AboutPage() {
       {/* Why Choose Us */}
       <section className="section-padding">
         <div className="container-custom">
-          <div className="card rounded-3xl p-8 lg:p-12">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="card rounded-3xl p-8 lg:p-12" style={{ padding: '48px', backgroundColor: '#ffffff', borderRadius: '24px', border: '1px solid #e2e8f0' }}>
+            <div className="grid lg:grid-cols-2 gap-12 items-center" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '48px', alignItems: 'center' }}>
               <div>
                 <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium bg-primary/10 text-primary border border-primary/20 mb-6">
                   Why Choose Us
@@ -325,10 +326,11 @@ export default function AboutPage() {
                   business goals. Our multi-industry expertise, commitment to quality, and
                   agile delivery methodology set us apart from traditional IT service providers.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4">
+                <div className="flex flex-col sm:flex-row gap-4" style={{ display: 'flex', flexWrap: 'wrap', gap: '16px' }}>
                   <Link
                     href="/contact"
                     className="inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-semibold rounded-xl bg-primary text-primary-foreground hover:opacity-90 transition-opacity"
+                    style={{ padding: '12px 24px', borderRadius: '12px', display: 'inline-flex', alignItems: 'center', gap: '8px' }}
                   >
                     Start a Project
                     <ArrowRight className="h-4 w-4" />
@@ -336,19 +338,20 @@ export default function AboutPage() {
                   <Link
                     href="/portfolio"
                     className="inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-semibold rounded-xl border border-border text-foreground hover:bg-muted transition-colors"
+                    style={{ padding: '12px 24px', borderRadius: '12px', display: 'inline-flex', alignItems: 'center', gap: '8px' }}
                   >
                     View Our Work
                   </Link>
                 </div>
               </div>
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-2 gap-4" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', gap: '16px' }}>
                 {[
                   { icon: Award, label: 'GST Certified', value: 'Compliant' },
                   { icon: Shield, label: 'Udyam Registered', value: 'MSME' },
                   { icon: MapPin, label: 'Based in', value: 'Surat, India' },
                   { icon: Calendar, label: 'Established', value: 'Since 2020' },
                 ].map((item) => (
-                  <div key={item.label} className="rounded-xl border border-border p-5 text-center">
+                  <div key={item.label} className="rounded-xl border border-border p-5 text-center" style={{ padding: '20px', textAlign: 'center', borderRadius: '12px', border: '1px solid #e2e8f0' }}>
                     <item.icon className="h-5 w-5 text-primary mx-auto mb-2" />
                     <div className="text-sm font-semibold text-foreground">{item.value}</div>
                     <div className="text-xs text-muted-foreground mt-1">{item.label}</div>
@@ -363,7 +366,7 @@ export default function AboutPage() {
       {/* CTA */}
       <section className="section-padding">
         <div className="container-custom">
-          <div className="relative rounded-3xl overflow-hidden bg-pastel-blue border border-primary/10 p-12 lg:p-16 text-center">
+          <div className="relative rounded-3xl overflow-hidden bg-pastel-blue border border-primary/10 p-12 lg:p-16 text-center" style={{ padding: '64px', textAlign: 'center', backgroundColor: '#eff6ff', borderRadius: '24px', border: '1px solid rgba(79, 70, 229, 0.1)' }}>
             <div className="relative z-10">
               <h2 className="text-3xl lg:text-4xl font-heading font-bold text-foreground mb-4">
                 Ready to Start Your Project?
@@ -371,10 +374,11 @@ export default function AboutPage() {
               <p className="text-lg text-muted-foreground max-w-xl mx-auto mb-8">
                 Let&apos;s discuss how we can help transform your business with technology.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '16px' }}>
                 <Link
                   href="/contact"
                   className="inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold rounded-xl bg-primary text-white hover:opacity-90 transition-colors"
+                  style={{ padding: '16px 32px', borderRadius: '12px', display: 'inline-flex', alignItems: 'center', gap: '8px' }}
                 >
                   Book a Consultation
                   <ArrowRight className="h-4 w-4" />
@@ -382,6 +386,7 @@ export default function AboutPage() {
                 <Link
                   href="/services"
                   className="inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold rounded-xl border-2 border-border text-foreground hover:bg-muted transition-colors"
+                  style={{ padding: '16px 32px', borderRadius: '12px', display: 'inline-flex', alignItems: 'center', gap: '8px' }}
                 >
                   Explore Services
                 </Link>
