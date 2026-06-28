@@ -136,6 +136,27 @@ export default function ProductsClient() {
                 transition={{ duration: 0.8, delay: 0.2 }}
                 style={{ width: '100%', height: '100%', position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
               >
+                {/* Floating Card 1 */}
+                <div className="floating-card-1 card-bg" style={{ position: 'absolute', top: '10%', right: '5%', width: '200px', padding: '1rem', borderRadius: '1rem', zIndex: 3, boxShadow: '0 15px 30px -5px rgba(0,0,0,0.1)' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '0.75rem' }}>
+                    <div style={{ width: '32px', height: '32px', borderRadius: '50%', background: 'linear-gradient(135deg, #38bdf8, #3b82f6)' }} />
+                    <div>
+                      <div style={{ fontWeight: 600, fontSize: '0.75rem', color: '#0f172a' }}>System Active</div>
+                      <div style={{ fontSize: '0.65rem', color: '#64748b' }}>All services operational</div>
+                    </div>
+                  </div>
+                  <div style={{ height: '6px', background: 'rgba(0,0,0,0.05)', borderRadius: '3px', overflow: 'hidden' }}>
+                    <div style={{ width: '85%', height: '100%', backgroundColor: '#38bdf8' }} />
+                  </div>
+                </div>
+                
+                {/* Floating Card 2 */}
+                <div className="floating-card-2 card-bg" style={{ position: 'absolute', bottom: '15%', left: '5%', width: '180px', padding: '1rem', borderRadius: '1rem', zIndex: 3, boxShadow: '0 15px 30px -5px rgba(0,0,0,0.1)' }}>
+                   <div style={{ fontWeight: 700, fontSize: '1.25rem', marginBottom: '0.25rem', color: '#0f172a' }}>+124%</div>
+                   <div style={{ fontSize: '0.75rem', color: '#64748b' }}>Efficiency Gain</div>
+                   <img src="/abstract-graphic.png" alt="Graph" style={{ width: '100%', marginTop: '0.75rem', borderRadius: '0.5rem', opacity: 0.9 }} onError={(e) => e.currentTarget.style.display = 'none'} />
+                </div>
+
                 {/* Main Graphic */}
                 <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', width: '70%', height: '70%', background: 'radial-gradient(circle, rgba(129, 140, 248, 0.2) 0%, transparent 70%)', zIndex: 1, borderRadius: '50%' }} />
                 <img src="/product-mockup.png" alt="Software Dashboard" style={{ position: 'relative', width: '90%', objectFit: 'contain', zIndex: 2, borderRadius: '1rem', boxShadow: '0 20px 40px rgba(0,0,0,0.15)' }} onError={(e) => { e.currentTarget.style.display = 'none'; e.currentTarget.parentElement!.style.background = 'url(/abstract-graphic.png) center/cover'; }} />
@@ -223,7 +244,7 @@ export default function ProductsClient() {
                   </div>
                   
                   <div className="bento-grid" style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-                    <div className="bento-main card-bg hover-lift" style={{ padding: '2.5rem', borderRadius: '1.5rem', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', minHeight: '300px' }}>
+                    <div className="bento-main card-bg hover-lift" style={{ padding: '2.5rem', borderRadius: '1.5rem', display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: '2rem', minHeight: '300px' }}>
                       <div>
                         <h3 style={{ fontSize: '1.5rem', fontWeight: 600, marginBottom: '1rem' }}>Core Modules</h3>
                         <p style={{ color: '#64748b', marginBottom: '2rem' }}>Experience full automation with integrated systems tailored for modern operations.</p>
