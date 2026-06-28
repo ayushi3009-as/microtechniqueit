@@ -20,8 +20,7 @@ import {
   Code2,
   TrendingUp,
   Globe,
-  CheckCircle2,
-  Linkedin
+  CheckCircle2
 } from 'lucide-react';
 
 const values = [
@@ -348,8 +347,8 @@ export default function AboutClient() {
                     <Image src={member.image} alt={member.name} fill style={{ objectFit: 'cover' }} />
                   </motion.div>
                   <motion.div variants={{ hover: { opacity: 1 } }} initial={{ opacity: 0 }} transition={{ duration: 0.3 }} style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, background: 'linear-gradient(to top, rgba(15,23,42,0.8), transparent)' }} />
-                  <motion.a href="#" variants={{ hover: { y: 0, opacity: 1 } }} initial={{ y: 20, opacity: 0 }} transition={{ duration: 0.3 }} style={{ position: 'absolute', bottom: '24px', right: '24px', width: '48px', height: '48px', backgroundColor: '#ffffff', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#0077b5' }}>
-                    <Linkedin size={24} />
+                  <motion.a href="#" variants={{ hover: { y: 0, opacity: 1 } }} initial={{ y: 20, opacity: 0 }} transition={{ duration: 0.3 }} style={{ position: 'absolute', bottom: '24px', right: '24px', width: '48px', height: '48px', backgroundColor: '#ffffff', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#0077b5', textDecoration: 'none', fontWeight: 800, fontSize: '18px' }}>
+                    IN
                   </motion.a>
                 </div>
                 <div style={{ padding: '32px', backgroundColor: '#ffffff', flex: 1 }}>

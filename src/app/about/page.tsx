@@ -17,23 +17,6 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            "name": "Microtechnique IT",
-            "url": "https://microtechniqueit.com",
-            "logo": "https://microtechniqueit.com/logo.jpeg",
-            "contactPoint": {
-              "@type": "ContactPoint",
-              "telephone": "+91-6355997080",
-              "contactType": "customer service"
-            }
-          }),
-        }}
-      />
       <AboutClient />
     </>
   );

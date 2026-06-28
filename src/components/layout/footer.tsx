@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { Mail, Phone, MapPin, Linkedin, Twitter, Facebook, Instagram, Send } from 'lucide-react';
+import { Mail, Phone, MapPin, Send } from 'lucide-react';
 
 const footerLinks = {
   Services: [
@@ -102,10 +102,10 @@ export function Footer() {
 
             {/* Social Icons */}
             <div style={{ display: 'flex', gap: '16px' }}>
-              <a href="#" style={{ width: '40px', height: '40px', borderRadius: '50%', backgroundColor: 'rgba(255,255,255,0.05)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#ffffff', transition: 'background-color 0.2s' }}><Linkedin size={18} /></a>
-              <a href="#" style={{ width: '40px', height: '40px', borderRadius: '50%', backgroundColor: 'rgba(255,255,255,0.05)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#ffffff', transition: 'background-color 0.2s' }}><Twitter size={18} /></a>
-              <a href="#" style={{ width: '40px', height: '40px', borderRadius: '50%', backgroundColor: 'rgba(255,255,255,0.05)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#ffffff', transition: 'background-color 0.2s' }}><Facebook size={18} /></a>
-              <a href="#" style={{ width: '40px', height: '40px', borderRadius: '50%', backgroundColor: 'rgba(255,255,255,0.05)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#ffffff', transition: 'background-color 0.2s' }}><Instagram size={18} /></a>
+              <a href="#" style={{ width: '40px', height: '40px', borderRadius: '50%', backgroundColor: 'rgba(255,255,255,0.05)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#ffffff', transition: 'background-color 0.2s', textDecoration: 'none', fontSize: '14px', fontWeight: 600 }}>IN</a>
+              <a href="#" style={{ width: '40px', height: '40px', borderRadius: '50%', backgroundColor: 'rgba(255,255,255,0.05)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#ffffff', transition: 'background-color 0.2s', textDecoration: 'none', fontSize: '14px', fontWeight: 600 }}>X</a>
+              <a href="#" style={{ width: '40px', height: '40px', borderRadius: '50%', backgroundColor: 'rgba(255,255,255,0.05)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#ffffff', transition: 'background-color 0.2s', textDecoration: 'none', fontSize: '14px', fontWeight: 600 }}>FB</a>
+              <a href="#" style={{ width: '40px', height: '40px', borderRadius: '50%', backgroundColor: 'rgba(255,255,255,0.05)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#ffffff', transition: 'background-color 0.2s', textDecoration: 'none', fontSize: '14px', fontWeight: 600 }}>IG</a>
             </div>
           </div>
 
