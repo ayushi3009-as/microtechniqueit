@@ -101,10 +101,10 @@ export default function ContactPage() {
             margin: 0 auto;
           }
           .glass-contact-card {
-            background: rgba(255, 255, 255, 0.02);
+            background: #ffffff;
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(0, 0, 0, 0.05);
             border-radius: 24px;
             padding: 40px 30px;
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -113,8 +113,8 @@ export default function ContactPage() {
             align-items: center;
             text-align: center;
             text-decoration: none;
-            color: white;
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            color: #0f172a;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
             position: relative;
             overflow: hidden;
           }
@@ -122,13 +122,13 @@ export default function ContactPage() {
             content: '';
             position: absolute;
             top: 0; left: 0; right: 0; height: 1px;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            background: linear-gradient(90deg, transparent, rgba(0,0,0,0.1), transparent);
             opacity: 0;
             transition: opacity 0.4s ease;
           }
           .glass-contact-card:hover {
             transform: translateY(-12px);
-            background: rgba(255, 255, 255, 0.04);
+            background: #f8fafc;
             border-color: rgba(99, 102, 241, 0.4);
             box-shadow: 0 20px 40px rgba(99, 102, 241, 0.15);
           }
@@ -163,8 +163,8 @@ export default function ContactPage() {
           }
           .contact-card-value {
             font-size: 1.05rem;
-            color: #f1f5f9;
-            font-weight: 500;
+            color: #4f46e5;
+            font-weight: 600;
             margin-bottom: 8px;
           }
           .contact-card-desc {

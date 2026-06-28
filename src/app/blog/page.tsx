@@ -135,7 +135,7 @@ export default function BlogPage() {
           display: grid;
           grid-template-columns: 1.1fr 1fr;
           gap: 60px;
-          background: linear-gradient(145deg, #111318, #0a0b0e);
+          background: #ffffff;
           border-radius: 40px;
           padding: 60px;
           border: 1px solid rgba(0,0,0,0.05);
@@ -147,7 +147,7 @@ export default function BlogPage() {
 
         .featured-card:hover {
           transform: translateY(-8px);
-          box-shadow: 0 40px 80px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 40px 80px rgba(0, 0, 0, 0.1);
           border-color: rgba(59, 130, 246, 0.3);
         }
 
@@ -200,7 +200,7 @@ export default function BlogPage() {
         .featured-excerpt {
           font-size: 1.125rem;
           line-height: 1.7;
-          color: #cbd5e1;
+          color: #475569;
           max-width: 460px; /* Narrow width */
         }
 
@@ -243,7 +243,7 @@ export default function BlogPage() {
         .featured-letter {
           font-size: 10rem;
           font-weight: 800;
-          color: rgba(255, 255, 255, 0.1);
+          color: rgba(0, 0, 0, 0.05);
           z-index: 0;
         }
 
@@ -251,7 +251,7 @@ export default function BlogPage() {
           position: sticky;
           top: 0;
           z-index: 50;
-          background: rgba(5, 5, 5, 0.85);
+          background: rgba(255, 255, 255, 0.85);
           backdrop-filter: blur(24px);
           -webkit-backdrop-filter: blur(24px);
           padding: 24px 0;
@@ -285,7 +285,7 @@ export default function BlogPage() {
         }
 
         .cat-btn:hover {
-          background: rgba(255, 255, 255, 0.08);
+          background: rgba(0, 0, 0, 0.05);
           color: #0f172a;
         }
 
@@ -307,7 +307,7 @@ export default function BlogPage() {
         }
 
         .grid-card {
-          background: #0f1115;
+          background: #ffffff;
           border-radius: 28px;
           border: 1px solid rgba(0,0,0,0.05);
           overflow: hidden;
@@ -320,13 +320,13 @@ export default function BlogPage() {
 
         .grid-card:hover {
           transform: translateY(-12px);
-          box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
           border-color: rgba(59, 130, 246, 0.3);
         }
 
         .card-image-wrap {
           height: 240px;
-          background: linear-gradient(135deg, #1e293b, #0f172a);
+          background: #f8fafc;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -439,7 +439,7 @@ export default function BlogPage() {
         .author-name {
           font-size: 0.9rem;
           font-weight: 600;
-          color: #cbd5e1;
+          color: #475569;
         }
 
         .card-read-time {
