@@ -68,7 +68,7 @@ export const caseStudies: readonly CaseStudy[] = [
       role: 'Founder & CEO, StyleVerse Fashion',
     },
     technologies: ['Next.js', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS', 'Tailwind CSS'],
-    image: '/images/case-studies/styleverse-ecommerce.webp',
+    image: '/images/portfolio/styleverse-ecommerce.png',
     seo: {
       metaTitle: 'StyleVerse E-Commerce Revenue Growth | Case Study | Microtechnique IT',
       metaDescription:
@@ -106,7 +106,7 @@ export const caseStudies: readonly CaseStudy[] = [
       role: 'Owner, Diamond Star Exports',
     },
     technologies: ['.NET', 'React', 'SQL Server', 'Azure', 'Azure Cognitive Services', 'React Native'],
-    image: '/images/case-studies/diamondstar-inventory.webp',
+    image: '/images/portfolio/diamondstar-inventory.png',
     seo: {
       metaTitle: 'Diamond Inventory Modernisation | Case Study | Microtechnique IT',
       metaDescription:
@@ -144,7 +144,7 @@ export const caseStudies: readonly CaseStudy[] = [
       role: 'Managing Director, Singh Logistics Pvt. Ltd.',
     },
     technologies: ['React', 'Node.js', 'PostgreSQL', 'Redis', 'Google Maps API', 'AWS', 'React Native'],
-    image: '/images/case-studies/singh-logistics.webp',
+    image: '/images/portfolio/swiftship-logistics.png',
     seo: {
       metaTitle: 'AI Fleet Optimisation for Logistics | Case Study | Microtechnique IT',
       metaDescription:
