@@ -1,6 +1,7 @@
 'use client';
 
-const steps = [
+import { motion, useScroll } from 'framer-motion';
+import { useRef } from 'react';const steps = [
   { num: '01', title: 'Discovery & Strategy', desc: 'We analyze your requirements, target audience, and business goals to form a solid technical strategy.' },
   { num: '02', title: 'UI/UX Design', desc: 'Our designers create intuitive, user-centric interfaces that align with your brand identity.' },
   { num: '03', title: 'Development', desc: 'Agile sprints with regular updates, building scalable and secure code architectures.' },
@@ -9,32 +10,57 @@ const steps = [
 ];
 
 export function ProcessSection() {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start center", "end center"]
+  });
+
   return (
-    <section className="section-padding">
+    <section className="section-padding" style={{ padding: '80px 0', overflow: 'hidden' }}>
       <div className="container-custom">
-        <div className="text-center mb-16">
-          <div className="badge mb-4 mx-auto w-fit">How We Work</div>
-          <h2 className="text-foreground mb-4">Our Proven <span className="text-accent-gradient">Process</span></h2>
-          <p className="text-muted-foreground max-w-xl mx-auto">A transparent, agile methodology ensuring quality delivery on time, every time.</p>
+        <div className="text-center mb-16" style={{ textAlign: 'center', marginBottom: '64px' }}>
+          <div className="badge mb-4 mx-auto w-fit" style={{ margin: '0 auto 16px auto' }}>How We Work</div>
+          <h2 className="text-foreground mb-4" style={{ margin: '0 auto 16px auto', textAlign: 'center' }}>Our Proven <span className="text-accent-gradient">Process</span></h2>
+          <p className="text-muted-foreground max-w-xl mx-auto" style={{ margin: '0 auto', textAlign: 'center' }}>A transparent, agile methodology ensuring quality delivery on time, every time.</p>
         </div>
 
-        <div className="max-w-4xl mx-auto relative">
-          {/* Vertical Line */}
-          <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-border -translate-x-1/2" />
+        <div className="max-w-4xl mx-auto relative" ref={containerRef} style={{ position: 'relative', margin: '0 auto', maxWidth: '896px' }}>
+          {/* Vertical Line (Static) */}
+          <div style={{ position: 'absolute', left: '50%', top: 0, bottom: 0, width: '2px', backgroundColor: '#e2e8f0', transform: 'translateX(-50%)' }} />
           
-          <div className="space-y-12">
+          {/* Vertical Line (Animated Flow) */}
+          <motion.div 
+            style={{ 
+              position: 'absolute', 
+              left: '50%', 
+              top: 0, 
+              bottom: 0, 
+              width: '2px', 
+              backgroundColor: '#4f46e5', 
+              transform: 'translateX(-50%)',
+              scaleY: scrollYProgress,
+              transformOrigin: "top",
+              zIndex: 1
+            }} 
+          />
+          
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '64px', position: 'relative', zIndex: 2 }}>
             {steps.map((step, idx) => (
-              <div key={step.num} className={`relative flex flex-col md:flex-row items-center gap-8 ${idx % 2 === 0 ? 'md:flex-row-reverse' : ''}`}>
+              <div key={step.num} style={{ display: 'flex', flexDirection: idx % 2 === 0 ? 'row-reverse' : 'row', alignItems: 'center', position: 'relative', width: '100%', justifyContent: 'space-between' }}>
                 {/* Center dot */}
-                <div className="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-pastel-blue border-4 border-white items-center justify-center shadow-sm z-10">
-                  <div className="w-2 h-2 rounded-full bg-primary" />
+                <div style={{ position: 'absolute', left: '50%', top: '50%', transform: 'translate(-50%, -50%)', width: '32px', height: '32px', borderRadius: '50%', backgroundColor: '#eff6ff', border: '4px solid white', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 10 }}>
+                  <div style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#4f46e5' }} />
                 </div>
                 
-                <div className="md:w-1/2" />
-                <div className="md:w-1/2 w-full card p-6 text-center md:text-left">
-                  <span className="text-sm font-bold text-primary mb-2 block tracking-widest">STEP {step.num}</span>
-                  <h3 className="text-xl font-semibold text-foreground mb-2">{step.title}</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">{step.desc}</p>
+                {/* Spacer to push card to the side */}
+                <div style={{ width: '50%' }} />
+                
+                {/* Card content */}
+                <div className="card" style={{ width: '45%', padding: '32px', backgroundColor: '#ffffff', borderRadius: '16px', border: '1px solid #e2e8f0', textAlign: idx % 2 === 0 ? 'right' : 'left', position: 'relative', zIndex: 5 }}>
+                  <span style={{ display: 'block', marginBottom: '8px', color: '#4f46e5', fontSize: '12px', fontWeight: 'bold', letterSpacing: '0.1em' }}>STEP {step.num}</span>
+                  <h3 style={{ fontSize: '20px', fontWeight: '600', marginBottom: '12px', color: '#0f172a' }}>{step.title}</h3>
+                  <p style={{ fontSize: '15px', lineHeight: '1.6', color: '#64748b' }}>{step.desc}</p>
                 </div>
               </div>
             ))}

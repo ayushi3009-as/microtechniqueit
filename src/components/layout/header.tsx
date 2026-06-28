@@ -39,7 +39,7 @@ export function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-sm border-b border-border">
       <div className="container-custom">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-16" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: '64px' }}>
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2.5 shrink-0">
             <Image src="/logo.jpeg" alt="Microtechnique IT" width={32} height={32} className="rounded-md" />
@@ -49,7 +49,7 @@ export function Header() {
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden lg:flex items-center gap-1">
+          <nav className="hidden lg:flex items-center gap-1" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
             {navItems.map((item) => (
               <div
                 key={item.label}
@@ -60,6 +60,7 @@ export function Header() {
                 <Link
                   href={item.href}
                   className="flex items-center gap-1 px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors rounded-lg"
+                  style={{ padding: '8px 12px', display: 'flex', alignItems: 'center', gap: '4px' }}
                 >
                   {item.label}
                   {item.children && <ChevronDown className="h-3.5 w-3.5" />}
@@ -86,8 +87,8 @@ export function Header() {
           </nav>
 
           {/* CTA + Mobile Toggle */}
-          <div className="flex items-center gap-3">
-            <Link href="/contact" className="hidden sm:inline-flex btn-primary text-sm px-5 py-2.5">
+          <div className="flex items-center gap-3" style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+            <Link href="/contact" className="hidden sm:inline-flex btn-primary text-sm px-5 py-2.5" style={{ padding: '10px 20px', borderRadius: '8px', display: 'inline-flex' }}>
               Get in Touch
             </Link>
             <button

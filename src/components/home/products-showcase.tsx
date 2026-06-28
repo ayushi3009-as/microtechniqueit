@@ -33,22 +33,22 @@ const products = [
 
 export function ProductsShowcase() {
   return (
-    <section className="section-padding bg-section-alt">
+    <section className="section-padding bg-section-alt" style={{ padding: '80px 0' }}>
       <div className="container-custom">
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', flexWrap: 'wrap', gap: '24px', marginBottom: '48px' }}>
           <div className="max-w-2xl">
-            <div className="badge mb-4 w-fit">Our Products</div>
-            <h2 className="text-foreground mb-4">Enterprise <span className="text-accent-gradient">Software</span></h2>
+            <div className="badge mb-4 w-fit" style={{ marginBottom: '16px' }}>Our Products</div>
+            <h2 className="text-foreground mb-4" style={{ marginBottom: '16px' }}>Enterprise <span className="text-accent-gradient">Software</span></h2>
             <p className="text-muted-foreground">Ready-to-use, scalable products built for Indian businesses.</p>
           </div>
-          <Link href="/products" className="btn-secondary">
+          <Link href="/products" className="btn-secondary" style={{ display: 'inline-flex', alignItems: 'center' }}>
             View All Products
           </Link>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-2 gap-6" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '24px' }}>
           {products.map((product) => (
-            <div key={product.slug} className="card card-lift p-8">
+            <div key={product.slug} className="card card-lift p-8" style={{ padding: '32px' }}>
               {product.badge && (
                 <span className="inline-block px-3 py-1 bg-pastel-violet text-primary text-xs font-semibold rounded-full mb-4">
                   {product.badge}
@@ -59,7 +59,7 @@ export function ProductsShowcase() {
               
               <ul className="space-y-3 mb-8">
                 {product.features.map((feature) => (
-                  <li key={feature} className="flex items-center gap-2 text-sm text-foreground">
+                  <li key={feature} className="flex items-center gap-2 text-sm text-foreground" style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '12px' }}>
                     <Check className="h-4 w-4 text-primary" />
                     {feature}
                   </li>

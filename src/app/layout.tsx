@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter, DM_Sans } from 'next/font/google';
 import './globals.css';
+import './tailwind-compiled.css';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans' });
 const dmSans = DM_Sans({ subsets: ['latin'], variable: '--font-heading' });
@@ -86,9 +87,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning className={`${inter.variable} ${dmSans.variable}`}>
-      <head>
-        <link rel="stylesheet" href="/tailwind.css?v=3" />
-      </head>
       <body className="min-h-screen bg-background text-foreground antialiased flex flex-col pt-16">
         <Providers>
           <Header />

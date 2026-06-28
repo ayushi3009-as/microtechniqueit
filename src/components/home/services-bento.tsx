@@ -18,18 +18,18 @@ const services = [
 
 export function ServicesBento() {
   return (
-    <section className="section-padding bg-section-alt">
+    <section className="section-padding bg-section-alt" style={{ padding: '80px 0' }}>
       <div className="container-custom">
-        <div className="text-center mb-12">
-          <div className="badge mb-4 mx-auto w-fit">Our Expertise</div>
-          <h2 className="text-foreground mb-4">Solutions That Drive <span className="text-accent-gradient">Growth</span></h2>
-          <p className="text-muted-foreground max-w-xl mx-auto">End-to-end technology services designed to transform your business operations and accelerate growth.</p>
+        <div className="text-center mb-12" style={{ textAlign: 'center', marginBottom: '48px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+          <div className="badge mb-4 mx-auto w-fit" style={{ margin: '0 auto 16px auto' }}>Our Expertise</div>
+          <h2 className="text-foreground mb-4" style={{ margin: '0 auto 16px auto', textAlign: 'center' }}>Solutions That Drive <span className="text-accent-gradient">Growth</span></h2>
+          <p className="text-muted-foreground max-w-xl mx-auto" style={{ margin: '0 auto', textAlign: 'center' }}>End-to-end technology services designed to transform your business operations and accelerate growth.</p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
           {services.map((service) => (
-            <Link key={service.slug} href={`/services/${service.slug}`} className="group card card-lift p-6">
-              <div className={`w-10 h-10 rounded-xl ${service.bg} flex items-center justify-center mb-4`}>
+            <Link key={service.slug} href={`/services/${service.slug}`} className="group card card-lift p-6" style={{ padding: '24px', display: 'block' }}>
+              <div className={`w-10 h-10 rounded-xl ${service.bg} flex items-center justify-center mb-4`} style={{ width: '40px', height: '40px', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '16px' }}>
                 <service.icon className="h-5 w-5 text-primary" />
               </div>
               <h3 className="text-base font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">{service.title}</h3>

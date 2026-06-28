@@ -30,10 +30,10 @@ const footerLinks = {
 export function Footer() {
   return (
     <footer className="border-t border-border bg-white">
-      <div className="container-custom py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
+      <div className="container-custom py-16" style={{ padding: '64px 0' }}>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10" style={{ display: 'flex', flexWrap: 'wrap', gap: '40px' }}>
           {/* Brand */}
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-2" style={{ flex: '1 1 300px' }}>
             <Link href="/" className="flex items-center gap-2.5 mb-4">
               <Image src="/logo.jpeg" alt="Microtechnique IT" width={32} height={32} className="rounded-md" />
               <span className="text-base font-bold text-foreground font-heading">
@@ -59,9 +59,9 @@ export function Footer() {
 
           {/* Link Columns */}
           {Object.entries(footerLinks).map(([title, links]) => (
-            <div key={title}>
-              <h3 className="text-sm font-semibold text-foreground mb-4">{title}</h3>
-              <ul className="space-y-2.5">
+            <div key={title} style={{ flex: '1 1 150px' }}>
+              <h3 className="text-sm font-semibold text-foreground mb-4" style={{ marginBottom: '16px' }}>{title}</h3>
+              <ul className="space-y-2.5" style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
                 {links.map((link) => (
                   <li key={link.href}>
                     <Link href={link.href} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
@@ -77,7 +77,7 @@ export function Footer() {
 
       {/* Bottom Bar */}
       <div className="border-t border-border">
-        <div className="container-custom py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
+        <div className="container-custom py-5 flex flex-col sm:flex-row items-center justify-between gap-3" style={{ padding: '20px 0', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '12px' }}>
           <p className="text-xs text-muted-foreground">
             &copy; {new Date().getFullYear()} Microtechnique IT & Communication Solutions. All rights reserved.
           </p>

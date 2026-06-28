@@ -9,9 +9,9 @@ export function TrustedClients() {
   const items = [...clients, ...clients, ...clients];
 
   return (
-    <section className="py-12 border-b border-border">
+    <section className="py-12 border-b border-border" style={{ padding: '60px 0' }}>
       <div className="container-custom">
-        <p className="text-center text-sm text-muted-foreground mb-8 font-medium">
+        <p className="text-center text-sm text-muted-foreground mb-8 font-medium" style={{ textAlign: 'center', marginBottom: '32px' }}>
           Trusted by businesses across India
         </p>
         <div className="relative overflow-hidden">
