@@ -86,7 +86,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning className={`${inter.variable} ${dmSans.variable}`}>
-      <body className="min-h-screen bg-background text-foreground antialiased flex flex-col pt-16">
+      <body className="min-h-screen bg-background text-foreground antialiased flex flex-col">
         <Providers>
           <Header />
           <main className="min-h-screen">{children}</main>
