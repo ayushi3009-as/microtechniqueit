@@ -49,7 +49,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             
             {/* Left Content */}
-            <div className="max-w-[700px]">
+            <div className="max-w-full lg:max-w-[650px]">
               <nav className="flex items-center gap-2 text-sm text-[#64748b] mb-8 font-medium">
                 <Link href="/" className="hover:text-[#0f172a] transition-colors">Home</Link>
                 <span>/</span>
@@ -87,9 +87,9 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
             </div>
 
             {/* Right Illustration */}
-            <div className="relative hidden lg:flex justify-center items-center h-[600px]">
+            <div className="relative hidden lg:flex justify-end items-center h-[600px] w-full">
               <div className="absolute inset-0 bg-gradient-to-tr from-[#eef2ff] to-[#f8fafc] rounded-full blur-[100px] opacity-60 z-0"></div>
-              <div className="relative z-10 w-full max-w-[500px] h-[500px] illustration-hover">
+              <div className="relative z-10 w-[90%] max-w-[500px] h-auto aspect-square illustration-hover">
                 <img src={ext.heroIllustration} alt={service.title} className="w-full h-full object-contain drop-shadow-2xl" />
                 
                 {/* Floating UI Elements */}
@@ -260,7 +260,9 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                 "{ext.testimonial.quote}"
               </h3>
               <div className="flex items-center gap-4">
-                <img src={ext.testimonial.avatar} alt="Client" className="w-16 h-16 rounded-full border-2 border-[#334155]" />
+                <div className="w-16 h-16 rounded-full border-2 border-[#334155] bg-gradient-to-tr from-[#4f46e5] to-[#9333ea] flex items-center justify-center text-xl font-bold text-white shadow-lg">
+                  {ext.testimonial.name.charAt(0)}
+                </div>
                 <div>
                   <div className="font-bold text-lg">{ext.testimonial.name}</div>
                   <div className="text-[#94a3b8]">{ext.testimonial.role}, {ext.testimonial.company}</div>
