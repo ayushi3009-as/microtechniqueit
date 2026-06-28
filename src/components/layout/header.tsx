@@ -80,10 +80,10 @@ export function Header() {
       <div className="sticky top-0 z-50 pt-4 px-4 pb-4 pointer-events-none">
         <header className="mx-auto max-w-7xl bg-white/90 backdrop-blur-md border border-slate-200 shadow-sm rounded-2xl pointer-events-auto">
           <div className="container-custom">
-            <div className="flex items-center justify-between h-16 w-full">
+            <div className="flex items-center justify-between h-16 w-full" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%', height: '64px' }}>
               
-              {/* Logo - Fixed Width */}
-              <div className="w-[200px] shrink-0">
+              {/* Logo - Fixed Width using inline style to bypass Tailwind compilation issues */}
+              <div className="shrink-0 flex items-center" style={{ width: '240px', flexShrink: 0 }}>
                 <Link href="/" className="flex items-center gap-2.5">
                   <Image src="/logo.jpeg" alt="Microtechnique IT" width={32} height={32} className="rounded-md" />
                   <span className="text-base font-bold text-foreground font-heading whitespace-nowrap">
@@ -92,8 +92,8 @@ export function Header() {
                 </Link>
               </div>
 
-              {/* Desktop Nav - Centered strictly between the 200px sidebars */}
-              <nav className="hidden xl:flex flex-1 items-center justify-center gap-6 px-4">
+              {/* Desktop Nav - Centered strictly between the sidebars */}
+              <nav className="hidden xl:flex flex-1 items-center justify-center gap-6 px-4" style={{ flex: 1, display: 'flex', justifyContent: 'center' }}>
                 {navItems.map((item) => (
                   <div
                     key={item.label}
@@ -129,8 +129,8 @@ export function Header() {
                 ))}
               </nav>
 
-              {/* Right Side - Matches Logo Width (200px) on Desktop to balance the center */}
-              <div className="w-[200px] shrink-0 flex items-center justify-end">
+              {/* Right Side - Matches Logo Width using inline style to balance the center */}
+              <div className="shrink-0 flex items-center justify-end" style={{ width: '240px', flexShrink: 0 }}>
                 <button
                   onClick={() => setMobileOpen(!mobileOpen)}
                   className="xl:hidden p-2 rounded-lg hover:bg-slate-100 transition-colors text-slate-900"
