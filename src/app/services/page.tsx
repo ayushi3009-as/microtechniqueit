@@ -121,23 +121,23 @@ export default function ServicesPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative pt-32 pb-16 overflow-hidden">
+      <section style={{ position: 'relative', paddingTop: '8rem', paddingBottom: '4rem', overflow: 'hidden' }}>
         
-        <div className="container-custom relative z-10">
-          <nav className="flex items-center gap-2 text-sm text-muted-foreground mb-8" aria-label="Breadcrumb">
-            <Link href="/" className="hover:text-primary transition-colors">Home</Link>
+        <div className="container" style={{ position: 'relative', zIndex: 10, maxWidth: '1320px', margin: '0 auto', padding: '0 1.5rem' }}>
+          <nav style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.875rem', color: '#64748b', marginBottom: '2rem' }} aria-label="Breadcrumb">
+            <Link href="/" style={{ color: '#64748b', textDecoration: 'none' }}>Home</Link>
             <span>/</span>
-            <span className="text-foreground">Services</span>
+            <span style={{ color: '#0f172a' }}>Services</span>
           </nav>
-          <div className="max-w-3xl">
-            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium bg-primary/10 text-primary border border-primary/20 mb-6">
+          <div style={{ maxWidth: '768px' }}>
+            <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', padding: '0.5rem 1rem', borderRadius: '9999px', fontSize: '0.875rem', fontWeight: 500, backgroundColor: 'rgba(99, 102, 241, 0.1)', color: '#6366f1', border: '1px solid rgba(99, 102, 241, 0.2)', marginBottom: '1.5rem' }}>
               Our Expertise
             </span>
-            <h1 className="text-foreground mb-6 font-heading">
+            <h1 style={{ color: '#0f172a', marginBottom: '1.5rem', fontFamily: 'Outfit, sans-serif', fontSize: '4rem', fontWeight: 800, lineHeight: 1.1 }}>
               Solutions That Drive{' '}
-              <span className="text-accent-gradient">Business Growth</span>
+              <span style={{ background: 'linear-gradient(to right, #6366f1, #8b5cf6)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Business Growth</span>
             </h1>
-            <p className="text-lg text-muted-foreground leading-relaxed">
+            <p style={{ fontSize: '1.125rem', color: '#64748b', lineHeight: 1.6 }}>
               From custom software development to digital marketing, we offer a comprehensive
               suite of technology services designed to transform your business operations and
               accelerate growth.
@@ -154,24 +154,25 @@ export default function ServicesPage() {
               <Link
                 key={service.slug}
                 href={`/services/${service.slug}`}
-                className={`group card rounded-2xl p-8 hover:border-primary/30 transition-all duration-300 hover:-translate-y-1 ${service.size === 'large' ? 'sm:col-span-2 lg:col-span-1' : ''}`}
+                style={{ display: 'block', padding: '2rem', borderRadius: '1rem', backgroundColor: '#ffffff', border: '1px solid #e2e8f0', textDecoration: 'none', boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.05)' }}
+                className="hover-lift"
               >
-                <div className={`p-3 rounded-xl bg-gradient-to-br ${service.gradient} w-fit mb-5`}>
-                  <service.icon className="h-6 w-6 text-foreground" />
+                <div className={`w-fit mb-5`} style={{ padding: '0.75rem', borderRadius: '0.75rem', backgroundColor: '#f1f5f9', display: 'inline-block' }}>
+                  <service.icon style={{ width: '24px', height: '24px', color: '#0f172a' }} />
                 </div>
-                <div className="flex items-start justify-between gap-4 mb-3">
-                  <h2 className="text-lg font-heading font-bold text-foreground group-hover:text-primary transition-colors">
+                <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: '1rem', marginBottom: '0.75rem' }}>
+                  <h2 style={{ fontSize: '1.25rem', fontFamily: 'Outfit, sans-serif', fontWeight: 700, color: '#0f172a', margin: 0 }}>
                     {service.title}
                   </h2>
-                  <span className="shrink-0 px-2.5 py-1 rounded-full text-xs font-semibold bg-primary/10 text-primary">
+                  <span style={{ flexShrink: 0, padding: '0.25rem 0.625rem', borderRadius: '9999px', fontSize: '0.75rem', fontWeight: 600, backgroundColor: 'rgba(99, 102, 241, 0.1)', color: '#6366f1' }}>
                     {service.stat}
                   </span>
                 </div>
-                <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+                <p style={{ fontSize: '0.875rem', color: '#64748b', lineHeight: 1.6, marginBottom: '1rem' }}>
                   {service.description}
                 </p>
-                <span className="inline-flex items-center gap-2 text-sm text-primary font-medium group-hover:gap-3 transition-all">
-                  Learn More <ArrowRight className="h-4 w-4" />
+                <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.875rem', color: '#6366f1', fontWeight: 500 }}>
+                  Learn More <ArrowRight style={{ width: '16px', height: '16px' }} />
                 </span>
               </Link>
             ))}
