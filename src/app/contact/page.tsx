@@ -12,8 +12,8 @@ export default function ContactPage() {
       <style dangerouslySetInnerHTML={{
         __html: `
           .contact-page-wrapper {
-            background-color: #030303;
-            color: #ffffff;
+            background-color: #0f172a;
+            color: #0f172a;
             font-family: inherit;
             overflow: hidden;
             min-height: 100vh;
@@ -230,7 +230,7 @@ export default function ContactPage() {
             background: rgba(0, 0, 0, 0.5);
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 18px;
-            color: #fff;
+            color: #0f172a;
             font-size: 1rem;
             padding: 0 24px;
             outline: none;
@@ -277,7 +277,7 @@ export default function ContactPage() {
             left: 16px;
             font-size: 0.85rem;
             color: #a5b4fc;
-            background: #111116; 
+            background: #f8fafc; 
             padding: 0 8px;
             border-radius: 6px;
             font-weight: 500;
@@ -288,7 +288,7 @@ export default function ContactPage() {
             border-radius: 18px;
             height: 56px;
             width: 100%;
-            color: #fff;
+            color: #0f172a;
             font-size: 1.125rem;
             font-weight: 600;
             cursor: pointer;
@@ -367,10 +367,10 @@ export default function ContactPage() {
           }
           .faq-card details[open] summary::after {
             transform: rotate(45deg);
-            color: #fff;
+            color: #0f172a;
           }
           .faq-card details[open] summary {
-            color: #fff;
+            color: #0f172a;
           }
           .faq-body {
             padding: 0 30px 24px;
@@ -422,7 +422,7 @@ export default function ContactPage() {
           .brand-logo span {
             font-size: 1.35rem;
             font-weight: 700;
-            color: #fff;
+            color: #0f172a;
             letter-spacing: -0.02em;
           }
 

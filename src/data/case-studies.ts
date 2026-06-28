@@ -30,7 +30,7 @@ export const caseStudies: readonly CaseStudy[] = [
       role: 'Operations Head, MedCare Hospital Group',
     },
     technologies: ['.NET', 'React', 'SQL Server', 'Azure', 'SignalR', 'Twilio', 'Docker'],
-    image: '/images/case-studies/medcare-hospital.webp',
+    image: '/images/portfolio/medcare-healthcare.png',
     seo: {
       metaTitle: 'MedCare Hospital Digital Transformation | Case Study | Microtechnique IT',
       metaDescription:

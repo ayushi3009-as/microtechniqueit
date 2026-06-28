@@ -36,8 +36,8 @@ export default function CaseStudiesPage() {
       <style dangerouslySetInnerHTML={{ __html: `
         .cs-page-container { 
           font-family: var(--font-sans, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif); 
-          background-color: #000; 
-          color: #fff;
+          background-color: #ffffff; 
+          color: #0f172a;
           overflow-x: hidden;
           margin: 0;
           padding: 0;
@@ -171,7 +171,7 @@ export default function CaseStudiesPage() {
           width: 60px; 
           height: 60px; 
           border-radius: 30px; 
-          background: #000; 
+          background: #ffffff; 
           border: 1px solid rgba(255,255,255,0.2); 
           display: flex; 
           align-items: center; 
@@ -185,7 +185,7 @@ export default function CaseStudiesPage() {
         .cs-timeline-step:hover .cs-timeline-dot { 
           background: #fff; 
           color: #000; 
-          border-color: #fff; 
+          border-color: #0f172a; 
           transform: scale(1.15); 
           box-shadow: 0 0 30px rgba(255,255,255,0.3); 
         }
@@ -199,13 +199,13 @@ export default function CaseStudiesPage() {
           transition: color 0.3s ease; 
         }
         .cs-timeline-step:hover .cs-timeline-label { 
-          color: #fff; 
+          color: #0f172a; 
         }
 
         /* FEATURED SECTION */
         .cs-featured { 
           padding: 120px 5%; 
-          background: #000; 
+          background: #ffffff; 
         }
         .cs-featured-inner { 
           display: flex; 
@@ -292,7 +292,7 @@ export default function CaseStudiesPage() {
         .cs-stat-value { 
           font-size: 40px; 
           font-weight: 800; 
-          color: #fff; 
+          color: #0f172a; 
           margin-bottom: 12px; 
           background: linear-gradient(135deg, #fff, #aaa);
           -webkit-background-clip: text;
@@ -307,7 +307,7 @@ export default function CaseStudiesPage() {
         /* GRID SECTION */
         .cs-grid { 
           padding: 100px 5% 160px; 
-          background: #000; 
+          background: #ffffff; 
         }
         .cs-grid-title { 
           font-size: 48px; 
@@ -374,7 +374,7 @@ export default function CaseStudiesPage() {
           font-weight: 700; 
           text-transform: uppercase;
           letter-spacing: 1px;
-          color: #fff; 
+          color: #0f172a; 
           margin-bottom: 24px; 
           align-self: flex-start; 
           border: 1px solid rgba(255,255,255,0.1);
@@ -382,7 +382,7 @@ export default function CaseStudiesPage() {
         }
         .cs-card-title { 
           font-size: 28px; 
-          color: #fff; 
+          color: #0f172a; 
           margin-bottom: 16px; 
           font-weight: 700; 
           line-height: 1.2; 
@@ -398,7 +398,7 @@ export default function CaseStudiesPage() {
           display: flex; 
           align-items: center; 
           gap: 8px; 
-          color: #fff; 
+          color: #0f172a; 
           font-size: 15px; 
           font-weight: 600; 
           transition: gap 0.3s ease; 

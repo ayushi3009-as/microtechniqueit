@@ -518,9 +518,6 @@ export default function BlogPage() {
                 src="/blog-illustration.png" 
                 alt="Blog Illustration" 
                 className="blog-hero-img"
-                onError={(e) => {
-                  (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=800';
-                }}
               />
             </div>
           </div>
@@ -563,9 +560,6 @@ export default function BlogPage() {
                   src={featured.image} 
                   alt={featured.title} 
                   className="featured-image-img"
-                  onError={(e) => {
-                    (e.target as HTMLImageElement).style.display = 'none';
-                  }}
                 />
               )}
               <span className="featured-letter">{featured.title.charAt(0)}</span>
@@ -596,9 +590,6 @@ export default function BlogPage() {
                       src={post.image} 
                       alt={post.title} 
                       className="card-image-img"
-                      onError={(e) => {
-                        (e.target as HTMLImageElement).style.display = 'none';
-                      }}
                     />
                   )}
                   <span className="card-letter">{post.title.charAt(0)}</span>
