@@ -93,7 +93,7 @@ export function Header() {
               </div>
 
               {/* Desktop Nav - Centered Flex */}
-              <nav className="hidden xl:flex flex-1 items-center justify-center gap-8 px-4">
+              <nav className="hidden xl:flex flex-1 items-center justify-center gap-4 px-4">
                 {navItems.map((item) => (
                   <div
                     key={item.label}
