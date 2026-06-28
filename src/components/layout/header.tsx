@@ -93,7 +93,7 @@ export function Header() {
               </div>
 
               {/* Desktop Nav */}
-              <nav className="hidden lg:flex items-center justify-center gap-2 flex-none">
+              <nav className="hidden lg:flex items-center justify-center gap-8 flex-none">
                 {navItems.map((item) => (
                   <div
                     key={item.label}
