@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import { Inter, DM_Sans } from 'next/font/google';
 import './globals.css';
-import './tailwind-compiled.css';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans' });
 const dmSans = DM_Sans({ subsets: ['latin'], variable: '--font-heading' });
