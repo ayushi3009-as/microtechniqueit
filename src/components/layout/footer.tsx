@@ -61,7 +61,7 @@ export function Footer() {
       <div className="container-custom" style={{ maxWidth: 1280, margin: '0 auto' }}>
         {/* ═══════════════════ TOP ROW ═══════════════════ */}
         <div
-          className="flex flex-col lg:flex-row justify-between gap-12 py-16"
+          className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-12 py-16"
           style={{ borderBottom: '1px solid var(--color-border)' }}
         >
           {/* Left — Brand + Description + Socials */}

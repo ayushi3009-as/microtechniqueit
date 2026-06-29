@@ -6,10 +6,10 @@ import { ArrowRight, Sparkles } from 'lucide-react';
 
 export function ContactCta() {
   return (
-    <section className="py-12 md:py-16 relative overflow-hidden bg-background">
+    <section className="py-24 relative overflow-hidden bg-background">
       <div className="container-custom">
         <motion.div 
-          className="relative rounded-[2rem] overflow-hidden bg-gradient-to-br from-[#0a0f2c] to-[#050816] border border-white/10 p-10 md:p-16 text-center shadow-2xl"
+          className="relative rounded-[2rem] overflow-hidden bg-gradient-to-br from-blue-700 to-indigo-950 border border-white/10 p-10 md:p-16 text-center shadow-[0_20px_50px_rgba(29,78,216,0.3)]"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-100px' }}
