@@ -58,11 +58,11 @@ export function Footer() {
     <footer
       style={{ backgroundColor: 'var(--color-card)', borderTop: '1px solid var(--color-border)' }}
     >
-      <div className="container-custom" style={{ maxWidth: 1280, margin: '0 auto' }}>
+      <div className="container-custom" style={{ maxWidth: 1280, margin: '0 auto', padding: '0 1.5rem' }}>
         {/* ═══════════════════ TOP ROW ═══════════════════ */}
         <div
-          className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-12 py-16"
-          style={{ borderBottom: '1px solid var(--color-border)' }}
+          className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-12"
+          style={{ padding: '4rem 0', borderBottom: '1px solid var(--color-border)' }}
         >
           {/* Left — Brand + Description + Socials */}
           <div className="flex-1 max-w-md">
@@ -172,8 +172,8 @@ export function Footer() {
 
         {/* ═══════════════════ MIDDLE ROW — 4-Column Links ═══════════════════ */}
         <div
-          className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 lg:gap-16 py-14"
-          style={{ borderBottom: '1px solid var(--color-border)' }}
+          className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 lg:gap-16"
+          style={{ padding: '3.5rem 0', borderBottom: '1px solid var(--color-border)' }}
         >
           {/* Products */}
           <div>
