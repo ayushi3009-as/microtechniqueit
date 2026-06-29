@@ -1,0 +1,126 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum Role {
+  WORKING_PARTNER
+  CHANNEL_PARTNER
+  SUPER_ADMIN
+}
+
+enum ProjectStatus {
+  PENDING
+  IN_PROGRESS
+  COMPLETED
+  ON_HOLD
+  CANCELLED
+}
+
+enum ReferralStatus {
+  SUBMITTED
+  UNDER_REVIEW
+  ACCEPTED
+  REJECTED
+}
+
+enum PaymentStatus {
+  PENDING
+  PAID
+  CANCELLED
+}
+
+model User {
+  id            String   @id @default(cuid())
+  email         String   @unique
+  password      String
+  firstName     String
+  lastName      String
+  phone         String?
+  role          Role
+  companyName   String?
+  gstNumber     String?
+  employeeId    String?
+  department    String?
+  isActive      Boolean  @default(true)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  // Relations
+  assignedProjects Project[]  @relation("AssignedTo")
+  referrals        Referral[] @relation("ReferredBy")
+  payments         Payment[]  @relation("PaidTo")
+
+  @@map("users")
+}
+
+model Project {
+  id          String        @id @default(cuid())
+  name        String
+  description String?
+  clientName  String
+  clientEmail String?
+  clientPhone String?
+  status      ProjectStatus @default(PENDING)
+  deadline    DateTime?
+  totalAmount Float         @default(0)
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+
+  // Relations
+  assignedToId String?
+  assignedTo   User?     @relation("AssignedTo", fields: [assignedToId], references: [id])
+  referral     Referral? @relation("FromReferral")
+  payments     Payment[] @relation("ProjectPayments")
+
+  @@map("projects")
+}
+
+model Referral {
+  id              String         @id @default(cuid())
+  customerName    String
+  customerEmail   String?
+  customerPhone   String?
+  customerCompany String?
+  productInterest String
+  budgetRange     String?
+  timeline        String?
+  requirements    String?
+  status          ReferralStatus @default(SUBMITTED)
+  finalPrice      Float?
+  commissionRate  Float?
+  commissionAmount Float?
+  commissionStatus PaymentStatus?
+  adminNotes      String?
+  createdAt       DateTime       @default(now())
+  updatedAt       DateTime       @updatedAt
+
+  // Relations
+  referredById String
+  referredBy   User    @relation("ReferredBy", fields: [referredById], references: [id])
+  projectId    String? @unique
+  project      Project? @relation("FromReferral", fields: [projectId], references: [id])
+
+  @@map("referrals")
+}
+
+model Payment {
+  id          String        @id @default(cuid())
+  amount      Float
+  description String?
+  status      PaymentStatus @default(PENDING)
+  paidAt      DateTime?
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+
+  // Relations
+  paidToId  String
+  paidTo    User    @relation("PaidTo", fields: [paidToId], references: [id])
+  projectId String?
+  project   Project? @relation("ProjectPayments", fields: [projectId], references: [id])
+
+  @@map("payments")
+}

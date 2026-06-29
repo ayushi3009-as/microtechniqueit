@@ -1,0 +1,26 @@
+export enum Role {
+  WORKING_PARTNER = 'WORKING_PARTNER',
+  CHANNEL_PARTNER = 'CHANNEL_PARTNER',
+  SUPER_ADMIN = 'SUPER_ADMIN',
+}
+
+export enum ProjectStatus {
+  PENDING = 'PENDING',
+  IN_PROGRESS = 'IN_PROGRESS',
+  COMPLETED = 'COMPLETED',
+  ON_HOLD = 'ON_HOLD',
+  CANCELLED = 'CANCELLED',
+}
+
+export enum ReferralStatus {
+  SUBMITTED = 'SUBMITTED',
+  UNDER_REVIEW = 'UNDER_REVIEW',
+  ACCEPTED = 'ACCEPTED',
+  REJECTED = 'REJECTED',
+}
+
+export enum PaymentStatus {
+  PENDING = 'PENDING',
+  PAID = 'PAID',
+  CANCELLED = 'CANCELLED',
+}
