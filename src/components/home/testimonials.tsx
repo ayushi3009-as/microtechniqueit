@@ -32,7 +32,7 @@ export function Testimonials() {
   const [activeTab, setActiveTab] = useState(0);
 
   return (
-    <section className="section-padding bg-[#050816] relative overflow-hidden">
+    <section className="section-padding bg-background relative overflow-hidden">
       <div className="container-custom relative z-10">
         
         {/* Header */}
@@ -54,8 +54,8 @@ export function Testimonials() {
               onClick={() => setActiveTab(idx)}
               className={`px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${
                 activeTab === idx 
-                  ? 'bg-primary text-white shadow-[0_0_15px_rgba(37,99,235,0.4)]' 
-                  : 'bg-white/5 text-muted-foreground hover:bg-white/10 hover:text-white'
+                  ? 'bg-primary text-foreground shadow-[0_0_15px_rgba(37,99,235,0.4)]' 
+                  : 'bg-card/50 text-muted-foreground hover:bg-muted hover:text-foreground'
               }`}
             >
               {tab}
@@ -79,15 +79,15 @@ export function Testimonials() {
                 style={{ gap: '24px' }}
               >
                 {videoReviews.map((vid, i) => (
-                  <div key={i} className="card group overflow-hidden bg-white/[0.02] border-white/10 hover:border-white/20" style={{ padding: '16px' }}>
-                    <div className={`relative aspect-video rounded-xl bg-gradient-to-br ${vid.thumb} border border-white/5 flex items-center justify-center mb-4 overflow-hidden group-hover:scale-[1.02] transition-transform duration-500 cursor-pointer`}>
-                      <div className="w-14 h-14 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center border border-white/20 group-hover:bg-primary/90 transition-colors shadow-lg z-10 relative">
-                        <Play className="w-6 h-6 text-white ml-1" fill="currentColor" />
+                  <div key={i} className="card group overflow-hidden bg-card border-border hover:border-border" style={{ padding: '16px' }}>
+                    <div className={`relative aspect-video rounded-xl bg-gradient-to-br ${vid.thumb} border border-border/50 flex items-center justify-center mb-4 overflow-hidden group-hover:scale-[1.02] transition-transform duration-500 cursor-pointer`}>
+                      <div className="w-14 h-14 rounded-full bg-muted backdrop-blur-md flex items-center justify-center border border-border group-hover:bg-primary/90 transition-colors shadow-lg z-10 relative">
+                        <Play className="w-6 h-6 text-foreground ml-1" fill="currentColor" />
                       </div>
                       {/* Fake Thumbnail image effect */}
-                      <div className="absolute inset-0 bg-white/5 backdrop-blur-[2px]" />
+                      <div className="absolute inset-0 bg-card/50 backdrop-blur-[2px]" />
                     </div>
-                    <h3 className="font-semibold text-lg text-white/90">{vid.name}</h3>
+                    <h3 className="font-semibold text-lg text-foreground">{vid.name}</h3>
                     <p className="text-sm text-muted-foreground">{vid.company}</p>
                   </div>
                 ))}
@@ -107,27 +107,27 @@ export function Testimonials() {
                   <div className="flex gap-1 mb-2">
                     {[1, 2, 3, 4, 5].map(i => <Star key={i} className="w-6 h-6 text-yellow-400" fill="currentColor" />)}
                   </div>
-                  <div className="text-xl font-bold text-white/90 mb-1">4.9/5 Rating</div>
+                  <div className="text-xl font-bold text-foreground mb-1">4.9/5 Rating</div>
                   <div className="text-sm text-muted-foreground">Based on 200+ Google Reviews</div>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2" style={{ gap: '24px' }}>
                   {googleReviews.map((review, i) => (
-                    <div key={i} className="card bg-white/[0.02] border-white/10 flex flex-col h-full" style={{ padding: '24px' }}>
+                    <div key={i} className="card bg-card border-border flex flex-col h-full" style={{ padding: '24px' }}>
                       <div className="flex gap-1 mb-4">
                         {Array.from({length: 5}).map((_, j) => (
-                          <Star key={j} className={`w-4 h-4 ${j < review.rating ? 'text-yellow-400' : 'text-white/20'}`} fill={j < review.rating ? "currentColor" : "none"} />
+                          <Star key={j} className={`w-4 h-4 ${j < review.rating ? 'text-yellow-400' : 'text-muted-foreground/50'}`} fill={j < review.rating ? "currentColor" : "none"} />
                         ))}
                       </div>
-                      <p className="text-white/80 leading-relaxed text-sm mb-6 flex-1 italic">
+                      <p className="text-foreground/80 leading-relaxed text-sm mb-6 flex-1 italic">
                         "{review.text}"
                       </p>
                       <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center text-white font-bold text-sm">
+                        <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center text-foreground font-bold text-sm">
                           {review.name.charAt(0)}
                         </div>
                         <div>
-                          <div className="font-semibold text-white/90 text-sm">{review.name}</div>
+                          <div className="font-semibold text-foreground text-sm">{review.name}</div>
                           <div className="text-xs text-muted-foreground">{review.company}</div>
                         </div>
                       </div>
@@ -149,17 +149,17 @@ export function Testimonials() {
                 style={{ gap: '24px' }}
               >
                 {clientPhotos.map((photo, i) => (
-                  <div key={i} className="card bg-white/[0.02] border-white/10 text-center relative overflow-hidden" style={{ padding: '24px' }}>
-                    <Quote className="absolute top-4 left-4 w-8 h-8 text-white/5 rotate-180" />
+                  <div key={i} className="card bg-card border-border text-center relative overflow-hidden" style={{ padding: '24px' }}>
+                    <Quote className="absolute top-4 left-4 w-8 h-8 text-foreground/5 rotate-180" />
                     
-                    <div className="w-16 h-16 mx-auto rounded-full bg-gradient-to-br from-blue-600/30 to-purple-600/30 border border-white/10 flex items-center justify-center text-xl font-bold text-white mb-4 shadow-inner">
+                    <div className="w-16 h-16 mx-auto rounded-full bg-gradient-to-br from-blue-600/30 to-purple-600/30 border border-border flex items-center justify-center text-xl font-bold text-foreground mb-4 shadow-inner">
                       {photo.initials}
                     </div>
                     
-                    <p className="text-sm text-white/80 italic mb-4">"{photo.quote}"</p>
+                    <p className="text-sm text-foreground/80 italic mb-4">"{photo.quote}"</p>
                     
                     <div>
-                      <div className="font-semibold text-white/90 text-sm">{photo.name}</div>
+                      <div className="font-semibold text-foreground text-sm">{photo.name}</div>
                       <div className="text-xs text-primary">{photo.role}, {photo.company}</div>
                     </div>
                   </div>

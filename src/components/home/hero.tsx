@@ -77,7 +77,7 @@ export function HeroSection() {
     <section className="relative min-h-[100vh] flex items-center justify-center overflow-hidden bg-background pt-24 pb-12">
       {/* Background Gradient & Effects */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#050816] via-[#0a0f2c] to-[#050816] opacity-90" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background opacity-90" />
         
         {/* Animated Particles/Dots Network (CSS based) */}
         <div className="absolute inset-0 opacity-30">
@@ -113,7 +113,7 @@ export function HeroSection() {
             transition={{ duration: 0.8, staggerChildren: 0.2 }}
           >
             <motion.div 
-              className="badge mb-6 backdrop-blur-md bg-white/5 border-white/10"
+              className="badge mb-6 backdrop-blur-md bg-card/50 border-border"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
             >
@@ -144,7 +144,7 @@ export function HeroSection() {
                     animate={{ y: 0, opacity: 1 }}
                     exit={{ y: -20, opacity: 0 }}
                     transition={{ duration: 0.4, ease: "easeOut" }}
-                    className="absolute inset-0 font-semibold text-white/90"
+                    className="absolute inset-0 font-semibold text-foreground"
                   >
                     {expertiseList[activeExpertise]}
                   </motion.span>
@@ -161,7 +161,7 @@ export function HeroSection() {
               <Link href="/contact" className="btn-primary w-full sm:w-auto text-base py-3.5 shadow-[0_0_20px_rgba(37,99,235,0.3)]">
                 🚀 Book Free Demo
               </Link>
-              <Link href="/portfolio" className="btn-secondary w-full sm:w-auto text-base py-3.5 bg-white/5 hover:bg-white/10 border-white/10">
+              <Link href="/portfolio" className="btn-secondary w-full sm:w-auto text-base py-3.5 bg-card/50 hover:bg-muted border-border">
                 ▶️ Watch Live Demo
               </Link>
             </motion.div>
@@ -177,12 +177,12 @@ export function HeroSection() {
             <div className="relative rotate-3d hover:transform hover:rotate-y-[-5deg] hover:rotate-x-[2deg] transition-transform duration-700 w-full max-w-[600px] mx-auto">
               
               {/* Laptop Screen Frame */}
-              <div className="laptop-frame relative bg-[#0a0f2c] p-2 aspect-[16/10] shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
+              <div className="laptop-frame relative bg-card p-2 aspect-[16/10] shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
                 
                 {/* Screen Content / Dashboard */}
-                <div className="relative w-full h-full bg-[#050816] rounded overflow-hidden flex flex-col border border-white/5">
+                <div className="relative w-full h-full bg-background rounded overflow-hidden flex flex-col border border-border/50">
                   {/* Fake Top Bar */}
-                  <div className="h-6 bg-white/5 flex items-center px-3 border-b border-white/5">
+                  <div className="h-6 bg-card/50 flex items-center px-3 border-b border-border/50">
                     <div className="flex gap-1.5">
                       <div className="w-2 h-2 rounded-full bg-red-500/80" />
                       <div className="w-2 h-2 rounded-full bg-amber-500/80" />
@@ -206,8 +206,8 @@ export function HeroSection() {
                           return (
                             <>
                               <div className="flex items-center justify-between mb-4">
-                                <h3 className="text-sm font-semibold text-white/90">{dash.name} Overview</h3>
-                                <div className={`px-2 py-0.5 rounded text-[10px] font-medium bg-gradient-to-r ${dash.color} text-white`}>
+                                <h3 className="text-sm font-semibold text-foreground">{dash.name} Overview</h3>
+                                <div className={`px-2 py-0.5 rounded text-[10px] font-medium bg-gradient-to-r ${dash.color} text-foreground`}>
                                   Live
                                 </div>
                               </div>
@@ -215,20 +215,20 @@ export function HeroSection() {
                               {/* Premium Stats Grid */}
                               <div className="grid grid-cols-3 gap-3 mb-4">
                                 {dash.stats.map((stat, sIdx) => (
-                                  <div key={sIdx} className="bg-black/20 rounded-lg p-3 border border-white/5 backdrop-blur-sm">
-                                    <div className="text-[10px] text-white/40 font-medium tracking-wider uppercase mb-1">{stat.label}</div>
-                                    <div className="text-lg font-semibold text-white/90">{stat.value}</div>
+                                  <div key={sIdx} className="bg-muted rounded-lg p-3 border border-border/50 backdrop-blur-sm">
+                                    <div className="text-[10px] text-muted-foreground font-medium tracking-wider uppercase mb-1">{stat.label}</div>
+                                    <div className="text-lg font-semibold text-foreground">{stat.value}</div>
                                   </div>
                                 ))}
                               </div>
 
                               {/* Animated Chart Area */}
-                              <div className="flex-1 rounded-lg border border-white/5 bg-black/20 p-4 relative overflow-hidden flex flex-col justify-end">
+                              <div className="flex-1 rounded-lg border border-border/50 bg-muted p-4 relative overflow-hidden flex flex-col justify-end">
                                 {/* Grid lines */}
                                 <div className="absolute inset-0 flex flex-col justify-between p-4 opacity-10">
-                                  <div className="w-full border-b border-white border-dashed"></div>
-                                  <div className="w-full border-b border-white border-dashed"></div>
-                                  <div className="w-full border-b border-white border-dashed"></div>
+                                  <div className="w-full border-b border-border border-dashed"></div>
+                                  <div className="w-full border-b border-border border-dashed"></div>
+                                  <div className="w-full border-b border-border border-dashed"></div>
                                 </div>
                                 {/* Animated Bars */}
                                 <div className="relative z-10 flex items-end justify-between h-full gap-2 w-full mt-4">

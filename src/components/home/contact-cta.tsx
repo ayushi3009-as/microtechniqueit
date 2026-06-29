@@ -9,7 +9,7 @@ export function ContactCta() {
     <section className="py-24 relative overflow-hidden bg-background">
       <div className="container-custom">
         <motion.div 
-          className="relative rounded-[2rem] overflow-hidden bg-gradient-to-br from-[#0a0f2c] to-[#050816] border border-white/10 p-10 md:p-16 text-center shadow-2xl"
+          className="relative rounded-[2rem] overflow-hidden bg-gradient-to-br from-card to-background border border-border p-10 md:p-16 text-center shadow-2xl"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-100px' }}
@@ -30,7 +30,7 @@ export function ContactCta() {
           </div>
 
           <div className="relative z-10 flex flex-col items-center">
-            <div className="w-16 h-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center mb-8 backdrop-blur-sm">
+            <div className="w-16 h-16 rounded-2xl bg-card/50 border border-border flex items-center justify-center mb-8 backdrop-blur-sm">
               <Sparkles className="w-8 h-8 text-accent" />
             </div>
             
@@ -48,7 +48,7 @@ export function ContactCta() {
                 Schedule a Consultation
                 <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
-              <Link href="tel:+916355997080" className="btn-secondary text-base py-3.5 px-8 bg-white/5 border-white/10 hover:bg-white/10">
+              <Link href="tel:+916355997080" className="btn-secondary text-base py-3.5 px-8 bg-card/50 border-border hover:bg-muted">
                 Call +91 6355997080
               </Link>
             </div>
