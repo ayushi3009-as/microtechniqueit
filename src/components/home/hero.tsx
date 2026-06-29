@@ -2,11 +2,13 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const dashboards = [
   {
     name: 'Billing',
+    image: '/images/hero/dashboard-billing.jpg',
     color: 'from-blue-500 to-cyan-400',
     stats: [
       { label: 'Total Revenue', value: '₹4.2M' },
@@ -16,6 +18,7 @@ const dashboards = [
   },
   {
     name: 'CRM',
+    image: '/images/hero/dashboard-crm.jpg',
     color: 'from-purple-500 to-pink-500',
     stats: [
       { label: 'New Leads', value: '845' },
@@ -25,6 +28,7 @@ const dashboards = [
   },
   {
     name: 'ERP',
+    image: '/images/hero/dashboard-erp.jpg',
     color: 'from-emerald-400 to-cyan-500',
     stats: [
       { label: 'Orders', value: '3,450' },
@@ -34,6 +38,7 @@ const dashboards = [
   },
   {
     name: 'HRMS',
+    image: '/images/hero/dashboard-hrms.jpg',
     color: 'from-orange-400 to-pink-500',
     stats: [
       { label: 'Employees', value: '450' },
@@ -222,26 +227,15 @@ export function HeroSection() {
                                 ))}
                               </div>
 
-                              {/* Animated Chart Area */}
-                              <div className="flex-1 rounded-lg border border-border/50 bg-muted p-4 relative overflow-hidden flex flex-col justify-end">
-                                {/* Grid lines */}
-                                <div className="absolute inset-0 flex flex-col justify-between p-4 opacity-10">
-                                  <div className="w-full border-b border-border border-dashed"></div>
-                                  <div className="w-full border-b border-border border-dashed"></div>
-                                  <div className="w-full border-b border-border border-dashed"></div>
-                                </div>
-                                {/* Animated Bars */}
-                                <div className="relative z-10 flex items-end justify-between h-full gap-2 w-full mt-4">
-                                  {Array.from({ length: 8 }).map((_, barIdx) => (
-                                    <motion.div 
-                                      key={barIdx} 
-                                      initial={{ height: 0 }}
-                                      animate={{ height: `${Math.max(30, Math.random() * 100)}%` }}
-                                      transition={{ duration: 1, delay: barIdx * 0.05, ease: "easeOut" }}
-                                      className={`w-full max-w-[40px] rounded-t-sm bg-gradient-to-t ${dash.color} opacity-90`}
-                                    />
-                                  ))}
-                                </div>
+                              {/* Real Image Area */}
+                              <div className="flex-1 rounded-lg border border-border/50 bg-muted relative overflow-hidden mt-4">
+                                <Image 
+                                  src={dash.image}
+                                  alt={`${dash.name} Dashboard Interface`}
+                                  fill
+                                  className="object-cover object-top opacity-90 hover:opacity-100 transition-opacity duration-500"
+                                  unoptimized
+                                />
                               </div>
                             </>
                           );
