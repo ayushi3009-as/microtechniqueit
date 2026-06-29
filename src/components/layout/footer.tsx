@@ -125,7 +125,7 @@ export function Footer() {
           </div>
 
           {/* Right — Newsletter */}
-          <div className="flex-1 max-w-md lg:ml-auto">
+          <div className="flex-1 max-w-md lg:max-w-lg lg:ml-auto">
             <h3
               className="font-heading text-lg font-bold mb-2"
               style={{ color: 'var(--color-foreground)' }}
