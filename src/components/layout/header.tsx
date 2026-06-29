@@ -468,15 +468,6 @@ export function Header() {
                 Log in
               </Link>
 
-              {/* Book Demo CTA */}
-              <Link
-                href="/contact"
-                className="btn-primary hidden sm:inline-flex"
-                style={{ padding: '0.5rem 1.25rem', fontSize: '0.8125rem', borderRadius: 10 }}
-              >
-                <span>Book Demo</span>
-              </Link>
-
               {/* Mobile Hamburger */}
               <button
                 onClick={() => setMobileOpen(!mobileOpen)}
