@@ -78,36 +78,32 @@
 }
 
 /* ─── Base ─── */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 
-html {
-  scroll-behavior: smooth;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
 
-body {
-  font-family: var(--font-sans);
-  background-color: var(--color-background);
-  color: var(--color-foreground);
-  line-height: 1.6;
-  overflow-x: hidden;
-}
+  /* ─── Typography ─── */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    line-height: 1.15;
+    letter-spacing: -0.025em;
+    color: var(--color-foreground);
+  }
 
-/* ─── Typography ─── */
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-heading);
-  line-height: 1.15;
-  letter-spacing: -0.025em;
-  color: var(--color-foreground);
+  h1 { font-size: clamp(2.25rem, 5vw, 3.75rem); font-weight: 700; }
+  h2 { font-size: clamp(1.75rem, 4vw, 2.75rem); font-weight: 700; }
 }
-
-h1 { font-size: clamp(2.25rem, 5vw, 3.75rem); font-weight: 700; }
-h2 { font-size: clamp(1.75rem, 4vw, 2.75rem); font-weight: 700; }
 h3 { font-size: 1.25rem; font-weight: 600; }
 
 /* ─── Layout Utilities ─── */
