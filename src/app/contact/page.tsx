@@ -12,8 +12,8 @@ export default function ContactPage() {
       <style dangerouslySetInnerHTML={{
         __html: `
           .contact-page-wrapper {
-            background-color: #ffffff;
-            color: #0f172a;
+            background-color: var(--color-background);
+            color: var(--color-foreground);
             font-family: inherit;
             overflow: hidden;
             min-height: 100vh;
@@ -51,7 +51,7 @@ export default function ContactPage() {
           }
           .hero-subheadline {
             font-size: 1.25rem;
-            color: #94a3b8;
+            color: var(--color-muted-foreground);
             line-height: 1.7;
             margin-bottom: 40px;
             font-weight: 400;
@@ -101,7 +101,7 @@ export default function ContactPage() {
             margin: 0 auto;
           }
           .glass-contact-card {
-            background: #ffffff;
+            background: var(--color-card);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
             border: 1px solid rgba(0, 0, 0, 0.05);
@@ -113,7 +113,7 @@ export default function ContactPage() {
             align-items: center;
             text-align: center;
             text-decoration: none;
-            color: #0f172a;
+            color: var(--color-foreground);
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
             position: relative;
             overflow: hidden;
@@ -128,7 +128,7 @@ export default function ContactPage() {
           }
           .glass-contact-card:hover {
             transform: translateY(-12px);
-            background: #f8fafc;
+            background: var(--color-background-secondary);
             border-color: rgba(99, 102, 241, 0.4);
             box-shadow: 0 20px 40px rgba(99, 102, 241, 0.15);
           }
@@ -169,7 +169,7 @@ export default function ContactPage() {
           }
           .contact-card-desc {
             font-size: 0.9rem;
-            color: #64748b;
+            color: var(--color-muted-foreground);
           }
 
           /* Form & FAQ Layout */
@@ -185,7 +185,7 @@ export default function ContactPage() {
 
           /* Form Styles */
           .premium-form-container {
-            background: #ffffff;
+            background: var(--color-card);
             backdrop-filter: blur(24px);
             -webkit-backdrop-filter: blur(24px);
             border: 1px solid rgba(0, 0, 0, 0.05);
@@ -216,7 +216,7 @@ export default function ContactPage() {
             letter-spacing: -0.02em;
           }
           .form-heading p {
-            color: #94a3b8;
+            color: var(--color-muted-foreground);
             font-size: 1.1rem;
             line-height: 1.6;
           }
@@ -227,10 +227,10 @@ export default function ContactPage() {
           .input-wrap input, 
           .input-wrap textarea {
             width: 100%;
-            background: #f8fafc;
+            background: var(--color-background-secondary);
             border: 1px solid var(--color-border);
             border-radius: 18px;
-            color: #0f172a;
+            color: var(--color-foreground);
             font-size: 1rem;
             padding: 0 24px;
             outline: none;
@@ -250,7 +250,7 @@ export default function ContactPage() {
             position: absolute;
             left: 24px;
             top: 18px;
-            color: #64748b;
+            color: var(--color-muted-foreground);
             pointer-events: none;
             transition: all 0.2s ease-out;
             font-size: 1rem;
@@ -277,7 +277,7 @@ export default function ContactPage() {
             left: 16px;
             font-size: 0.85rem;
             color: #a5b4fc;
-            background: #f8fafc; 
+            background: var(--color-background-secondary); 
             padding: 0 8px;
             border-radius: 6px;
             font-weight: 500;
@@ -288,7 +288,7 @@ export default function ContactPage() {
             border-radius: 18px;
             height: 56px;
             width: 100%;
-            color: #0f172a;
+            color: var(--color-foreground);
             font-size: 1.125rem;
             font-weight: 600;
             cursor: pointer;
@@ -353,7 +353,7 @@ export default function ContactPage() {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            color: #0f172a;
+            color: var(--color-foreground);
           }
           .faq-card summary::-webkit-details-marker {
             display: none;
@@ -367,14 +367,14 @@ export default function ContactPage() {
           }
           .faq-card details[open] summary::after {
             transform: rotate(45deg);
-            color: #0f172a;
+            color: var(--color-foreground);
           }
           .faq-card details[open] summary {
-            color: #0f172a;
+            color: var(--color-foreground);
           }
           .faq-body {
             padding: 0 30px 24px;
-            color: #94a3b8;
+            color: var(--color-muted-foreground);
             line-height: 1.7;
             font-size: 1rem;
             animation: fadeInDown 0.3s ease-out;
@@ -395,7 +395,7 @@ export default function ContactPage() {
             font-size: 0.875rem;
             text-transform: uppercase;
             letter-spacing: 0.25em;
-            color: #64748b;
+            color: var(--color-muted-foreground);
             margin-bottom: 50px;
             font-weight: 600;
           }
@@ -422,7 +422,7 @@ export default function ContactPage() {
           .brand-logo span {
             font-size: 1.35rem;
             font-weight: 700;
-            color: #0f172a;
+            color: var(--color-foreground);
             letter-spacing: -0.02em;
           }
 

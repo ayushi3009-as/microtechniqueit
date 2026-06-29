@@ -18,8 +18,8 @@ export default function BlogPage() {
       <style dangerouslySetInnerHTML={{ __html: `
         .blog-page-container {
           font-family: var(--font-sans, system-ui, -apple-system, sans-serif);
-          background-color: #ffffff;
-          color: #0f172a;
+          background-color: var(--color-background);
+          color: var(--color-foreground);
           min-height: 100vh;
         }
         
@@ -73,7 +73,7 @@ export default function BlogPage() {
         .blog-hero-desc {
           font-size: 1.25rem;
           line-height: 1.6;
-          color: #64748b;
+          color: var(--color-muted-foreground);
           max-width: 480px; /* Narrow paragraph */
         }
 
@@ -119,7 +119,7 @@ export default function BlogPage() {
           font-size: 1.75rem;
           font-weight: 700;
           margin-bottom: 40px;
-          color: #0f172a;
+          color: var(--color-foreground);
           display: flex;
           align-items: center;
           gap: 16px;
@@ -135,7 +135,7 @@ export default function BlogPage() {
           display: grid;
           grid-template-columns: 1.1fr 1fr;
           gap: 60px;
-          background: #ffffff;
+          background: var(--color-card);
           border-radius: 40px;
           padding: 60px;
           border: 1px solid rgba(0,0,0,0.05);
@@ -162,7 +162,7 @@ export default function BlogPage() {
           align-items: center;
           gap: 20px;
           font-size: 0.9rem;
-          color: #64748b;
+          color: var(--color-muted-foreground);
           flex-wrap: wrap;
         }
 
@@ -188,7 +188,7 @@ export default function BlogPage() {
           font-size: 2.75rem;
           line-height: 1.15;
           font-weight: 800;
-          color: #0f172a;
+          color: var(--color-foreground);
           transition: color 0.3s ease;
           letter-spacing: -0.02em;
         }
@@ -200,7 +200,7 @@ export default function BlogPage() {
         .featured-excerpt {
           font-size: 1.125rem;
           line-height: 1.7;
-          color: #475569;
+          color: var(--color-muted-foreground);
           max-width: 460px; /* Narrow width */
         }
 
@@ -275,7 +275,7 @@ export default function BlogPage() {
           padding: 10px 24px;
           border-radius: 100px;
           background: rgba(0,0,0,0.02);
-          color: #64748b;
+          color: var(--color-muted-foreground);
           font-weight: 600;
           font-size: 0.9rem;
           border: 1px solid rgba(0,0,0,0.05);
@@ -286,7 +286,7 @@ export default function BlogPage() {
 
         .cat-btn:hover {
           background: rgba(0, 0, 0, 0.05);
-          color: #0f172a;
+          color: var(--color-foreground);
         }
 
         .cat-btn.active {
@@ -307,7 +307,7 @@ export default function BlogPage() {
         }
 
         .grid-card {
-          background: #ffffff;
+          background: var(--color-card);
           border-radius: 28px;
           border: 1px solid rgba(0,0,0,0.05);
           overflow: hidden;
@@ -326,7 +326,7 @@ export default function BlogPage() {
 
         .card-image-wrap {
           height: 240px;
-          background: #f8fafc;
+          background: var(--color-background-secondary);
           display: flex;
           align-items: center;
           justify-content: center;
@@ -382,7 +382,7 @@ export default function BlogPage() {
           font-size: 1.5rem;
           line-height: 1.35;
           font-weight: 700;
-          color: #0f172a;
+          color: var(--color-foreground);
           margin-bottom: 16px;
           display: -webkit-box;
           -webkit-line-clamp: 2;
@@ -398,7 +398,7 @@ export default function BlogPage() {
         .card-excerpt {
           font-size: 1rem;
           line-height: 1.6;
-          color: #64748b;
+          color: var(--color-muted-foreground);
           margin-bottom: 28px;
           display: -webkit-box;
           -webkit-line-clamp: 3;
@@ -439,7 +439,7 @@ export default function BlogPage() {
         .author-name {
           font-size: 0.9rem;
           font-weight: 600;
-          color: #475569;
+          color: var(--color-muted-foreground);
         }
 
         .card-read-time {
@@ -447,7 +447,7 @@ export default function BlogPage() {
           align-items: center;
           gap: 6px;
           font-size: 0.8rem;
-          color: #64748b;
+          color: var(--color-muted-foreground);
           font-weight: 500;
         }
 

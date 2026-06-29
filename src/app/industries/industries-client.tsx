@@ -66,7 +66,7 @@ export default function IndustriesClient() {
     }
     .ind-subtitle {
       font-size: 1.125rem;
-      color: #94a3b8;
+      color: var(--color-muted-foreground);
       line-height: 1.6;
       margin: 0;
     }
@@ -92,7 +92,7 @@ export default function IndustriesClient() {
     
     .ind-bento {
       padding: 100px 0;
-      background: #f8fafc;
+      background: var(--color-background-secondary);
     }
     .ind-bento-grid {
       display: grid;
@@ -123,10 +123,10 @@ export default function IndustriesClient() {
       }
     }
     .bento-card {
-      background: #ffffff;
+      background: var(--color-card);
       border-radius: 24px;
       padding: 32px;
-      border: 1px solid #e2e8f0;
+      border: 1px solid var(--color-border);
       box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
       transition: all 0.3s ease;
       display: flex;
@@ -144,12 +144,12 @@ export default function IndustriesClient() {
     .bento-card h3 {
       font-size: 1.5rem;
       margin: 0 0 12px 0;
-      color: #0f172a;
+      color: var(--color-foreground);
       font-weight: 700;
     }
     .bento-card p {
       font-size: 0.95rem;
-      color: #64748b;
+      color: var(--color-muted-foreground);
       margin: 0 0 24px 0;
       line-height: 1.5;
     }
@@ -161,13 +161,13 @@ export default function IndustriesClient() {
       align-items: center;
       justify-content: center;
       margin-bottom: 24px;
-      background: #eff6ff;
+      background: var(--color-surface);
       color: #3b82f6;
     }
     
     .ind-timeline {
       padding: 100px 0;
-      background: #ffffff;
+      background: var(--color-card);
     }
     .timeline-wrapper {
       display: flex;
@@ -191,7 +191,7 @@ export default function IndustriesClient() {
       width: 48px;
       height: 48px;
       border-radius: 50%;
-      background: #eff6ff;
+      background: var(--color-surface);
       color: #3b82f6;
       display: flex;
       align-items: center;
@@ -201,7 +201,7 @@ export default function IndustriesClient() {
       margin-bottom: 24px;
       position: relative;
       z-index: 2;
-      border: 2px solid #bfdbfe;
+      border: 2px solid var(--color-border);
     }
     .timeline-line {
       display: none;
@@ -214,7 +214,7 @@ export default function IndustriesClient() {
         left: 48px;
         right: -32px;
         height: 2px;
-        background: #e2e8f0;
+        background: var(--color-border);
         z-index: 1;
       }
       .timeline-item:last-child .timeline-line {
@@ -225,11 +225,11 @@ export default function IndustriesClient() {
       font-size: 1.25rem;
       font-weight: 700;
       margin: 0 0 12px 0;
-      color: #0f172a;
+      color: var(--color-foreground);
     }
     .timeline-desc {
       font-size: 0.95rem;
-      color: #64748b;
+      color: var(--color-muted-foreground);
       margin: 0;
       line-height: 1.6;
     }
@@ -277,14 +277,14 @@ export default function IndustriesClient() {
     }
     .stat-label {
       font-size: 1.1rem;
-      color: #94a3b8;
+      color: var(--color-muted-foreground);
       margin: 0;
       font-weight: 500;
     }
     
     .ind-cta {
       padding: 120px 0;
-      background: #f8fafc;
+      background: var(--color-background-secondary);
       text-align: center;
     }
     .cta-box {
@@ -313,7 +313,7 @@ export default function IndustriesClient() {
       display: inline-flex;
       align-items: center;
       gap: 12px;
-      background: #ffffff;
+      background: var(--color-card);
       color: #1e3a8a;
       padding: 18px 40px;
       border-radius: 99px;
