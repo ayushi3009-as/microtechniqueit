@@ -204,40 +204,18 @@ export function HeroSection() {
                         animate={{ opacity: 1, scale: 1, filter: 'blur(0px)' }}
                         exit={{ opacity: 0, scale: 1.05, filter: 'blur(4px)' }}
                         transition={{ duration: 0.4, ease: 'easeOut' }}
-                        className="absolute inset-0 p-4 flex flex-col"
+                        className="absolute inset-0"
                       >
                         {(() => {
                           const dash = dashboards[activeDashboard];
                           return (
-                            <>
-                              <div className="flex items-center justify-between mb-4">
-                                <h3 className="text-sm font-semibold text-foreground">{dash.name} Overview</h3>
-                                <div className={`px-2 py-0.5 rounded text-[10px] font-medium bg-gradient-to-r ${dash.color} text-foreground`}>
-                                  Live
-                                </div>
-                              </div>
-
-                              {/* Premium Stats Grid */}
-                              <div className="grid grid-cols-3 gap-3 mb-4">
-                                {dash.stats.map((stat, sIdx) => (
-                                  <div key={sIdx} className="bg-muted rounded-lg p-3 border border-border/50 backdrop-blur-sm">
-                                    <div className="text-[10px] text-muted-foreground font-medium tracking-wider uppercase mb-1">{stat.label}</div>
-                                    <div className="text-lg font-semibold text-foreground">{stat.value}</div>
-                                  </div>
-                                ))}
-                              </div>
-
-                              {/* Real Image Area */}
-                              <div className="flex-1 rounded-lg border border-border/50 bg-muted relative overflow-hidden mt-4">
-                                <Image 
-                                  src={dash.image}
-                                  alt={`${dash.name} Dashboard Interface`}
-                                  fill
-                                  className="object-cover object-top opacity-90 hover:opacity-100 transition-opacity duration-500"
-                                  unoptimized
-                                />
-                              </div>
-                            </>
+                            <Image 
+                              src={dash.image}
+                              alt={`${dash.name} Dashboard Interface`}
+                              fill
+                              className="object-cover object-top opacity-90 hover:opacity-100 transition-opacity duration-500"
+                              unoptimized
+                            />
                           );
                         })()}
                       </motion.div>
