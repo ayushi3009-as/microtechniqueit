@@ -457,6 +457,17 @@ export function Header() {
                 )}
               </button>
 
+              {/* Partner with Us Link */}
+              <Link
+                href="/partner-with-us"
+                className="hidden sm:inline-flex items-center text-[14px] font-semibold transition-colors"
+                style={{ color: 'var(--color-foreground)' }}
+                onMouseEnter={(e) => e.currentTarget.style.color = 'var(--primary)'}
+                onMouseLeave={(e) => e.currentTarget.style.color = 'var(--color-foreground)'}
+              >
+                Partner with Us
+              </Link>
+
               {/* Login Link */}
               <Link
                 href="/login"
