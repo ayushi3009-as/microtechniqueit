@@ -138,7 +138,7 @@ export function Header() {
                 background: 'rgba(5, 8, 22, 0.75)',
                 backdropFilter: 'blur(20px)',
                 WebkitBackdropFilter: 'blur(20px)',
-                borderBottom: '1px solid rgba(255,255,255,0.06)',
+                borderBottom: '1px solid var(--color-border)',
                 boxShadow: '0 4px 30px rgba(0,0,0,0.2)',
               }
             : {
@@ -190,10 +190,10 @@ export function Header() {
                       <div
                         className="rounded-2xl overflow-hidden"
                         style={{
-                          background: 'rgba(8, 12, 32, 0.95)',
+                          background: 'var(--color-card)',
                           backdropFilter: 'blur(30px)',
                           WebkitBackdropFilter: 'blur(30px)',
-                          border: '1px solid rgba(255,255,255,0.1)',
+                          border: '1px solid var(--color-border)',
                           boxShadow: '0 40px 80px rgba(0,0,0,0.8)',
                           animation: 'fade-in 0.2s ease-out',
                         }}
@@ -201,16 +201,16 @@ export function Header() {
                         {/* Header */}
                         <div
                           className="flex items-center justify-between"
-                          style={{ padding: '20px 28px', borderBottom: '1px solid rgba(255,255,255,0.06)' }}
+                          style={{ padding: '20px 28px', borderBottom: '1px solid var(--color-border)' }}
                         >
                           <div>
                             <p
                               className="text-[11px] font-bold tracking-widest uppercase mb-0.5"
-                              style={{ color: 'rgba(255,255,255,0.3)' }}
+                              style={{ color: 'var(--color-muted-foreground)' }}
                             >
                               Our Services
                             </p>
-                            <p className="text-[12px]" style={{ color: 'rgba(255,255,255,0.2)' }}>
+                            <p className="text-[12px]" style={{ color: 'var(--color-muted-foreground)' }}>
                               End-to-end technology solutions
                             </p>
                           </div>
@@ -220,7 +220,7 @@ export function Header() {
                             style={{
                               padding: '8px 16px',
                               background: '#2563eb',
-                              color: '#ffffff',
+                              color: 'var(--color-foreground)',
                               border: '1px solid #3b82f6',
                               boxShadow: '0 4px 14px 0 rgba(37, 99, 235, 0.39)',
                             }}
@@ -248,19 +248,19 @@ export function Header() {
                                 href={svc.href}
                                 className="flex items-start gap-4 rounded-xl transition-all group"
                                 style={{ padding: '16px' }}
-                                onMouseEnter={(e) => (e.currentTarget.style.background = 'rgba(255,255,255,0.05)')}
+                                onMouseEnter={(e) => (e.currentTarget.style.background = 'var(--color-surface)')}
                                 onMouseLeave={(e) => (e.currentTarget.style.background = 'transparent')}
                               >
                                 {/* Icon */}
                                 <div
                                   className="flex items-center justify-center shrink-0 w-[42px] h-[42px] rounded-[10px] transition-all group-hover:border-[rgba(99,133,255,0.4)] group-hover:bg-[rgba(99,133,255,0.12)]"
                                   style={{
-                                    background: 'rgba(255,255,255,0.04)',
-                                    border: '1px solid rgba(255,255,255,0.08)',
+                                    background: 'var(--color-surface)',
+                                    border: '1px solid var(--color-border)',
                                   }}
                                 >
                                   <Icon className="w-[18px] h-[18px] transition-colors"
-                                    style={{ color: 'rgba(255,255,255,0.4)' }}
+                                    style={{ color: 'var(--color-foreground)' }}
                                   />
                                 </div>
 
@@ -268,8 +268,8 @@ export function Header() {
                                 <div className="flex-1 min-w-0 pt-0.5">
                                   <div className="flex items-center gap-1.5 mb-1">
                                     <span
-                                      className="text-[14px] font-semibold transition-colors group-hover:text-white"
-                                      style={{ color: 'rgba(255,255,255,0.82)' }}
+                                      className="text-[14px] font-semibold transition-colors group-hover:text-[var(--color-foreground)]"
+                                      style={{ color: 'var(--color-foreground)' }}
                                     >
                                       {svc.label}
                                     </span>
@@ -279,8 +279,8 @@ export function Header() {
                                     />
                                   </div>
                                   <span
-                                    className="text-[12.5px] leading-relaxed transition-colors group-hover:text-white/60"
-                                    style={{ color: 'rgba(255,255,255,0.38)' }}
+                                    className="text-[12.5px] leading-relaxed transition-colors group-hover:text-[var(--color-foreground)]"
+                                    style={{ color: 'var(--color-muted-foreground)' }}
                                   >
                                     {svc.description}
                                   </span>
@@ -295,15 +295,15 @@ export function Header() {
                           className="flex items-center gap-3"
                           style={{
                             padding: '16px 28px',
-                            borderTop: '1px solid rgba(255,255,255,0.06)',
-                            background: 'rgba(255,255,255,0.015)',
+                            borderTop: '1px solid var(--color-border)',
+                            background: 'var(--color-background-secondary)',
                           }}
                         >
                           <div
                             className="w-1.5 h-1.5 rounded-full shrink-0"
                             style={{ background: 'rgba(99,133,255,0.6)' }}
                           />
-                          <span className="text-[12px] flex-1" style={{ color: 'rgba(255,255,255,0.35)' }}>
+                          <span className="text-[12px] flex-1" style={{ color: 'var(--color-muted-foreground)' }}>
                             Not sure where to start?
                           </span>
                           <Link
@@ -329,10 +329,10 @@ export function Header() {
                       <div
                         className="rounded-2xl overflow-hidden"
                         style={{
-                          background: 'rgba(8, 12, 32, 0.95)',
+                          background: 'var(--color-card)',
                           backdropFilter: 'blur(30px)',
                           WebkitBackdropFilter: 'blur(30px)',
-                          border: '1px solid rgba(255,255,255,0.1)',
+                          border: '1px solid var(--color-border)',
                           boxShadow: '0 40px 80px rgba(0,0,0,0.8)',
                           animation: 'fade-in 0.2s ease-out',
                         }}
@@ -340,7 +340,7 @@ export function Header() {
                         {/* Header */}
                         <div
                           className="flex items-center gap-3"
-                          style={{ padding: '16px 24px', borderBottom: '1px solid rgba(255,255,255,0.06)' }}
+                          style={{ padding: '16px 24px', borderBottom: '1px solid var(--color-border)' }}
                         >
                           <div
                             className="flex items-center justify-center w-8 h-8 rounded-[8px] shrink-0"
@@ -352,10 +352,10 @@ export function Header() {
                             <Package className="w-4 h-4" style={{ color: 'rgba(99,133,255,0.85)' }} />
                           </div>
                           <div>
-                            <p className="text-[13px] font-semibold" style={{ color: 'rgba(255,255,255,0.75)' }}>
+                            <p className="text-[13px] font-semibold" style={{ color: 'var(--color-foreground)' }}>
                               Product Suite
                             </p>
-                            <p className="text-[11px]" style={{ color: 'rgba(255,255,255,0.28)' }}>
+                            <p className="text-[11px]" style={{ color: 'var(--color-muted-foreground)' }}>
                               8 ready-to-deploy business solutions
                             </p>
                           </div>
@@ -371,30 +371,30 @@ export function Header() {
                                 href={product.href}
                                 className="flex items-center gap-3 rounded-[10px] transition-all group"
                                 style={{ padding: '10px 14px' }}
-                                onMouseEnter={(e) => (e.currentTarget.style.background = 'rgba(255,255,255,0.05)')}
+                                onMouseEnter={(e) => (e.currentTarget.style.background = 'var(--color-surface)')}
                                 onMouseLeave={(e) => (e.currentTarget.style.background = 'transparent')}
                               >
                                 <div
                                   className="flex items-center justify-center w-8 h-8 rounded-[7px] shrink-0 transition-all group-hover:bg-[rgba(99,133,255,0.18)] group-hover:border-[rgba(99,133,255,0.3)]"
                                   style={{
-                                    background: 'rgba(255,255,255,0.04)',
-                                    border: '1px solid rgba(255,255,255,0.08)',
+                                    background: 'var(--color-surface)',
+                                    border: '1px solid var(--color-border)',
                                   }}
                                 >
                                   <Icon
                                     className="w-3.5 h-3.5 transition-colors group-hover:text-[rgba(140,165,255,0.9)]"
-                                    style={{ color: 'rgba(255,255,255,0.35)' }}
+                                    style={{ color: 'var(--color-muted-foreground)' }}
                                   />
                                 </div>
                                 <span
-                                  className="text-[13.5px] font-medium flex-1 transition-colors group-hover:text-white/95"
-                                  style={{ color: 'rgba(255,255,255,0.65)' }}
+                                  className="text-[13.5px] font-medium flex-1 transition-colors group-hover:text-[var(--color-foreground)]"
+                                  style={{ color: 'var(--color-foreground)' }}
                                 >
                                   {product.label}
                                 </span>
                                 <ChevronRight
                                   className="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-opacity"
-                                  style={{ color: 'rgba(255,255,255,0.3)' }}
+                                  style={{ color: 'var(--color-muted-foreground)' }}
                                 />
                               </Link>
                             );
@@ -403,24 +403,24 @@ export function Header() {
 
                         {/* Footer */}
                         <div
-                          style={{ padding: '12px 24px 20px 24px', borderTop: '1px solid rgba(255,255,255,0.06)' }}
+                          style={{ padding: '12px 24px 20px 24px', borderTop: '1px solid var(--color-border)' }}
                         >
                           <Link
                             href="/products"
                             className="flex items-center justify-center gap-2 w-full rounded-[10px] text-[14px] font-bold transition-all hover:-translate-y-0.5"
                             style={{
                               padding: '12px 24px',
-                              background: 'rgba(255,255,255,0.03)',
-                              color: '#ffffff',
-                              border: '1px solid rgba(255,255,255,0.1)',
+                              background: 'var(--color-surface)',
+                              color: 'var(--color-foreground)',
+                              border: '1px solid var(--color-border)',
                             }}
                             onMouseEnter={(e) => {
-                              e.currentTarget.style.background = 'rgba(255,255,255,0.08)';
-                              e.currentTarget.style.borderColor = 'rgba(255,255,255,0.2)';
+                              e.currentTarget.style.background = 'var(--color-border)';
+                              e.currentTarget.style.borderColor = 'var(--color-muted-foreground)';
                             }}
                             onMouseLeave={(e) => {
-                              e.currentTarget.style.background = 'rgba(255,255,255,0.03)';
-                              e.currentTarget.style.borderColor = 'rgba(255,255,255,0.1)';
+                              e.currentTarget.style.background = 'var(--color-surface)';
+                              e.currentTarget.style.borderColor = 'var(--color-border)';
                             }}
                           >
                             <LayoutGrid className="w-4 h-4" />
