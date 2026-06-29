@@ -341,7 +341,7 @@ export default function ProductsClient() {
       </section>
 
       {/* Massive Dark Gradient CTA */}
-      <section style={{ padding: '6rem 1.5rem', backgroundcolor: 'var(--color-foreground)' }}>
+      <section style={{ padding: '6rem 1.5rem', backgroundColor: 'var(--color-foreground)' }}>
         <div style={{ 
           maxWidth: '1200px', 
           margin: '0 auto', 
