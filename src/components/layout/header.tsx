@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useTheme } from 'next-themes';
@@ -100,6 +100,7 @@ export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [mounted, setMounted] = useState(false);
+  const dropdownTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const { theme, setTheme } = useTheme();
 
   useEffect(() => { setMounted(true); }, []);
@@ -117,13 +118,12 @@ export function Header() {
 
   const closeMobile = useCallback(() => setMobileOpen(false), []);
 
-  let dropdownTimeout: ReturnType<typeof setTimeout>;
   const openDropdown = (key: string) => {
-    clearTimeout(dropdownTimeout);
+    if (dropdownTimeoutRef.current) clearTimeout(dropdownTimeoutRef.current);
     setActiveDropdown(key);
   };
   const closeDropdown = () => {
-    dropdownTimeout = setTimeout(() => setActiveDropdown(null), 150);
+    dropdownTimeoutRef.current = setTimeout(() => setActiveDropdown(null), 150);
   };
 
   return (
@@ -456,6 +456,17 @@ export function Header() {
                   <Sun className="w-[18px] h-[18px] opacity-0" />
                 )}
               </button>
+
+              {/* Login Link */}
+              <Link
+                href="/login"
+                className="hidden sm:inline-flex items-center text-[14px] font-semibold transition-colors"
+                style={{ color: 'var(--color-foreground)' }}
+                onMouseEnter={(e) => e.currentTarget.style.color = 'var(--primary)'}
+                onMouseLeave={(e) => e.currentTarget.style.color = 'var(--color-foreground)'}
+              >
+                Log in
+              </Link>
 
               {/* Book Demo CTA */}
               <Link
