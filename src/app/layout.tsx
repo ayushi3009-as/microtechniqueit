@@ -9,6 +9,7 @@ import { Providers } from '@/components/providers';
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
 import { SplashScreen } from '@/components/splash-screen';
+import Script from 'next/script';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://microtechniqueit.com'),
@@ -95,7 +96,8 @@ export default function RootLayout({
           <main className="min-h-screen">{children}</main>
           <Footer />
           {/* Organization Schema */}
-          <script
+          <Script
+            id="organization-schema"
             type="application/ld+json"
             dangerouslySetInnerHTML={{
               __html: JSON.stringify({
