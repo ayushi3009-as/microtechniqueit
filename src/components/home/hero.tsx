@@ -8,7 +8,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 const dashboards = [
   {
     name: 'Billing',
-    image: '/images/hero/dashboard-billing.jpg',
+    image: '/images/hero/dashboard-billing.png',
     color: 'from-blue-500 to-cyan-400',
     stats: [
       { label: 'Total Revenue', value: '₹4.2M' },
@@ -18,7 +18,7 @@ const dashboards = [
   },
   {
     name: 'CRM',
-    image: '/images/hero/dashboard-crm.jpg',
+    image: '/images/hero/dashboard-crm.png',
     color: 'from-purple-500 to-pink-500',
     stats: [
       { label: 'New Leads', value: '845' },
@@ -28,7 +28,7 @@ const dashboards = [
   },
   {
     name: 'ERP',
-    image: '/images/hero/dashboard-erp.jpg',
+    image: '/images/hero/dashboard-erp.png',
     color: 'from-emerald-400 to-cyan-500',
     stats: [
       { label: 'Orders', value: '3,450' },
@@ -38,7 +38,7 @@ const dashboards = [
   },
   {
     name: 'HRMS',
-    image: '/images/hero/dashboard-hrms.jpg',
+    image: '/images/hero/dashboard-hrms.png',
     color: 'from-orange-400 to-pink-500',
     stats: [
       { label: 'Employees', value: '450' },
@@ -204,7 +204,7 @@ export function HeroSection() {
                         animate={{ opacity: 1, scale: 1, filter: 'blur(0px)' }}
                         exit={{ opacity: 0, scale: 1.05, filter: 'blur(4px)' }}
                         transition={{ duration: 0.4, ease: 'easeOut' }}
-                        className="absolute inset-0 p-4"
+                        className="absolute inset-0 p-4 flex flex-col"
                       >
                         {(() => {
                           const dash = dashboards[activeDashboard];
