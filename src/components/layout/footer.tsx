@@ -56,13 +56,13 @@ const socialLinks = [
 export function Footer() {
   return (
     <footer
-      style={{ backgroundColor: '#0a0f2c', borderTop: '1px solid rgba(255,255,255,0.06)' }}
+      style={{ backgroundColor: 'var(--color-card)', borderTop: '1px solid var(--color-border)' }}
     >
       <div className="container-custom" style={{ maxWidth: 1280, margin: '0 auto' }}>
         {/* ═══════════════════ TOP ROW ═══════════════════ */}
         <div
           className="flex flex-col lg:flex-row gap-12 lg:gap-16 py-16"
-          style={{ borderBottom: '1px solid rgba(255,255,255,0.06)' }}
+          style={{ borderBottom: '1px solid var(--color-border)' }}
         >
           {/* Left — Brand + Description + Socials */}
           <div className="flex-1 max-w-md">
@@ -99,9 +99,9 @@ export function Footer() {
                   style={{
                     width: 38,
                     height: 38,
-                    background: 'rgba(255,255,255,0.05)',
-                    border: '1px solid rgba(255,255,255,0.08)',
-                    color: '#ffffff',
+                    background: 'var(--color-surface)',
+                    border: '1px solid var(--color-border)',
+                    color: 'var(--color-foreground)',
                     textDecoration: 'none',
                   }}
                   onMouseEnter={(e) => {
@@ -112,11 +112,9 @@ export function Footer() {
                     (e.currentTarget as HTMLAnchorElement).style.color = '#00E5FF';
                   }}
                   onMouseLeave={(e) => {
-                    (e.currentTarget as HTMLAnchorElement).style.background =
-                      'rgba(255,255,255,0.05)';
-                    (e.currentTarget as HTMLAnchorElement).style.borderColor =
-                      'rgba(255,255,255,0.08)';
-                    (e.currentTarget as HTMLAnchorElement).style.color = '#ffffff';
+                    (e.currentTarget as HTMLAnchorElement).style.background = 'var(--color-surface)';
+                    (e.currentTarget as HTMLAnchorElement).style.borderColor = 'var(--color-border)';
+                    (e.currentTarget as HTMLAnchorElement).style.color = 'var(--color-foreground)';
                   }}
                 >
                   {social.label}
@@ -129,7 +127,7 @@ export function Footer() {
           <div className="flex-1 max-w-md lg:ml-auto">
             <h3
               className="font-heading text-lg font-bold mb-2"
-              style={{ color: '#ffffff' }}
+              style={{ color: 'var(--color-foreground)' }}
             >
               Stay at the forefront of innovation.
             </h3>
@@ -148,9 +146,9 @@ export function Footer() {
                   height: 48,
                   fontSize: '0.875rem',
                   borderRadius: 12,
-                  background: 'rgba(255,255,255,0.05)',
-                  border: '1px solid rgba(255,255,255,0.1)',
-                  color: '#ffffff',
+                  background: 'var(--color-surface)',
+                  border: '1px solid var(--color-border)',
+                  color: 'var(--color-foreground)',
                 }}
               />
               <button
@@ -174,13 +172,13 @@ export function Footer() {
         {/* ═══════════════════ MIDDLE ROW — 4-Column Links ═══════════════════ */}
         <div
           className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-8 py-14"
-          style={{ borderBottom: '1px solid rgba(255,255,255,0.06)' }}
+          style={{ borderBottom: '1px solid var(--color-border)' }}
         >
           {/* Products */}
           <div>
             <h4
               className="text-xs font-semibold uppercase tracking-wider mb-5"
-              style={{ color: '#ffffff' }}
+              style={{ color: 'var(--color-foreground)' }}
             >
               Products
             </h4>
@@ -192,7 +190,7 @@ export function Footer() {
                     className="text-sm transition-colors duration-200"
                     style={{ color: 'var(--color-muted-foreground)', textDecoration: 'none' }}
                     onMouseEnter={(e) =>
-                      ((e.currentTarget as HTMLAnchorElement).style.color = '#ffffff')
+                      ((e.currentTarget as HTMLAnchorElement).style.color = 'var(--color-foreground)')
                     }
                     onMouseLeave={(e) =>
                       ((e.currentTarget as HTMLAnchorElement).style.color =
@@ -210,7 +208,7 @@ export function Footer() {
           <div>
             <h4
               className="text-xs font-semibold uppercase tracking-wider mb-5"
-              style={{ color: '#ffffff' }}
+              style={{ color: 'var(--color-foreground)' }}
             >
               Services
             </h4>
@@ -222,7 +220,7 @@ export function Footer() {
                     className="text-sm transition-colors duration-200"
                     style={{ color: 'var(--color-muted-foreground)', textDecoration: 'none' }}
                     onMouseEnter={(e) =>
-                      ((e.currentTarget as HTMLAnchorElement).style.color = '#ffffff')
+                      ((e.currentTarget as HTMLAnchorElement).style.color = 'var(--color-foreground)')
                     }
                     onMouseLeave={(e) =>
                       ((e.currentTarget as HTMLAnchorElement).style.color =
@@ -240,7 +238,7 @@ export function Footer() {
           <div>
             <h4
               className="text-xs font-semibold uppercase tracking-wider mb-5"
-              style={{ color: '#ffffff' }}
+              style={{ color: 'var(--color-foreground)' }}
             >
               Industries
             </h4>
@@ -252,7 +250,7 @@ export function Footer() {
                     className="text-sm transition-colors duration-200"
                     style={{ color: 'var(--color-muted-foreground)', textDecoration: 'none' }}
                     onMouseEnter={(e) =>
-                      ((e.currentTarget as HTMLAnchorElement).style.color = '#ffffff')
+                      ((e.currentTarget as HTMLAnchorElement).style.color = 'var(--color-foreground)')
                     }
                     onMouseLeave={(e) =>
                       ((e.currentTarget as HTMLAnchorElement).style.color =
@@ -270,7 +268,7 @@ export function Footer() {
           <div>
             <h4
               className="text-xs font-semibold uppercase tracking-wider mb-5"
-              style={{ color: '#ffffff' }}
+              style={{ color: 'var(--color-foreground)' }}
             >
               Company
             </h4>
@@ -282,7 +280,7 @@ export function Footer() {
                     className="text-sm transition-colors duration-200"
                     style={{ color: 'var(--color-muted-foreground)', textDecoration: 'none' }}
                     onMouseEnter={(e) =>
-                      ((e.currentTarget as HTMLAnchorElement).style.color = '#ffffff')
+                      ((e.currentTarget as HTMLAnchorElement).style.color = 'var(--color-foreground)')
                     }
                     onMouseLeave={(e) =>
                       ((e.currentTarget as HTMLAnchorElement).style.color =
@@ -308,7 +306,7 @@ export function Footer() {
               className="text-xs transition-colors duration-200"
               style={{ color: 'var(--color-muted-foreground)', textDecoration: 'none' }}
               onMouseEnter={(e) =>
-                ((e.currentTarget as HTMLAnchorElement).style.color = '#ffffff')
+                ((e.currentTarget as HTMLAnchorElement).style.color = 'var(--color-foreground)')
               }
               onMouseLeave={(e) =>
                 ((e.currentTarget as HTMLAnchorElement).style.color =
@@ -317,13 +315,13 @@ export function Footer() {
             >
               Privacy Policy
             </Link>
-            <span style={{ color: 'rgba(255,255,255,0.15)' }}>|</span>
+            <span style={{ color: 'var(--color-border)' }}>|</span>
             <Link
               href="/terms"
               className="text-xs transition-colors duration-200"
               style={{ color: 'var(--color-muted-foreground)', textDecoration: 'none' }}
               onMouseEnter={(e) =>
-                ((e.currentTarget as HTMLAnchorElement).style.color = '#ffffff')
+                ((e.currentTarget as HTMLAnchorElement).style.color = 'var(--color-foreground)')
               }
               onMouseLeave={(e) =>
                 ((e.currentTarget as HTMLAnchorElement).style.color =
@@ -332,13 +330,13 @@ export function Footer() {
             >
               Terms of Service
             </Link>
-            <span style={{ color: 'rgba(255,255,255,0.15)' }}>|</span>
+            <span style={{ color: 'var(--color-border)' }}>|</span>
             <Link
               href="/cookies"
               className="text-xs transition-colors duration-200"
               style={{ color: 'var(--color-muted-foreground)', textDecoration: 'none' }}
               onMouseEnter={(e) =>
-                ((e.currentTarget as HTMLAnchorElement).style.color = '#ffffff')
+                ((e.currentTarget as HTMLAnchorElement).style.color = 'var(--color-foreground)')
               }
               onMouseLeave={(e) =>
                 ((e.currentTarget as HTMLAnchorElement).style.color =
