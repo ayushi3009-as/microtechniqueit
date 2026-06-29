@@ -151,9 +151,9 @@ export function Header() {
           <div className="flex items-center justify-between h-full">
 
             {/* ── Logo ── */}
-            <Link href="/" className="flex items-center gap-2.5 shrink-0">
-              <Image src="/logo.jpeg" alt="MicrotechniqueIT" width={36} height={36} className="rounded-lg" />
-              <span className="text-lg font-bold font-heading gradient-text">MicrotechniqueIT</span>
+            <Link href="/" className="flex items-center gap-3 shrink-0">
+              <Image src="/logo.jpeg" alt="MicrotechniqueIT" width={48} height={48} className="rounded-xl" />
+              <span className="text-xl font-bold font-heading gradient-text">MicrotechniqueIT</span>
             </Link>
 
             {/* ── Desktop Navigation ── */}

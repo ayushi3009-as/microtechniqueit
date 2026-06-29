@@ -8,6 +8,7 @@ const spaceGrotesk = Space_Grotesk({ subsets: ['latin'], variable: '--font-headi
 import { Providers } from '@/components/providers';
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
+import { SplashScreen } from '@/components/splash-screen';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://microtechniqueit.com'),
@@ -88,6 +89,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning className={`${inter.variable} ${dmSans.variable} ${spaceGrotesk.variable}`}>
       <body className="min-h-screen bg-background text-foreground antialiased flex flex-col">
+        <SplashScreen />
         <Providers>
           <Header />
           <main className="min-h-screen">{children}</main>

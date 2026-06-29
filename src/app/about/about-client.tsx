@@ -77,14 +77,14 @@ const team = [
     role: 'Chief Technology Officer',
     bio: 'Leading technical vision across all product lines. Expertise in scalable system architecture.',
     tags: ['Architecture', 'Cloud', 'AI'],
-    image: '/avatar-placeholder.png'
+    image: 'https://ui-avatars.com/api/?name=Garvit+Dubey&background=random'
   },
   {
     name: 'Mrs. Varsha Pandey',
     role: 'Head of Human Resources',
     bio: 'Building and nurturing the team that powers our solutions. Oversees talent and culture.',
     tags: ['Talent', 'Culture', 'Operations'],
-    image: '/avatar-placeholder.png'
+    image: 'https://ui-avatars.com/api/?name=Varsha+Pandey&background=random'
   },
 ];
 
@@ -135,15 +135,6 @@ export default function AboutClient() {
                   <Link href="/portfolio" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', height: '56px', padding: '0 32px', backgroundColor: 'var(--color-background)', color: 'var(--color-foreground)', border: '1px solid var(--color-border)', borderRadius: '14px', fontWeight: 600, fontSize: '16px', transition: 'all 0.2s' }}>
                     View Our Work
                   </Link>
-                </div>
-                <div>
-                  <p style={{ fontSize: '14px', color: 'var(--color-muted-foreground)', marginBottom: '16px', fontWeight: 500 }}>TRUSTED BY INNOVATIVE COMPANIES</p>
-                  <div style={{ display: 'flex', gap: '24px', opacity: 0.6, flexWrap: 'wrap' }}>
-                    {/* Placeholder logos */}
-                    <div style={{ width: '100px', height: '30px', backgroundColor: '#cbd5e1', borderRadius: '4px' }}></div>
-                    <div style={{ width: '100px', height: '30px', backgroundColor: '#cbd5e1', borderRadius: '4px' }}></div>
-                    <div style={{ width: '100px', height: '30px', backgroundColor: '#cbd5e1', borderRadius: '4px' }}></div>
-                  </div>
                 </div>
               </motion.div>
             </div>
@@ -252,7 +243,7 @@ export default function AboutClient() {
                 <h2 style={{ fontSize: '32px', fontWeight: 700, color: 'var(--color-foreground)', margin: 0 }}>Vision</h2>
               </div>
               <p style={{ fontSize: '16px', lineHeight: '1.7', color: 'var(--color-muted-foreground)', maxWidth: '900px' }}>
-                To become India's most trusted technology partner for businesses of all sizes, known for engineering excellence, innovative thinking, and transformational impact. We envision a future where every business — from startups to enterprises — has access to world-class software solutions.
+                To become India&apos;s most trusted technology partner for businesses of all sizes, known for engineering excellence, innovative thinking, and transformational impact. We envision a future where every business — from startups to enterprises — has access to world-class software solutions.
               </p>
             </motion.div>
 
