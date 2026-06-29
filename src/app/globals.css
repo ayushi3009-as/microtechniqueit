@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 /* ─── Premium Dark Theme Tokens ─── */
-@theme inline {
+@theme {
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
   --font-heading: 'Space Grotesk', 'DM Sans', system-ui, sans-serif;
   --font-mono: 'JetBrains Mono', ui-monospace, monospace;

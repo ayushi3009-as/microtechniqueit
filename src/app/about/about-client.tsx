@@ -201,8 +201,8 @@ export default function AboutClient() {
                   style={{ position: 'absolute', bottom: '-5%', left: '0%', padding: '20px 24px', backgroundColor: 'rgba(255,255,255,0.95)', backdropFilter: 'blur(12px)', borderRadius: '20px', border: '1px solid rgba(255,255,255,0.5)', boxShadow: '0 10px 40px -10px rgba(0,0,0,0.15)', display: 'flex', alignItems: 'center', gap: '16px', zIndex: 10 }}>
                   <div style={{ width: '48px', height: '48px', borderRadius: '12px', backgroundColor: '#eff6ff', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#4f46e5' }}><Briefcase size={24} /></div>
                   <div>
-                    <div style={{ fontSize: '24px', fontWeight: 800, color: '#0f172a', lineHeight: 1 }}>200+</div>
-                    <div style={{ fontSize: '14px', color: '#64748b', fontWeight: 600 }}>Projects Delivered</div>
+                    <div style={{ fontSize: '24px', fontWeight: 800, color: 'var(--color-foreground)', lineHeight: 1 }}>200+</div>
+                    <div style={{ fontSize: '14px', color: 'var(--color-muted-foreground)', fontWeight: 600 }}>Projects Delivered</div>
                   </div>
                 </motion.div>
 
@@ -212,8 +212,8 @@ export default function AboutClient() {
                   style={{ position: 'absolute', top: '10%', right: '-10%', padding: '20px 24px', backgroundColor: 'rgba(255,255,255,0.95)', backdropFilter: 'blur(12px)', borderRadius: '20px', border: '1px solid rgba(255,255,255,0.5)', boxShadow: '0 10px 40px -10px rgba(0,0,0,0.15)', display: 'flex', alignItems: 'center', gap: '16px', zIndex: 10 }}>
                   <div style={{ width: '48px', height: '48px', borderRadius: '12px', backgroundColor: '#f0fdf4', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#16a34a' }}><Shield size={24} /></div>
                   <div>
-                    <div style={{ fontSize: '24px', fontWeight: 800, color: '#0f172a', lineHeight: 1 }}>99.9%</div>
-                    <div style={{ fontSize: '14px', color: '#64748b', fontWeight: 600 }}>Uptime SLA</div>
+                    <div style={{ fontSize: '24px', fontWeight: 800, color: 'var(--color-foreground)', lineHeight: 1 }}>99.9%</div>
+                    <div style={{ fontSize: '14px', color: 'var(--color-muted-foreground)', fontWeight: 600 }}>Uptime SLA</div>
                   </div>
                 </motion.div>
               </motion.div>
