@@ -29,7 +29,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
       <div className="min-h-screen flex items-center justify-center bg-section-alt">
         <div className="text-center">
           <h1 className="text-4xl font-heading font-bold text-foreground mb-4">Service Not Found</h1>
-          <Link href="/services" className="text-indigo-600 hover:underline">View all services</Link>
+          <Link href="/services" className="text-primary hover:underline">View all services</Link>
         </div>
       </div>
     );
@@ -50,7 +50,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
             
             {/* Left Content */}
             <div className="max-w-full lg:max-w-2xl">
-              <nav className="flex items-center gap-2 text-sm text-slate-500 mb-8 font-medium">
+              <nav className="flex items-center gap-2 text-sm text-muted-foreground mb-8 font-medium">
                 <Link href="/" className="hover:text-foreground transition-colors">Home</Link>
                 <span>/</span>
                 <Link href="/services" className="hover:text-foreground transition-colors">Services</Link>
@@ -58,7 +58,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                 <span className="text-foreground">{service.shortTitle}</span>
               </nav>
 
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-bold bg-indigo-50 text-indigo-600 mb-6">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-bold bg-primary/10 text-primary mb-6">
                 Enterprise Grade
               </div>
               
@@ -79,10 +79,10 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                 </Link>
               </div>
 
-              <div className="flex flex-wrap items-center gap-6 text-sm font-semibold text-slate-500">
-                <div className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-500" /> 200+ Projects</div>
-                <div className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-500" /> 150+ Clients</div>
-                <div className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-500" /> 99.9% SLA</div>
+              <div className="flex flex-wrap items-center gap-6 text-sm font-semibold text-muted-foreground">
+                <div className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[#10b981]" /> 200+ Projects</div>
+                <div className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[#10b981]" /> 150+ Clients</div>
+                <div className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[#10b981]" /> 99.9% SLA</div>
               </div>
             </div>
 
@@ -94,7 +94,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                 
                 {/* Floating UI Elements */}
                 {ext.floatingLabels.map((label: string, i: number) => (
-                  <div key={i} className={`absolute bg-background/90 backdrop-blur-md px-4 py-2 rounded-xl shadow-xl border border-slate-100 font-semibold text-foreground text-sm floating-element delay-` + (i*200)}
+                  <div key={i} className={`absolute bg-background/90 backdrop-blur-md px-4 py-2 rounded-xl shadow-xl border border-border font-semibold text-foreground text-sm floating-element delay-` + (i*200)}
                        style={{ 
                          top: (20 + i*25) + '%', 
                          [i%2===0 ? 'left' : 'right']: i%2===0 ? '-10%' : '-5%' 
@@ -109,24 +109,24 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
       </section>
 
       {/* 2. SUCCESS METRICS */}
-      <section className="py-12 bg-background border-b border-slate-100">
+      <section className="py-12 bg-background border-b border-border">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 divide-x divide-slate-100">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 divide-x divide-border">
             <div className="text-center px-4">
               <div className="text-4xl font-extrabold text-foreground mb-2">200+</div>
-              <div className="text-slate-500 font-medium uppercase tracking-wider text-sm">Projects</div>
+              <div className="text-muted-foreground font-medium uppercase tracking-wider text-sm">Projects</div>
             </div>
             <div className="text-center px-4">
               <div className="text-4xl font-extrabold text-foreground mb-2">150+</div>
-              <div className="text-slate-500 font-medium uppercase tracking-wider text-sm">Clients</div>
+              <div className="text-muted-foreground font-medium uppercase tracking-wider text-sm">Clients</div>
             </div>
             <div className="text-center px-4">
               <div className="text-4xl font-extrabold text-foreground mb-2">99.9%</div>
-              <div className="text-slate-500 font-medium uppercase tracking-wider text-sm">SLA Uptime</div>
+              <div className="text-muted-foreground font-medium uppercase tracking-wider text-sm">SLA Uptime</div>
             </div>
             <div className="text-center px-4">
               <div className="text-4xl font-extrabold text-foreground mb-2">5+</div>
-              <div className="text-slate-500 font-medium uppercase tracking-wider text-sm">Years Exp.</div>
+              <div className="text-muted-foreground font-medium uppercase tracking-wider text-sm">Years Exp.</div>
             </div>
           </div>
         </div>
@@ -137,17 +137,17 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-4xl md:text-5xl font-extrabold text-foreground mb-6 tracking-tight">What We Deliver</h2>
-            <p className="text-xl text-slate-500">{service.longDescription}</p>
+            <p className="text-xl text-muted-foreground">{service.longDescription}</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {service.features.map((feature, i) => (
               <div key={i} className="premium-card bg-background p-8 rounded-3xl border border-border shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:border-indigo-600/30 group">
-                <div className="w-14 h-14 rounded-2xl bg-section-alt flex items-center justify-center mb-6 group-hover:bg-indigo-50 transition-colors border border-slate-100">
-                  <Check className="w-6 h-6 text-indigo-600" />
+                <div className="w-14 h-14 rounded-2xl bg-section-alt flex items-center justify-center mb-6 group-hover:bg-primary/10 transition-colors border border-border">
+                  <Check className="w-6 h-6 text-primary" />
                 </div>
                 <h3 className="text-xl font-bold text-foreground mb-3 leading-snug">{feature}</h3>
-                <p className="text-slate-500 leading-relaxed">Enterprise-grade capabilities ensuring high performance and scalability.</p>
+                <p className="text-muted-foreground leading-relaxed">Enterprise-grade capabilities ensuring high performance and scalability.</p>
               </div>
             ))}
           </div>
@@ -163,13 +163,13 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
               <h2 className="text-4xl md:text-5xl font-extrabold text-foreground mb-8 tracking-tight">Why Choose Us</h2>
               <div className="space-y-6">
                 {service.benefits.map((benefit, i) => (
-                  <div key={i} className="flex gap-5 p-6 rounded-3xl bg-section-alt border border-slate-100 transition-all hover:bg-background hover:shadow-lg hover:border-indigo-600/20">
-                    <div className="w-12 h-12 rounded-xl bg-background shadow-sm flex items-center justify-center shrink-0 border border-slate-100">
-                      <Zap className="w-5 h-5 text-indigo-600" />
+                  <div key={i} className="flex gap-5 p-6 rounded-3xl bg-section-alt border border-border transition-all hover:bg-background hover:shadow-lg hover:border-indigo-600/20">
+                    <div className="w-12 h-12 rounded-xl bg-background shadow-sm flex items-center justify-center shrink-0 border border-border">
+                      <Zap className="w-5 h-5 text-primary" />
                     </div>
                     <div>
                       <h4 className="text-lg font-bold text-foreground mb-2">{benefit}</h4>
-                      <p className="text-slate-500">Strategic advantages designed to give your business a competitive edge.</p>
+                      <p className="text-muted-foreground">Strategic advantages designed to give your business a competitive edge.</p>
                     </div>
                   </div>
                 ))}
@@ -181,8 +181,8 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
               <h2 className="text-4xl md:text-5xl font-extrabold text-foreground mb-8 tracking-tight">Technology Stack</h2>
               <div className="space-y-8">
                 {ext.techStackGroups.map((group: any, i: number) => (
-                  <div key={i} className="bg-section-alt p-8 rounded-3xl border border-slate-100">
-                    <h4 className="text-sm font-bold uppercase tracking-widest text-slate-500 mb-6 flex items-center gap-2">
+                  <div key={i} className="bg-section-alt p-8 rounded-3xl border border-border">
+                    <h4 className="text-sm font-bold uppercase tracking-widest text-muted-foreground mb-6 flex items-center gap-2">
                       <Code2 className="w-4 h-4" /> {group.category}
                     </h4>
                     <div className="flex flex-wrap gap-3">
@@ -205,15 +205,15 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-20">
             <h2 className="text-4xl md:text-5xl font-extrabold text-foreground mb-6 tracking-tight">Our Process</h2>
-            <p className="text-xl text-slate-500">A battle-tested methodology ensuring predictable delivery and enterprise quality.</p>
+            <p className="text-xl text-muted-foreground">A battle-tested methodology ensuring predictable delivery and enterprise quality.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative process-grid">
             {ext.process.slice(0,4).map((step: any, i: number) => (
               <div key={i} className="relative z-10 bg-background p-8 rounded-3xl border border-border shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all">
-                <div className="text-6xl font-extrabold text-slate-100 absolute top-4 right-6 -z-10">{step.id}</div>
+                <div className="text-6xl font-extrabold text-muted absolute top-4 right-6 -z-10">{step.id}</div>
                 <h4 className="text-xl font-bold text-foreground mb-3">{step.title}</h4>
-                <p className="text-slate-500">{step.desc}</p>
+                <p className="text-muted-foreground">{step.desc}</p>
               </div>
             ))}
           </div>
@@ -229,17 +229,17 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
             <table className="w-full text-left border-collapse">
               <thead>
                 <tr className="bg-section-alt border-b border-border">
-                  <th className="p-6 text-slate-500 font-semibold text-lg w-1/3">Feature</th>
-                  <th className="p-6 text-indigo-600 font-bold text-xl w-1/3">Microtechnique</th>
-                  <th className="p-6 text-slate-400 font-semibold text-lg w-1/3">Standard Agencies</th>
+                  <th className="p-6 text-muted-foreground font-semibold text-lg w-1/3">Feature</th>
+                  <th className="p-6 text-primary font-bold text-xl w-1/3">Microtechnique</th>
+                  <th className="p-6 text-muted-foreground font-semibold text-lg w-1/3">Standard Agencies</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-slate-100">
+              <tbody className="divide-y divide-border">
                 {ext.comparison.map((comp: any, i: number) => (
                   <tr key={i} className="hover:bg-section-alt/50 transition-colors">
                     <td className="p-6 font-semibold text-foreground">{comp.feature}</td>
-                    <td className="p-6 font-bold text-emerald-500 flex items-center gap-2"><Check className="w-5 h-5" /> {comp.us}</td>
-                    <td className="p-6 text-slate-500">{comp.others}</td>
+                    <td className="p-6 font-bold text-[#10b981] flex items-center gap-2"><Check className="w-5 h-5" /> {comp.us}</td>
+                    <td className="p-6 text-muted-foreground">{comp.others}</td>
                   </tr>
                 ))}
               </tbody>
@@ -249,29 +249,29 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
       </section>
 
       {/* 7. TESTIMONIAL & CLIENTS */}
-      <section className="py-20 lg:py-32 bg-slate-900 text-white">
+      <section className="py-20 lg:py-32 bg-section-alt text-foreground">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
               <div className="flex gap-2 mb-8">
                 {[1,2,3,4,5].map(star => <Star key={star} className="w-6 h-6 fill-amber-400 text-amber-400" />)}
               </div>
-              <h3 className="text-3xl lg:text-4xl font-bold leading-tight mb-10 text-slate-50">
+              <h3 className="text-3xl lg:text-4xl font-bold leading-tight mb-10 text-foreground">
                 "{ext.testimonial.quote}"
               </h3>
               <div className="flex items-center gap-4">
-                <div className="w-16 h-16 rounded-full border-2 border-slate-700 bg-gradient-to-tr from-indigo-600 to-purple-600 flex items-center justify-center text-xl font-bold text-white shadow-lg">
+                <div className="w-16 h-16 rounded-full border-2 border-border bg-gradient-to-tr from-indigo-600 to-purple-600 flex items-center justify-center text-xl font-bold text-white shadow-lg">
                   {ext.testimonial.name.charAt(0)}
                 </div>
                 <div>
                   <div className="font-bold text-lg">{ext.testimonial.name}</div>
-                  <div className="text-slate-400">{ext.testimonial.role}, {ext.testimonial.company}</div>
+                  <div className="text-muted-foreground">{ext.testimonial.role}, {ext.testimonial.company}</div>
                 </div>
               </div>
             </div>
 
-            <div className="bg-slate-800 p-10 rounded-3xl border border-slate-700">
-              <h4 className="text-center text-slate-400 font-semibold tracking-widest uppercase mb-10 text-sm">Trusted by Industry Leaders</h4>
+            <div className="bg-card p-10 rounded-3xl border border-border">
+              <h4 className="text-center text-muted-foreground font-semibold tracking-widest uppercase mb-10 text-sm">Trusted by Industry Leaders</h4>
               <div className="grid grid-cols-2 gap-8 items-center justify-items-center opacity-60">
                 {/* Generic Logos */}
                 <div className="text-2xl font-bold tracking-tighter">ACME Corp</div>
@@ -294,10 +294,10 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                 <summary className="flex justify-between items-center font-bold text-lg text-foreground cursor-pointer list-none p-6 md:p-8">
                   {faq.q}
                   <span className="transition group-open:rotate-180">
-                    <ChevronDown className="w-5 h-5 text-slate-500" />
+                    <ChevronDown className="w-5 h-5 text-muted-foreground" />
                   </span>
                 </summary>
-                <div className="text-slate-500 px-6 pb-6 md:px-8 md:pb-8 leading-relaxed">
+                <div className="text-muted-foreground px-6 pb-6 md:px-8 md:pb-8 leading-relaxed">
                   {faq.a}
                 </div>
               </details>
@@ -313,12 +313,12 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {relatedServices.map((s) => (
               <Link key={s.slug} href={'/services/' + s.slug} className="bg-background p-8 rounded-3xl border border-border shadow-sm hover:shadow-2xl hover:-translate-y-2 hover:border-indigo-600/30 transition-all group">
-                <div className="w-14 h-14 rounded-2xl bg-section-alt flex items-center justify-center mb-6 border border-slate-100">
-                  <Monitor className="w-6 h-6 text-foreground group-hover:text-indigo-600 transition-colors" />
+                <div className="w-14 h-14 rounded-2xl bg-section-alt flex items-center justify-center mb-6 border border-border">
+                  <Monitor className="w-6 h-6 text-foreground group-hover:text-primary transition-colors" />
                 </div>
                 <h3 className="text-xl font-bold text-foreground mb-3">{s.title}</h3>
-                <p className="text-slate-500 mb-6 line-clamp-2">{s.description}</p>
-                <span className="inline-flex items-center gap-2 text-indigo-600 font-bold">Explore Service <ArrowRight className="w-4 h-4" /></span>
+                <p className="text-muted-foreground mb-6 line-clamp-2">{s.description}</p>
+                <span className="inline-flex items-center gap-2 text-primary font-bold">Explore Service <ArrowRight className="w-4 h-4" /></span>
               </Link>
             ))}
           </div>
@@ -328,11 +328,11 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
       {/* 10. FINAL CTA */}
       <section className="py-20 lg:py-32 bg-background">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="relative rounded-3xl overflow-hidden bg-slate-900 p-12 lg:p-20 text-center border border-slate-800 shadow-2xl">
-            <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20"></div>
+          <div className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-blue-700 to-indigo-950 p-12 lg:p-20 text-center border border-white/10 shadow-[0_20px_50px_rgba(29,78,216,0.3)]" style={{ padding: '5rem' }}>
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(255,255,255,0.1)_0%,transparent_70%)]"></div>
             <div className="relative z-10">
               <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-6 tracking-tight">Ready to Build Your Next Project?</h2>
-              <p className="text-xl text-slate-400 max-w-xl mx-auto mb-10">Book a Free Consultation today and let's turn your vision into an enterprise-grade reality.</p>
+              <p className="text-xl text-white/80 max-w-xl mx-auto mb-10">Book a Free Consultation today and let's turn your vision into an enterprise-grade reality.</p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
                 <Link href="/contact" className="premium-btn-primary flex items-center justify-center gap-2 px-10 py-5 rounded-2xl text-white font-bold text-lg transition-all hover:-translate-y-1 shadow-indigo-500/30 shadow-lg">
                   Schedule Consultation <ArrowRight className="w-5 h-5" />
