@@ -61,7 +61,7 @@ export function Footer() {
       <div className="container-custom" style={{ maxWidth: 1280, margin: '0 auto' }}>
         {/* ═══════════════════ TOP ROW ═══════════════════ */}
         <div
-          className="flex flex-col lg:flex-row gap-12 lg:gap-16 py-16"
+          className="flex flex-col lg:flex-row justify-between gap-12 py-16"
           style={{ borderBottom: '1px solid var(--color-border)' }}
         >
           {/* Left — Brand + Description + Socials */}
@@ -95,10 +95,11 @@ export function Footer() {
                   key={social.label}
                   href={social.href}
                   title={social.title}
-                  className="flex items-center justify-center rounded-full text-xs font-bold transition-all duration-200"
+                  className="flex items-center justify-center shrink-0 rounded-full text-xs font-bold transition-all duration-200"
                   style={{
                     width: 38,
                     height: 38,
+                    minWidth: 38,
                     background: 'var(--color-surface)',
                     border: '1px solid var(--color-border)',
                     color: 'var(--color-foreground)',
@@ -171,7 +172,7 @@ export function Footer() {
 
         {/* ═══════════════════ MIDDLE ROW — 4-Column Links ═══════════════════ */}
         <div
-          className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-8 py-14"
+          className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 lg:gap-16 py-14"
           style={{ borderBottom: '1px solid var(--color-border)' }}
         >
           {/* Products */}
