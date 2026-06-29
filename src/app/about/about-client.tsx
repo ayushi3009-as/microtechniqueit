@@ -129,7 +129,7 @@ export default function AboutClient() {
                   Founded in 2020, we empower organizations with enterprise-grade software, AI solutions, and digital transformation strategies that drive measurable outcomes.
                 </p>
                 <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap', marginBottom: '48px' }}>
-                  <Link href="/contact" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', height: '56px', padding: '0 32px', backgroundcolor: 'var(--color-foreground)', color: 'var(--color-background)', borderRadius: '14px', fontWeight: 600, fontSize: '16px', transition: 'all 0.2s', boxShadow: '0 4px 14px 0 rgba(0,0,0,0.1)' }}>
+                  <Link href="/contact" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', height: '56px', padding: '0 32px', backgroundColor: 'var(--color-foreground)', color: 'var(--color-background)', borderRadius: '14px', fontWeight: 600, fontSize: '16px', transition: 'all 0.2s', boxShadow: '0 4px 14px 0 rgba(0,0,0,0.1)' }}>
                     Start a Project
                   </Link>
                   <Link href="/portfolio" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', height: '56px', padding: '0 32px', backgroundColor: 'var(--color-background)', color: 'var(--color-foreground)', border: '1px solid var(--color-border)', borderRadius: '14px', fontWeight: 600, fontSize: '16px', transition: 'all 0.2s' }}>
@@ -149,29 +149,71 @@ export default function AboutClient() {
             </div>
             
             <div style={{ flex: '1 1 500px', position: 'relative', height: '600px' }}>
-              <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.2 }} style={{ width: '100%', height: '100%', position: 'relative' }}>
-                <Image src="/hero-abstract.png" alt="Abstract Innovation" fill style={{ objectFit: 'contain' }} priority />
+              <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.2 }} style={{ width: '100%', height: '100%', position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center', perspective: '1000px' }}>
                 
-                {/* Floating Achievement Cards */}
+                {/* 3D Glass Layered Abstract */}
+                <div style={{ position: 'relative', width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', transformStyle: 'preserve-3d' }}>
+                  {/* Glowing background orb */}
+                  <div style={{ position: 'absolute', width: '300px', height: '300px', background: 'linear-gradient(135deg, #4f46e5, #0ea5e9)', filter: 'blur(100px)', borderRadius: '50%', opacity: 0.4 }} />
+                  
+                  {/* Layer 1: Back glass pane */}
+                  <motion.div 
+                    animate={{ rotateY: [-5, 5, -5], rotateX: [2, -2, 2] }} 
+                    transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }} 
+                    style={{ position: 'absolute', width: '60%', height: '70%', background: 'rgba(255, 255, 255, 0.02)', border: '1px solid rgba(255, 255, 255, 0.05)', borderRadius: '32px', backdropFilter: 'blur(8px)', transform: 'translateZ(-40px) rotateY(-15deg)', zIndex: 1 }} 
+                  />
+                  
+                  {/* Layer 2: Main glass pane */}
+                  <motion.div 
+                    animate={{ rotateY: [-5, 5, -5], rotateX: [-2, 2, -2] }} 
+                    transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut', delay: 0.5 }} 
+                    style={{ position: 'absolute', width: '70%', height: '60%', background: 'rgba(255, 255, 255, 0.04)', border: '1px solid rgba(255, 255, 255, 0.1)', borderRadius: '32px', backdropFilter: 'blur(16px)', zIndex: 2, display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 30px 60px rgba(0,0,0,0.3)', transform: 'rotateY(10deg)' }}
+                  >
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '16px', padding: '32px', width: '100%', height: '100%' }}>
+                       <div style={{ background: 'rgba(255,255,255,0.03)', borderRadius: '16px', height: '100%' }} />
+                       <div style={{ background: 'linear-gradient(to bottom, rgba(255,255,255,0.1), transparent)', borderRadius: '16px', height: '100%' }} />
+                       <div style={{ background: 'rgba(255,255,255,0.03)', borderRadius: '16px', height: '100%' }} />
+                    </div>
+                  </motion.div>
+                  
+                  {/* Layer 3: Floating elements */}
+                  <motion.div 
+                    animate={{ y: [-15, 15, -15], rotateZ: [0, 10, 0] }} 
+                    transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }} 
+                    style={{ position: 'absolute', zIndex: 3, top: '25%', right: '15%', width: '90px', height: '90px', background: 'linear-gradient(135deg, #0ea5e9, #38bdf8)', borderRadius: '24px', opacity: 0.9, boxShadow: '0 10px 40px rgba(14,165,233,0.4)', display: 'flex', alignItems: 'center', justifyContent: 'center', transform: 'translateZ(60px)' }}
+                  >
+                    <div style={{ width: '40px', height: '40px', borderRadius: '50%', background: 'rgba(255,255,255,0.4)', filter: 'blur(2px)' }} />
+                  </motion.div>
+                  
+                  <motion.div 
+                    animate={{ y: [10, -10, 10], rotateZ: [0, -10, 0] }} 
+                    transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut', delay: 1 }} 
+                    style={{ position: 'absolute', zIndex: 3, bottom: '20%', left: '10%', width: '60px', height: '60px', background: 'linear-gradient(135deg, #8b5cf6, #d946ef)', borderRadius: '16px', opacity: 0.8, boxShadow: '0 10px 30px rgba(139,92,246,0.3)', display: 'flex', alignItems: 'center', justifyContent: 'center', transform: 'translateZ(40px)' }}
+                  >
+                    <div style={{ width: '20px', height: '20px', borderRadius: '50%', background: 'rgba(255,255,255,0.4)', filter: 'blur(1px)' }} />
+                  </motion.div>
+                </div>
+                
+                {/* Floating Achievement Cards (Moved down to avoid visual clutter) */}
                 <motion.div 
                   animate={{ y: [0, -10, 0] }} 
                   transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                  style={{ position: 'absolute', top: '20%', left: '-10%', padding: '24px', backgroundColor: 'rgba(255,255,255,0.9)', backdropFilter: 'blur(12px)', borderRadius: '20px', border: '1px solid rgba(255,255,255,0.5)', boxShadow: '0 10px 40px -10px rgba(0,0,0,0.08)', display: 'flex', alignItems: 'center', gap: '16px' }}>
+                  style={{ position: 'absolute', bottom: '-5%', left: '0%', padding: '20px 24px', backgroundColor: 'rgba(255,255,255,0.95)', backdropFilter: 'blur(12px)', borderRadius: '20px', border: '1px solid rgba(255,255,255,0.5)', boxShadow: '0 10px 40px -10px rgba(0,0,0,0.15)', display: 'flex', alignItems: 'center', gap: '16px', zIndex: 10 }}>
                   <div style={{ width: '48px', height: '48px', borderRadius: '12px', backgroundColor: '#eff6ff', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#4f46e5' }}><Briefcase size={24} /></div>
                   <div>
-                    <div style={{ fontSize: '24px', fontWeight: 800, color: 'var(--color-foreground)', lineHeight: 1 }}>200+</div>
-                    <div style={{ fontSize: '14px', color: 'var(--color-muted-foreground)', fontWeight: 500 }}>Projects Delivered</div>
+                    <div style={{ fontSize: '24px', fontWeight: 800, color: '#0f172a', lineHeight: 1 }}>200+</div>
+                    <div style={{ fontSize: '14px', color: '#64748b', fontWeight: 600 }}>Projects Delivered</div>
                   </div>
                 </motion.div>
 
                 <motion.div 
                   animate={{ y: [0, 10, 0] }} 
                   transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                  style={{ position: 'absolute', bottom: '25%', right: '-5%', padding: '24px', backgroundColor: 'rgba(255,255,255,0.9)', backdropFilter: 'blur(12px)', borderRadius: '20px', border: '1px solid rgba(255,255,255,0.5)', boxShadow: '0 10px 40px -10px rgba(0,0,0,0.08)', display: 'flex', alignItems: 'center', gap: '16px' }}>
+                  style={{ position: 'absolute', top: '10%', right: '-10%', padding: '20px 24px', backgroundColor: 'rgba(255,255,255,0.95)', backdropFilter: 'blur(12px)', borderRadius: '20px', border: '1px solid rgba(255,255,255,0.5)', boxShadow: '0 10px 40px -10px rgba(0,0,0,0.15)', display: 'flex', alignItems: 'center', gap: '16px', zIndex: 10 }}>
                   <div style={{ width: '48px', height: '48px', borderRadius: '12px', backgroundColor: '#f0fdf4', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#16a34a' }}><Shield size={24} /></div>
                   <div>
-                    <div style={{ fontSize: '24px', fontWeight: 800, color: 'var(--color-foreground)', lineHeight: 1 }}>99.9%</div>
-                    <div style={{ fontSize: '14px', color: 'var(--color-muted-foreground)', fontWeight: 500 }}>Uptime SLA</div>
+                    <div style={{ fontSize: '24px', fontWeight: 800, color: '#0f172a', lineHeight: 1 }}>99.9%</div>
+                    <div style={{ fontSize: '14px', color: '#64748b', fontWeight: 600 }}>Uptime SLA</div>
                   </div>
                 </motion.div>
               </motion.div>
@@ -186,30 +228,30 @@ export default function AboutClient() {
           <div style={{ display: 'flex', flexDirection: 'column', gap: '64px' }}>
             
             {/* Mission Row */}
-            <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} style={{ display: 'flex', flexWrap: 'wrap', gap: '64px', alignItems: 'center', padding: '64px', backgroundColor: 'var(--color-background)', borderRadius: '24px', border: '1px solid var(--color-border)', boxShadow: '0 4px 20px rgba(0,0,0,0.02)' }}>
+            <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} style={{ display: 'flex', flexWrap: 'wrap', gap: '40px', alignItems: 'center', padding: '40px', backgroundColor: 'var(--color-background)', borderRadius: '24px', border: '1px solid var(--color-border)', boxShadow: '0 4px 20px rgba(0,0,0,0.02)' }}>
               <div style={{ flex: '1 1 400px' }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '24px' }}>
-                  <span style={{ fontSize: '64px', fontWeight: 800, color: '#e2e8f0', lineHeight: 1 }}>01</span>
-                  <h2 style={{ fontSize: '48px', fontWeight: 700, color: 'var(--color-foreground)', margin: 0 }}>Mission</h2>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '16px' }}>
+                  <span style={{ fontSize: '40px', fontWeight: 800, color: '#334155', lineHeight: 1 }}>01</span>
+                  <h2 style={{ fontSize: '32px', fontWeight: 700, color: 'var(--color-foreground)', margin: 0 }}>Mission</h2>
                 </div>
-                <p style={{ fontSize: '20px', lineHeight: '1.7', color: 'var(--color-muted-foreground)' }}>
+                <p style={{ fontSize: '16px', lineHeight: '1.7', color: 'var(--color-muted-foreground)' }}>
                   To empower organizations with the tools necessary to streamline operations, enhance productivity, and drive sustainable growth. We believe technology should act as an enabler — not a barrier — to success. Every solution we build is designed to deliver tangible ROI and long-term competitive advantage.
                 </p>
               </div>
-              <div style={{ flex: '1 1 400px', display: 'flex', justifyContent: 'center' }}>
-                <div style={{ width: '120px', height: '120px', borderRadius: '30px', background: 'linear-gradient(135deg, #4f46e5 0%, #0ea5e9 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 20px 40px -10px rgba(79,70,229,0.3)' }}>
-                  <Target size={48} color="white" />
+              <div style={{ flex: '1 1 300px', display: 'flex', justifyContent: 'center' }}>
+                <div style={{ width: '100px', height: '100px', borderRadius: '24px', background: 'linear-gradient(135deg, #4f46e5 0%, #0ea5e9 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 20px 40px -10px rgba(79,70,229,0.3)' }}>
+                  <Target size={40} color="white" />
                 </div>
               </div>
             </motion.div>
 
             {/* Vision Row */}
-            <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} style={{ padding: '64px', backgroundColor: 'var(--color-background)', borderRadius: '24px', border: '1px solid var(--color-border)', boxShadow: '0 4px 20px rgba(0,0,0,0.02)', marginTop: '32px' }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '24px' }}>
-                <span style={{ fontSize: '64px', fontWeight: 800, color: '#e2e8f0', lineHeight: 1 }}>02</span>
-                <h2 style={{ fontSize: '48px', fontWeight: 700, color: 'var(--color-foreground)', margin: 0 }}>Vision</h2>
+            <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} style={{ padding: '40px', backgroundColor: 'var(--color-background)', borderRadius: '24px', border: '1px solid var(--color-border)', boxShadow: '0 4px 20px rgba(0,0,0,0.02)', marginTop: '24px' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '16px' }}>
+                <span style={{ fontSize: '40px', fontWeight: 800, color: '#334155', lineHeight: 1 }}>02</span>
+                <h2 style={{ fontSize: '32px', fontWeight: 700, color: 'var(--color-foreground)', margin: 0 }}>Vision</h2>
               </div>
-              <p style={{ fontSize: '20px', lineHeight: '1.7', color: 'var(--color-muted-foreground)', maxWidth: '900px' }}>
+              <p style={{ fontSize: '16px', lineHeight: '1.7', color: 'var(--color-muted-foreground)', maxWidth: '900px' }}>
                 To become India's most trusted technology partner for businesses of all sizes, known for engineering excellence, innovative thinking, and transformational impact. We envision a future where every business — from startups to enterprises — has access to world-class software solutions.
               </p>
             </motion.div>
@@ -219,14 +261,34 @@ export default function AboutClient() {
       </section>
 
       {/* SECTION 3: COMPANY STATS */}
-      <section style={{ padding: '140px 0', backgroundcolor: 'var(--color-foreground)', color: 'var(--color-background)' }}>
-        <div className="container-custom" style={{ maxWidth: '1320px', margin: '0 auto' }}>
+      <section className="section-padding bg-section-alt relative border-y border-white/5">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(37,99,235,0.05)_0%,transparent_70%)] pointer-events-none" />
+        <div className="container-custom relative z-10" style={{ maxWidth: '1320px', margin: '0 auto' }}>
           <div style={{ textAlign: 'center', marginBottom: '80px' }}>
-            <h2 style={{ fontSize: '48px', fontWeight: 700, marginBottom: '24px', color: 'var(--color-background)' }}>Impact in <span style={{ color: '#38bdf8' }}>Numbers</span></h2>
+            <div className="badge mb-4 mx-auto w-fit">Company Stats</div>
+            <h2 style={{ fontSize: '48px', fontWeight: 700, marginBottom: '24px', color: 'var(--color-foreground)' }}>Impact in <span className="text-accent-gradient">Numbers</span></h2>
             <p style={{ fontSize: '20px', color: 'var(--color-muted-foreground)', maxWidth: '600px', margin: '0 auto' }}>We measure our success by the scale of our impact and the reliability of our systems.</p>
           </div>
           
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '32px' }}>
+          <style dangerouslySetInnerHTML={{__html: `
+            .stats-grid {
+              display: grid;
+              grid-template-columns: repeat(2, 1fr);
+              gap: 16px;
+            }
+            @media (min-width: 768px) {
+              .stats-grid {
+                grid-template-columns: repeat(3, 1fr);
+              }
+            }
+            @media (min-width: 1024px) {
+              .stats-grid {
+                grid-template-columns: repeat(6, 1fr);
+                gap: 24px;
+              }
+            }
+          `}} />
+          <div className="stats-grid">
             {stats.map((stat, idx) => (
               <motion.div 
                 key={stat.label}
@@ -235,9 +297,9 @@ export default function AboutClient() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
                 whileHover={{ scale: 1.05, backgroundColor: 'rgba(255,255,255,0.05)' }}
-                style={{ padding: '40px 24px', borderRadius: '20px', border: '1px solid rgba(255,255,255,0.1)', textAlign: 'center', transition: 'background-color 0.3s' }}
+                style={{ padding: '32px 16px', borderRadius: '20px', border: '1px solid rgba(255,255,255,0.1)', textAlign: 'center', backgroundColor: 'rgba(255,255,255,0.02)', backdropFilter: 'blur(10px)', transition: 'background-color 0.3s' }}
               >
-                <div style={{ fontSize: '48px', fontWeight: 800, marginBottom: '8px', background: 'linear-gradient(135deg, #ffffff, #94a3b8)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+                <div style={{ fontSize: '48px', fontWeight: 800, marginBottom: '8px', color: 'var(--color-foreground)' }}>
                   {stat.value}
                 </div>
                 <div style={{ fontSize: '16px', color: 'var(--color-muted-foreground)', fontWeight: 500 }}>{stat.label}</div>
@@ -257,9 +319,10 @@ export default function AboutClient() {
           }
           .bento-card {
             padding: 40px;
-            background-color: #ffffff;
+            background-color: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(10px);
             border-radius: 20px;
-            border: 1px solid #ececec;
+            border: 1px solid rgba(255, 255, 255, 0.05);
             display: flex;
             flex-direction: column;
             transition: all 0.3s;
@@ -317,7 +380,7 @@ export default function AboutClient() {
                   whileHover={{ y: -5, boxShadow: '0 20px 40px -10px rgba(0,0,0,0.1)' }}
                   className={`bento-card ${bentoClass}`}
                 >
-                  <div style={{ width: '56px', height: '56px', borderRadius: '16px', backgroundColor: '#eff6ff', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '24px', color: '#4f46e5' }}>
+                  <div style={{ width: '56px', height: '56px', borderRadius: '16px', backgroundColor: 'rgba(79, 70, 229, 0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '24px', color: '#818cf8', border: '1px solid rgba(79, 70, 229, 0.2)' }}>
                     <val.icon size={28} />
                   </div>
                   <h3 style={{ fontSize: '24px', fontWeight: 700, color: 'var(--color-foreground)', marginBottom: '16px' }}>{val.title}</h3>
@@ -422,7 +485,7 @@ export default function AboutClient() {
               <p style={{ fontSize: '20px', lineHeight: '1.7', color: 'var(--color-muted-foreground)', marginBottom: '40px' }}>
                 We engineer solutions that align directly with your business goals. Our commitment to quality, security, and agile delivery sets us apart from traditional service providers.
               </p>
-              <Link href="/services" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', height: '56px', padding: '0 32px', backgroundcolor: 'var(--color-foreground)', color: 'var(--color-background)', borderRadius: '14px', fontWeight: 600, fontSize: '16px', transition: 'all 0.2s', boxShadow: '0 4px 14px 0 rgba(0,0,0,0.1)' }}>
+              <Link href="/services" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', height: '56px', padding: '0 32px', backgroundColor: 'var(--color-foreground)', color: 'var(--color-background)', borderRadius: '14px', fontWeight: 600, fontSize: '16px', transition: 'all 0.2s', boxShadow: '0 4px 14px 0 rgba(0,0,0,0.1)' }}>
                 Explore Our Services
               </Link>
             </div>
@@ -450,22 +513,22 @@ export default function AboutClient() {
       </section>
 
       {/* SECTION 8: CTA */}
-      <section style={{ padding: '140px 0' }}>
+      <section className="section-padding">
         <div className="container-custom" style={{ maxWidth: '1320px', margin: '0 auto' }}>
-          <div style={{ position: 'relative', padding: '100px 40px', backgroundcolor: 'var(--color-foreground)', borderRadius: '24px', textAlign: 'center', overflow: 'hidden' }}>
+          <div className="card-glow" style={{ position: 'relative', padding: '100px 40px', backgroundColor: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '24px', textAlign: 'center', overflow: 'hidden' }}>
             {/* Floating Shapes */}
-            <div style={{ position: 'absolute', top: '-20%', left: '-10%', width: '400px', height: '400px', backgroundColor: '#4f46e5', borderRadius: '50%', filter: 'blur(100px)', opacity: 0.3 }} />
-            <div style={{ position: 'absolute', bottom: '-20%', right: '-10%', width: '400px', height: '400px', backgroundColor: '#0ea5e9', borderRadius: '50%', filter: 'blur(100px)', opacity: 0.2 }} />
+            <div style={{ position: 'absolute', top: '-50%', left: '-20%', width: '600px', height: '600px', background: 'radial-gradient(circle, rgba(79,70,229,0.15) 0%, transparent 70%)', borderRadius: '50%' }} />
+            <div style={{ position: 'absolute', bottom: '-50%', right: '-20%', width: '600px', height: '600px', background: 'radial-gradient(circle, rgba(14,165,233,0.15) 0%, transparent 70%)', borderRadius: '50%' }} />
             
             <div style={{ position: 'relative', zIndex: 1, maxWidth: '800px', margin: '0 auto' }}>
-              <h2 style={{ fontSize: '56px', fontWeight: 700, color: 'var(--color-background)', marginBottom: '24px', lineHeight: 1.1 }}>Let's Build Something <span style={{ color: '#38bdf8' }}>Exceptional.</span></h2>
+              <h2 style={{ fontSize: '56px', fontWeight: 700, color: 'var(--color-foreground)', marginBottom: '24px', lineHeight: 1.1 }}>Let's Build Something <span className="text-accent-gradient">Exceptional.</span></h2>
               <p style={{ fontSize: '20px', color: 'var(--color-muted-foreground)', marginBottom: '48px' }}>From MVPs to enterprise platforms, we help ambitious businesses scale faster.</p>
               
               <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap', justifyContent: 'center' }}>
-                <Link href="/contact" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', height: '56px', padding: '0 32px', backgroundColor: 'var(--color-background)', color: 'var(--color-foreground)', borderRadius: '14px', fontWeight: 600, fontSize: '16px', transition: 'all 0.2s', boxShadow: '0 4px 14px 0 rgba(255,255,255,0.1)' }}>
+                <Link href="/contact" className="btn-primary" style={{ padding: '0 32px', height: '56px' }}>
                   Book Strategy Call
                 </Link>
-                <Link href="/portfolio" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', height: '56px', padding: '0 32px', backgroundColor: 'transparent', color: 'var(--color-background)', border: '1px solid rgba(255,255,255,0.2)', borderRadius: '14px', fontWeight: 600, fontSize: '16px', transition: 'all 0.2s' }}>
+                <Link href="/portfolio" className="btn-secondary" style={{ padding: '0 32px', height: '56px' }}>
                   View Portfolio
                 </Link>
               </div>
