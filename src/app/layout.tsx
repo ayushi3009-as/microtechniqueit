@@ -1,9 +1,10 @@
 import type { Metadata } from 'next';
-import { Inter, DM_Sans } from 'next/font/google';
+import { Inter, DM_Sans, Space_Grotesk } from 'next/font/google';
 import './globals.css';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans' });
-const dmSans = DM_Sans({ subsets: ['latin'], variable: '--font-heading' });
+const dmSans = DM_Sans({ subsets: ['latin'], variable: '--font-dm-sans' });
+const spaceGrotesk = Space_Grotesk({ subsets: ['latin'], variable: '--font-heading' });
 import { Providers } from '@/components/providers';
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
@@ -85,7 +86,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning className={`${inter.variable} ${dmSans.variable}`}>
+    <html lang="en" suppressHydrationWarning className={`${inter.variable} ${dmSans.variable} ${spaceGrotesk.variable}`}>
       <body className="min-h-screen bg-background text-foreground antialiased flex flex-col">
         <Providers>
           <Header />

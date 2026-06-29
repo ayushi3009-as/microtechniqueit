@@ -124,20 +124,20 @@ export default function ServicesPage() {
       <section style={{ position: 'relative', paddingTop: '8rem', paddingBottom: '4rem', overflow: 'hidden' }}>
         
         <div className="container" style={{ position: 'relative', zIndex: 10, maxWidth: '1320px', margin: '0 auto', padding: '0 1.5rem' }}>
-          <nav style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.875rem', color: '#64748b', marginBottom: '2rem' }} aria-label="Breadcrumb">
-            <Link href="/" style={{ color: '#64748b', textDecoration: 'none' }}>Home</Link>
+          <nav style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.875rem', color: 'var(--color-muted-foreground)', marginBottom: '2rem' }} aria-label="Breadcrumb">
+            <Link href="/" style={{ color: 'var(--color-muted-foreground)', textDecoration: 'none' }}>Home</Link>
             <span>/</span>
-            <span style={{ color: '#0f172a' }}>Services</span>
+            <span style={{ color: 'var(--color-foreground)' }}>Services</span>
           </nav>
           <div style={{ maxWidth: '768px' }}>
             <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', padding: '0.5rem 1rem', borderRadius: '9999px', fontSize: '0.875rem', fontWeight: 500, backgroundColor: 'rgba(99, 102, 241, 0.1)', color: '#6366f1', border: '1px solid rgba(99, 102, 241, 0.2)', marginBottom: '1.5rem' }}>
               Our Expertise
             </span>
-            <h1 style={{ color: '#0f172a', marginBottom: '1.5rem', fontFamily: 'Outfit, sans-serif', fontSize: '4rem', fontWeight: 800, lineHeight: 1.1 }}>
+            <h1 style={{ color: 'var(--color-foreground)', marginBottom: '1.5rem', fontFamily: 'Outfit, sans-serif', fontSize: '4rem', fontWeight: 800, lineHeight: 1.1 }}>
               Solutions That Drive{' '}
               <span style={{ background: 'linear-gradient(to right, #6366f1, #8b5cf6)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Business Growth</span>
             </h1>
-            <p style={{ fontSize: '1.125rem', color: '#64748b', lineHeight: 1.6 }}>
+            <p style={{ fontSize: '1.125rem', color: 'var(--color-muted-foreground)', lineHeight: 1.6 }}>
               From custom software development to digital marketing, we offer a comprehensive
               suite of technology services designed to transform your business operations and
               accelerate growth.
@@ -154,21 +154,21 @@ export default function ServicesPage() {
               <Link
                 key={service.slug}
                 href={`/services/${service.slug}`}
-                style={{ display: 'block', padding: '2rem', borderRadius: '1rem', backgroundColor: '#ffffff', border: '1px solid #e2e8f0', textDecoration: 'none', boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.05)' }}
+                style={{ display: 'block', padding: '2rem', borderRadius: '1rem', backgroundColor: 'var(--color-background)', border: '1px solid var(--color-border)', textDecoration: 'none', boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.05)' }}
                 className="hover-lift"
               >
-                <div className={`w-fit mb-5`} style={{ padding: '0.75rem', borderRadius: '0.75rem', backgroundColor: '#f1f5f9', display: 'inline-block' }}>
-                  <service.icon style={{ width: '24px', height: '24px', color: '#0f172a' }} />
+                <div className={`w-fit mb-5`} style={{ padding: '0.75rem', borderRadius: '0.75rem', backgroundColor: 'var(--color-background)', display: 'inline-block' }}>
+                  <service.icon style={{ width: '24px', height: '24px', color: 'var(--color-foreground)' }} />
                 </div>
                 <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: '1rem', marginBottom: '0.75rem' }}>
-                  <h2 style={{ fontSize: '1.25rem', fontFamily: 'Outfit, sans-serif', fontWeight: 700, color: '#0f172a', margin: 0 }}>
+                  <h2 style={{ fontSize: '1.25rem', fontFamily: 'Outfit, sans-serif', fontWeight: 700, color: 'var(--color-foreground)', margin: 0 }}>
                     {service.title}
                   </h2>
                   <span style={{ flexShrink: 0, padding: '0.25rem 0.625rem', borderRadius: '9999px', fontSize: '0.75rem', fontWeight: 600, backgroundColor: 'rgba(99, 102, 241, 0.1)', color: '#6366f1' }}>
                     {service.stat}
                   </span>
                 </div>
-                <p style={{ fontSize: '0.875rem', color: '#64748b', lineHeight: 1.6, marginBottom: '1rem' }}>
+                <p style={{ fontSize: '0.875rem', color: 'var(--color-muted-foreground)', lineHeight: 1.6, marginBottom: '1rem' }}>
                   {service.description}
                 </p>
                 <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.875rem', color: '#6366f1', fontWeight: 500 }}>
@@ -185,15 +185,15 @@ export default function ServicesPage() {
         <div className="container" style={{ maxWidth: '1320px', margin: '0 auto', padding: '0 1.5rem' }}>
           <div style={{ position: 'relative', borderRadius: '1.5rem', overflow: 'hidden', backgroundColor: '#e0e7ff', border: '1px solid rgba(99, 102, 241, 0.1)', padding: '4rem 2rem', textAlign: 'center' }}>
             <div className="relative z-10" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-              <h2 style={{ fontSize: '2.5rem', fontWeight: 800, color: '#0f172a', marginBottom: '1rem', textAlign: 'center' }}>
+              <h2 style={{ fontSize: '2.5rem', fontWeight: 800, color: 'var(--color-foreground)', marginBottom: '1rem', textAlign: 'center' }}>
                 Need a Custom Solution?
               </h2>
-              <p style={{ fontSize: '1.125rem', color: '#64748b', maxWidth: '600px', margin: '0 auto 2rem auto', textAlign: 'center', lineHeight: 1.6 }}>
+              <p style={{ fontSize: '1.125rem', color: 'var(--color-muted-foreground)', maxWidth: '600px', margin: '0 auto 2rem auto', textAlign: 'center', lineHeight: 1.6 }}>
                 Every business is unique. Let&apos;s discuss how we can tailor our services to your specific needs.
               </p>
               <Link
                 href="/contact"
-                style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', padding: '1rem 2rem', fontSize: '1rem', fontWeight: 600, borderRadius: '0.75rem', backgroundColor: '#6366f1', color: '#ffffff', textDecoration: 'none', transition: 'opacity 0.2s' }}
+                style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', padding: '1rem 2rem', fontSize: '1rem', fontWeight: 600, borderRadius: '0.75rem', backgroundColor: '#6366f1', color: 'var(--color-background)', textDecoration: 'none', transition: 'opacity 0.2s' }}
               >
                 Get a Free Consultation
                 <ArrowRight style={{ width: '16px', height: '16px' }} />

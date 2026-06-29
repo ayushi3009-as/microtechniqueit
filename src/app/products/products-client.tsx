@@ -8,7 +8,7 @@ import Link from 'next/link';
 
 export default function ProductsClient() {
   return (
-    <div style={{ backgroundColor: '#ffffff', color: '#0f172a', minHeight: '100vh', fontFamily: 'Inter, sans-serif', overflow: 'hidden' }}>
+    <div style={{ backgroundColor: 'var(--color-background)', color: 'var(--color-foreground)', minHeight: '100vh', fontFamily: 'Inter, sans-serif', overflow: 'hidden' }}>
       <style dangerouslySetInnerHTML={{
         __html: `
           .container {
@@ -115,14 +115,14 @@ export default function ProductsClient() {
                   Powering India's <br/>
                   <span className="text-gradient">Digital Growth</span>
                 </h1>
-                <p style={{ fontSize: '1.125rem', color: '#64748b', marginBottom: '2.5rem', lineHeight: 1.6, maxWidth: '90%' }}>
+                <p style={{ fontSize: '1.125rem', color: 'var(--color-muted-foreground)', marginBottom: '2.5rem', lineHeight: 1.6, maxWidth: '90%' }}>
                   From flagship ERPs to industry-specific point-of-sale solutions, we build world-class software that solves complex problems with elegant simplicity.
                 </p>
                 <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-                  <button onClick={() => { document.getElementById('products-list')?.scrollIntoView({ behavior: 'smooth' }) }} style={{ padding: '1rem 2rem', backgroundColor: '#38bdf8', color: '#0f172a', borderRadius: '0.75rem', fontWeight: 600, fontSize: '1rem', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '0.5rem', textDecoration: 'none' }}>
+                  <button onClick={() => { document.getElementById('products-list')?.scrollIntoView({ behavior: 'smooth' }) }} style={{ padding: '1rem 2rem', backgroundColor: '#38bdf8', color: 'var(--color-foreground)', borderRadius: '0.75rem', fontWeight: 600, fontSize: '1rem', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '0.5rem', textDecoration: 'none' }}>
                     Explore Products <ChevronRight style={{ width: '20px', height: '20px' }} />
                   </button>
-                  <Link href="/contact" style={{ padding: '1rem 2rem', backgroundColor: '#ffffff', color: '#0f172a', borderRadius: '0.75rem', fontWeight: 600, fontSize: '1rem', border: '1px solid #cbd5e1', cursor: 'pointer', textDecoration: 'none' }}>
+                  <Link href="/contact" style={{ padding: '1rem 2rem', backgroundColor: 'var(--color-background)', color: 'var(--color-foreground)', borderRadius: '0.75rem', fontWeight: 600, fontSize: '1rem', border: '1px solid var(--color-border)', cursor: 'pointer', textDecoration: 'none' }}>
                     View Pricing
                   </Link>
                 </div>
@@ -141,8 +141,8 @@ export default function ProductsClient() {
                   <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '0.75rem' }}>
                     <div style={{ width: '32px', height: '32px', borderRadius: '50%', background: 'linear-gradient(135deg, #38bdf8, #3b82f6)' }} />
                     <div>
-                      <div style={{ fontWeight: 600, fontSize: '0.75rem', color: '#0f172a' }}>System Active</div>
-                      <div style={{ fontSize: '0.65rem', color: '#64748b' }}>All services operational</div>
+                      <div style={{ fontWeight: 600, fontSize: '0.75rem', color: 'var(--color-foreground)' }}>System Active</div>
+                      <div style={{ fontSize: '0.65rem', color: 'var(--color-muted-foreground)' }}>All services operational</div>
                     </div>
                   </div>
                   <div style={{ height: '6px', background: 'rgba(0,0,0,0.05)', borderRadius: '3px', overflow: 'hidden' }}>
@@ -152,8 +152,8 @@ export default function ProductsClient() {
                 
                 {/* Floating Card 2 */}
                 <div className="floating-card-2 card-bg" style={{ position: 'absolute', bottom: '15%', left: '5%', width: '180px', padding: '1rem', borderRadius: '1rem', zIndex: 3, boxShadow: '0 15px 30px -5px rgba(0,0,0,0.1)' }}>
-                   <div style={{ fontWeight: 700, fontSize: '1.25rem', marginBottom: '0.25rem', color: '#0f172a' }}>+124%</div>
-                   <div style={{ fontSize: '0.75rem', color: '#64748b' }}>Efficiency Gain</div>
+                   <div style={{ fontWeight: 700, fontSize: '1.25rem', marginBottom: '0.25rem', color: 'var(--color-foreground)' }}>+124%</div>
+                   <div style={{ fontSize: '0.75rem', color: 'var(--color-muted-foreground)' }}>Efficiency Gain</div>
                    <img src="/abstract-graphic.png" alt="Graph" style={{ width: '100%', marginTop: '0.75rem', borderRadius: '0.5rem', opacity: 0.9 }} onError={(e) => e.currentTarget.style.display = 'none'} />
                 </div>
 
@@ -179,7 +179,7 @@ export default function ProductsClient() {
                   <div style={{ flex: 1 }}>
                     <div style={{ display: 'inline-block', padding: '0.5rem 1rem', backgroundColor: 'rgba(56, 189, 248, 0.1)', color: '#38bdf8', borderRadius: '9999px', fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.05em', textTransform: 'uppercase', marginBottom: '1.5rem' }}>Flagship Product</div>
                     <h2 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1.5rem', lineHeight: 1.2 }}>{product.title}</h2>
-                    <p style={{ fontSize: '1.125rem', color: '#64748b', marginBottom: '2rem', lineHeight: 1.6 }}>{product.longDescription}</p>
+                    <p style={{ fontSize: '1.125rem', color: 'var(--color-muted-foreground)', marginBottom: '2rem', lineHeight: 1.6 }}>{product.longDescription}</p>
                     
                     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1rem', marginBottom: '2.5rem' }}>
                       {product.features.slice(0, 4).map((feature, i) => (
@@ -209,7 +209,7 @@ export default function ProductsClient() {
                 <div key={product.id} className="asym-row-rev" style={{ display: 'flex', flexDirection: 'column', gap: '4rem', alignItems: 'center' }}>
                   <div style={{ flex: 1 }}>
                     <h2 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1.5rem', lineHeight: 1.2 }}>{product.title}</h2>
-                    <p style={{ fontSize: '1.125rem', color: '#64748b', marginBottom: '2rem', lineHeight: 1.6 }}>{product.description}</p>
+                    <p style={{ fontSize: '1.125rem', color: 'var(--color-muted-foreground)', marginBottom: '2rem', lineHeight: 1.6 }}>{product.description}</p>
                     
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', marginBottom: '2.5rem' }}>
                       {product.features.slice(0, 4).map((feature, i) => (
@@ -222,7 +222,7 @@ export default function ProductsClient() {
                       ))}
                     </div>
                     
-                    <Link href={`/products/${product.slug}`} style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', padding: '0.875rem 1.5rem', backgroundColor: 'rgba(0,0,0,0.05)', border: '1px solid rgba(0,0,0,0.1)', borderRadius: '0.75rem', color: '#0f172a', fontWeight: 600, textDecoration: 'none' }}>
+                    <Link href={`/products/${product.slug}`} style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', padding: '0.875rem 1.5rem', backgroundColor: 'rgba(0,0,0,0.05)', border: '1px solid rgba(0,0,0,0.1)', borderRadius: '0.75rem', color: 'var(--color-foreground)', fontWeight: 600, textDecoration: 'none' }}>
                       Learn More
                     </Link>
                   </div>
@@ -240,14 +240,14 @@ export default function ProductsClient() {
                 <div key={product.id} style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
                   <div style={{ textAlign: 'center', maxWidth: '600px', margin: '0 auto', marginBottom: '2rem' }}>
                     <h2 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>{product.title}</h2>
-                    <p style={{ color: '#64748b', fontSize: '1.125rem' }}>{product.description}</p>
+                    <p style={{ color: 'var(--color-muted-foreground)', fontSize: '1.125rem' }}>{product.description}</p>
                   </div>
                   
                   <div className="bento-grid" style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
                     <div className="bento-main card-bg hover-lift" style={{ padding: '2.5rem', borderRadius: '1.5rem', display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: '2rem', minHeight: '300px' }}>
                       <div>
                         <h3 style={{ fontSize: '1.5rem', fontWeight: 600, marginBottom: '1rem' }}>Core Modules</h3>
-                        <p style={{ color: '#64748b', marginBottom: '2rem' }}>Experience full automation with integrated systems tailored for modern operations.</p>
+                        <p style={{ color: 'var(--color-muted-foreground)', marginBottom: '2rem' }}>Experience full automation with integrated systems tailored for modern operations.</p>
                       </div>
                       <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
                         {product.modules?.slice(0, 3).map((mod, i) => (
@@ -261,12 +261,12 @@ export default function ProductsClient() {
                          <CheckCircle2 style={{ color: '#38bdf8', width: '32px', height: '32px' }} />
                       </div>
                       <h4 style={{ fontSize: '1.125rem', fontWeight: 600, marginBottom: '0.5rem' }}>Compliance Ready</h4>
-                      <p style={{ color: '#64748b', fontSize: '0.875rem' }}>Auto TDS, PF & ESIC</p>
+                      <p style={{ color: 'var(--color-muted-foreground)', fontSize: '0.875rem' }}>Auto TDS, PF & ESIC</p>
                     </div>
                     
                     <div className="card-bg hover-lift" style={{ padding: '2rem', borderRadius: '1.5rem', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', background: 'linear-gradient(135deg, #f8fafc, #f1f5f9)' }}>
-                      <Link href={`/products/${product.slug}`} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1rem', color: '#0f172a', textDecoration: 'none' }}>
-                        <div style={{ width: '48px', height: '48px', borderRadius: '50%', backgroundColor: '#38bdf8', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#ffffff' }}>
+                      <Link href={`/products/${product.slug}`} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1rem', color: 'var(--color-foreground)', textDecoration: 'none' }}>
+                        <div style={{ width: '48px', height: '48px', borderRadius: '50%', backgroundColor: '#38bdf8', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--color-background)' }}>
                           <ArrowRight style={{ width: '24px', height: '24px' }} />
                         </div>
                         <span style={{ fontWeight: 600 }}>Explore Solution</span>
@@ -284,18 +284,18 @@ export default function ProductsClient() {
                   <div className="centered-large-inner" style={{ maxWidth: '800px', display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
                     <div style={{ padding: '0.5rem 1rem', backgroundColor: 'rgba(129, 140, 248, 0.1)', color: '#818cf8', borderRadius: '9999px', fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.05em', textTransform: 'uppercase', marginBottom: '1.5rem' }}>Specialized</div>
                     <h2 style={{ fontSize: '3rem', fontWeight: 800, marginBottom: '1.5rem', lineHeight: 1.1 }}>{product.title}</h2>
-                    <p style={{ fontSize: '1.25rem', color: '#64748b', marginBottom: '3rem', lineHeight: 1.6 }}>{product.description}</p>
+                    <p style={{ fontSize: '1.25rem', color: 'var(--color-muted-foreground)', marginBottom: '3rem', lineHeight: 1.6 }}>{product.description}</p>
                     
                     <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap', justifyContent: 'center', width: '100%', marginBottom: '3rem' }}>
                       {product.modules?.map((mod, i) => (
                         <div key={i} className="card-bg hover-lift" style={{ padding: '1.5rem', borderRadius: '1rem', flex: '1 1 200px', minWidth: '200px', textAlign: 'center' }}>
                           <div style={{ fontSize: '1.125rem', fontWeight: 600, marginBottom: '0.5rem' }}>{mod.name}</div>
-                          <p style={{ fontSize: '0.875rem', color: '#64748b' }}>{mod.description}</p>
+                          <p style={{ fontSize: '0.875rem', color: 'var(--color-muted-foreground)' }}>{mod.description}</p>
                         </div>
                       ))}
                     </div>
                     
-                    <Link href={`/products/${product.slug}`} style={{ padding: '1rem 2.5rem', backgroundColor: '#fff', color: '#0f172a', borderRadius: '0.75rem', fontWeight: 600, fontSize: '1.125rem', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
+                    <Link href={`/products/${product.slug}`} style={{ padding: '1rem 2.5rem', backgroundColor: '#fff', color: 'var(--color-foreground)', borderRadius: '0.75rem', fontWeight: 600, fontSize: '1.125rem', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
                       Discover Capabilities <ChevronRight style={{ width: '20px', height: '20px' }} />
                     </Link>
                   </div>
@@ -310,11 +310,11 @@ export default function ProductsClient() {
       </section>
 
       {/* "Why Our Products" Comparison Checklist */}
-      <section style={{ padding: '6rem 0', backgroundColor: '#f8fafc', borderTop: '1px solid rgba(0,0,0,0.05)' }}>
+      <section style={{ padding: '6rem 0', backgroundColor: 'var(--color-background)', borderTop: '1px solid rgba(0,0,0,0.05)' }}>
         <div className="container">
           <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
             <h2 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Why Choose Microtechnique</h2>
-            <p style={{ color: '#64748b', fontSize: '1.125rem', maxWidth: '600px', margin: '0 auto' }}>A unified ecosystem designed to eliminate friction and scale effortlessly.</p>
+            <p style={{ color: 'var(--color-muted-foreground)', fontSize: '1.125rem', maxWidth: '600px', margin: '0 auto' }}>A unified ecosystem designed to eliminate friction and scale effortlessly.</p>
           </div>
           
           <div className="checklist-grid" style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '2rem' }}>
@@ -332,7 +332,7 @@ export default function ProductsClient() {
                 </div>
                 <div>
                   <h4 style={{ fontSize: '1.125rem', fontWeight: 600, marginBottom: '0.5rem' }}>{item.title}</h4>
-                  <p style={{ color: '#64748b', fontSize: '0.875rem', lineHeight: 1.5 }}>{item.desc}</p>
+                  <p style={{ color: 'var(--color-muted-foreground)', fontSize: '0.875rem', lineHeight: 1.5 }}>{item.desc}</p>
                 </div>
               </div>
             ))}
@@ -341,7 +341,7 @@ export default function ProductsClient() {
       </section>
 
       {/* Massive Dark Gradient CTA */}
-      <section style={{ padding: '6rem 1.5rem', backgroundColor: '#0f172a' }}>
+      <section style={{ padding: '6rem 1.5rem', backgroundcolor: 'var(--color-foreground)' }}>
         <div style={{ 
           maxWidth: '1200px', 
           margin: '0 auto', 
@@ -359,21 +359,21 @@ export default function ProductsClient() {
           <style dangerouslySetInnerHTML={{ __html: `@keyframes spin { 100% { transform: rotate(360deg); } }` }} />
           
           <div style={{ position: 'relative', zIndex: 1 }}>
-            <h2 style={{ fontSize: '3.5rem', fontWeight: 800, marginBottom: '1.5rem', color: '#0f172a', letterSpacing: '-0.02em' }}>
+            <h2 style={{ fontSize: '3.5rem', fontWeight: 800, marginBottom: '1.5rem', color: 'var(--color-foreground)', letterSpacing: '-0.02em' }}>
               Ready to transform your business?
             </h2>
             <p style={{ fontSize: '1.25rem', color: '#cbd5e1', marginBottom: '3rem', maxWidth: '600px', margin: '0 auto 3rem auto' }}>
               Join thousands of Indian businesses scaling faster with Microtechnique's intelligent software suite.
             </p>
             <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-              <button className="hover-lift" style={{ padding: '1.25rem 3rem', backgroundColor: '#38bdf8', color: '#0f172a', borderRadius: '1rem', fontWeight: 700, fontSize: '1.125rem', border: 'none', cursor: 'pointer', display: 'inline-flex', alignItems: 'center', gap: '0.75rem', boxShadow: '0 10px 25px rgba(56, 189, 248, 0.3)' }}>
+              <button className="hover-lift" style={{ padding: '1.25rem 3rem', backgroundColor: '#38bdf8', color: 'var(--color-foreground)', borderRadius: '1rem', fontWeight: 700, fontSize: '1.125rem', border: 'none', cursor: 'pointer', display: 'inline-flex', alignItems: 'center', gap: '0.75rem', boxShadow: '0 10px 25px rgba(56, 189, 248, 0.3)' }}>
                 Start 15-Day Free Trial <ArrowRight style={{ width: '20px', height: '20px' }} />
               </button>
-              <button className="hover-lift" style={{ padding: '1.25rem 3rem', backgroundColor: 'rgba(0,0,0,0.05)', color: '#0f172a', borderRadius: '1rem', fontWeight: 700, fontSize: '1.125rem', border: '1px solid rgba(0,0,0,0.2)', cursor: 'pointer' }}>
+              <button className="hover-lift" style={{ padding: '1.25rem 3rem', backgroundColor: 'rgba(0,0,0,0.05)', color: 'var(--color-foreground)', borderRadius: '1rem', fontWeight: 700, fontSize: '1.125rem', border: '1px solid rgba(0,0,0,0.2)', cursor: 'pointer' }}>
                 Schedule Demo
               </button>
             </div>
-            <p style={{ marginTop: '2rem', fontSize: '0.875rem', color: '#64748b' }}>No credit card required • Setup in 5 minutes</p>
+            <p style={{ marginTop: '2rem', fontSize: '0.875rem', color: 'var(--color-muted-foreground)' }}>No credit card required • Setup in 5 minutes</p>
           </div>
         </div>
       </section>

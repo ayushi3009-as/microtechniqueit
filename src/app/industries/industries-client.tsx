@@ -410,7 +410,7 @@ export default function IndustriesClient() {
         <div className="ind-container">
           <div style={{ textAlign: 'center', marginBottom: '64px' }}>
             <motion.h2 
-              style={{ fontSize: '2.5rem', fontWeight: 800, margin: '0 0 16px 0', color: '#0f172a' }}
+              style={{ fontSize: '2.5rem', fontWeight: 800, margin: '0 0 16px 0', color: 'var(--color-foreground)' }}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -418,7 +418,7 @@ export default function IndustriesClient() {
               Industry Showcase
             </motion.h2>
             <motion.p 
-              style={{ fontSize: '1.125rem', color: '#64748b', maxWidth: '650px', margin: '0 auto', lineHeight: 1.6 }}
+              style={{ fontSize: '1.125rem', color: 'var(--color-muted-foreground)', maxWidth: '650px', margin: '0 auto', lineHeight: 1.6 }}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -446,7 +446,7 @@ export default function IndustriesClient() {
                     <div style={{ marginTop: 'auto', paddingTop: '24px', borderTop: '1px solid #e2e8f0' }}>
                       <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '12px' }}>
                         {industry.solutions.slice(0, 3).map((sol, i) => (
-                          <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '12px', fontSize: '0.95rem', color: '#475569', lineHeight: 1.5 }}>
+                          <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '12px', fontSize: '0.95rem', color: 'var(--color-muted-foreground)', lineHeight: 1.5 }}>
                             <CheckCircle2 size={18} color="#3b82f6" style={{ marginTop: '2px', flexShrink: 0 }} />
                             {sol}
                           </li>
@@ -469,8 +469,8 @@ export default function IndustriesClient() {
       <section className="ind-timeline">
         <div className="ind-container">
           <div style={{ textAlign: 'center' }}>
-            <h2 style={{ fontSize: '2.5rem', fontWeight: 800, margin: '0 0 16px 0', color: '#0f172a' }}>Our Integration Process</h2>
-            <p style={{ fontSize: '1.125rem', color: '#64748b', maxWidth: '650px', margin: '0 auto' }}>
+            <h2 style={{ fontSize: '2.5rem', fontWeight: 800, margin: '0 0 16px 0', color: 'var(--color-foreground)' }}>Our Integration Process</h2>
+            <p style={{ fontSize: '1.125rem', color: 'var(--color-muted-foreground)', maxWidth: '650px', margin: '0 auto' }}>
               How we deliver high-impact industry solutions from concept to deployment.
             </p>
           </div>

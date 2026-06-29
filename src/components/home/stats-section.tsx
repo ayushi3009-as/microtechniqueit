@@ -1,28 +1,13 @@
-'use client';
-
-import { Briefcase, Users, Calendar, Code2 } from 'lucide-react';
-
-const stats = [
-  { icon: Briefcase, value: '200+', label: 'Projects Delivered' },
-  { icon: Users, value: '150+', label: 'Happy Clients' },
-  { icon: Calendar, value: '5+', label: 'Years of Innovation' },
-  { icon: Code2, value: '50+', label: 'Expert Engineers' },
-];
+/**
+ * Stats Section — DEPRECATED
+ *
+ * All stat counters (Google Rating, Happy Clients, Years Experience,
+ * Countries Served) have been moved into the TrustedClients component
+ * at src/components/home/trusted-clients.tsx.
+ *
+ * This file is kept as a no-op export so existing imports don't break.
+ */
 
 export function StatsSection() {
-  return (
-    <section className="section-padding">
-      <div className="container-custom" style={{ marginTop: '30px', marginBottom: '30px' }}>
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '24px' }}>
-          {stats.map((stat) => (
-            <div key={stat.label} className="text-center p-6 rounded-2xl bg-pastel-blue" style={{ textAlign: 'center', padding: '24px' }}>
-              <stat.icon className="h-5 w-5 text-primary mx-auto mb-3" style={{ display: 'block', margin: '0 auto 12px auto' }} />
-              <div className="text-3xl font-bold text-foreground font-heading mb-1">{stat.value}</div>
-              <div className="text-sm text-muted-foreground">{stat.label}</div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
+  return null;
 }

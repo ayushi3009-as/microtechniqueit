@@ -1,77 +1,189 @@
 'use client';
 
-import Link from 'next/link';
-import { ArrowRight, Check } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const products = [
   {
-    slug: 'microtechnique-accounts',
+    emoji: '📊',
     title: 'Microtechnique Accounts',
-    desc: 'Flagship ERP for GST billing, invoicing, inventory, and financial reports.',
-    features: ['GST Ready', 'AI/OCR Bill Scanning', 'Multi-user Access'],
+    description: 'GST billing, invoicing, inventory & financial reports',
+    features: ['GST Ready', 'AI/OCR Scanning', 'Multi-branch'],
     badge: 'Most Popular',
   },
   {
-    slug: 'billing-inventory',
-    title: 'Billing & Inventory',
-    desc: 'Multi-store barcode and role-based access for seamless operations.',
-    features: ['Barcode Integration', 'Multi-store', 'Real-time Stock'],
+    emoji: '👨‍💼',
+    title: 'HRMS & Payroll',
+    description: 'Complete HR management with payroll automation',
+    features: ['Attendance', 'Leave Mgmt', 'Salary Processing'],
+    badge: null,
   },
   {
-    slug: 'payroll-software',
-    title: 'Payroll Software',
-    desc: 'Automated payroll with TDS/PF/PT/ESIC and attendance tracking.',
-    features: ['Automated Salary', 'Compliance', 'Staff Portal'],
+    emoji: '🏢',
+    title: 'ERP Solution',
+    description: 'End-to-end enterprise resource planning',
+    features: ['Inventory', 'Production', 'Supply Chain'],
+    badge: null,
   },
   {
-    slug: 'industry-specific-software',
-    title: 'Industry Solutions',
-    desc: 'Specialized software for retail, restaurant, manufacturing, and more.',
-    features: ['Custom Workflows', 'Domain Specific', 'Scalable'],
+    emoji: '🤝',
+    title: 'CRM',
+    description: 'Customer relationship & sales pipeline management',
+    features: ['Lead Tracking', 'Sales Pipeline', 'Analytics'],
+    badge: null,
+  },
+  {
+    emoji: '🏥',
+    title: 'Hospital Management',
+    description: 'Complete hospital & clinic management system',
+    features: ['OPD/IPD', 'Pharmacy', 'Lab Reports'],
+    badge: null,
+  },
+  {
+    emoji: '🏫',
+    title: 'School ERP',
+    description: 'All-in-one school management platform',
+    features: ['Admissions', 'Fees', 'Exams'],
+    badge: null,
+  },
+  {
+    emoji: '🍽',
+    title: 'Restaurant POS',
+    description: 'Smart point of sale for restaurants',
+    features: ['Table Mgmt', 'KOT', 'Online Orders'],
+    badge: null,
+  },
+  {
+    emoji: '🏗',
+    title: 'Builder CRM',
+    description: 'Real estate & construction project management',
+    features: ['Plot Booking', 'Payment Plans', 'Site Tracking'],
+    badge: null,
   },
 ];
 
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+      ease: 'easeOut',
+    },
+  },
+};
+
 export function ProductsShowcase() {
   return (
-    <section className="section-padding bg-section-alt" style={{ padding: '80px 0' }}>
+    <section className="section-padding bg-section-alt">
       <div className="container-custom">
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', flexWrap: 'wrap', gap: '24px', marginBottom: '48px' }}>
-          <div className="max-w-2xl">
-            <div className="badge mb-4 w-fit" style={{ marginBottom: '16px' }}>Our Products</div>
-            <h2 className="text-foreground mb-4" style={{ marginBottom: '16px' }}>Enterprise <span className="text-accent-gradient">Software</span></h2>
-            <p className="text-muted-foreground">Ready-to-use, scalable products built for Indian businesses.</p>
-          </div>
-          <Link href="/products" className="btn-secondary" style={{ display: 'inline-flex', alignItems: 'center' }}>
-            View All Products
-          </Link>
-        </div>
+        {/* Section Heading */}
+        <motion.div
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-80px' }}
+          transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
+        >
+          <div className="badge mb-4 mx-auto w-fit">Our Products</div>
+          <h2>
+            Enterprise{' '}
+            <span className="text-accent-gradient">Software Products</span>
+          </h2>
+          <p className="text-muted-foreground mt-4 max-w-2xl mx-auto text-lg">
+            Ready-to-use, scalable products built for Indian businesses across
+            every industry.
+          </p>
+        </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-6" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '24px' }}>
+        {/* Products Grid */}
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4"
+          style={{ gap: '32px' }}
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: '-60px' }}
+        >
           {products.map((product) => (
-            <div key={product.slug} className="card card-lift p-8" style={{ padding: '32px' }}>
+            <motion.div
+              key={product.title}
+              variants={cardVariants as any}
+              className="card card-glow group relative flex flex-col"
+              style={{ padding: '32px' }}
+              whileHover={{ scale: 1.03 }}
+              transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+            >
+              {/* Badge */}
               {product.badge && (
-                <span className="inline-block px-3 py-1 bg-pastel-violet text-primary text-xs font-semibold rounded-full mb-4">
+                <span
+                  className="absolute top-4 right-4 text-xs font-bold px-3 py-1 rounded-full"
+                  style={{
+                    background:
+                      'linear-gradient(135deg, rgba(37, 99, 235, 0.25), rgba(0, 229, 255, 0.2))',
+                    color: '#00E5FF',
+                    border: '1px solid rgba(0, 229, 255, 0.3)',
+                  }}
+                >
                   {product.badge}
                 </span>
               )}
-              <h3 className="text-xl font-semibold text-foreground mb-3">{product.title}</h3>
-              <p className="text-muted-foreground mb-6">{product.desc}</p>
-              
-              <ul className="space-y-3 mb-8">
-                {product.features.map((feature) => (
-                  <li key={feature} className="flex items-center gap-2 text-sm text-foreground" style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '12px' }}>
-                    <Check className="h-4 w-4 text-primary" />
-                    {feature}
-                  </li>
-                ))}
-              </ul>
 
-              <Link href={`/products/${product.slug}`} className="text-primary font-medium inline-flex items-center gap-1 hover:gap-2 transition-all text-sm">
-                Explore Product <ArrowRight className="h-4 w-4" />
-              </Link>
-            </div>
+              {/* Emoji Icon */}
+              <div
+                className="w-14 h-14 rounded-2xl flex items-center justify-center text-2xl mb-5 shrink-0"
+                style={{
+                  background:
+                    'linear-gradient(135deg, rgba(37, 99, 235, 0.2), rgba(0, 229, 255, 0.15))',
+                  boxShadow: '0 0 24px rgba(37, 99, 235, 0.15)',
+                }}
+              >
+                {product.emoji}
+              </div>
+
+              {/* Title */}
+              <h3 className="text-lg font-semibold text-foreground mb-2">
+                {product.title}
+              </h3>
+
+              {/* Description */}
+              <p className="text-muted-foreground text-sm leading-relaxed mb-5 flex-1">
+                {product.description}
+              </p>
+
+              {/* Feature Pills */}
+              <div className="flex flex-wrap mb-8" style={{ gap: '8px' }}>
+                {product.features.map((feature) => (
+                  <span
+                    key={feature}
+                    className="text-[11px] font-semibold tracking-wide px-3 py-1.5 rounded-full"
+                    style={{
+                      background: 'rgba(255, 255, 255, 0.04)',
+                      color: 'var(--color-muted-foreground)',
+                      border: '1px solid rgba(255, 255, 255, 0.08)',
+                    }}
+                  >
+                    {feature}
+                  </span>
+                ))}
+              </div>
+
+              {/* Live Demo Button */}
+              <button className="w-full text-[13px] font-bold py-3 mt-auto rounded-xl transition-all duration-300 bg-white/5 border border-white/10 text-white/90 group-hover:bg-blue-500/15 group-hover:border-blue-500/40 group-hover:text-blue-400 group-hover:shadow-[0_0_20px_rgba(37,99,235,0.15)]">
+                Live Demo
+              </button>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
