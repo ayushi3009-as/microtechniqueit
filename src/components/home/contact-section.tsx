@@ -34,46 +34,46 @@ export function ContactSection() {
           
           {/* LEFT: Form */}
           <div className="w-full lg:w-[60%]">
-            <div className="glass rounded-2xl bg-white/[0.02] border-white/10 relative" style={{ padding: '32px' }}>
+            <div className="glass rounded-2xl bg-card border-border relative" style={{ padding: '32px' }}>
               
               {isSubmitted ? (
-                <div className="absolute inset-0 flex flex-col items-center justify-center bg-[#050816]/80 backdrop-blur-sm rounded-2xl z-20">
+                <div className="absolute inset-0 flex flex-col items-center justify-center bg-background/80 backdrop-blur-sm rounded-2xl z-20">
                   <div className="w-16 h-16 rounded-full bg-green-500/20 flex items-center justify-center text-green-500 text-3xl mb-4">
                     ✓
                   </div>
-                  <h3 className="text-2xl font-bold text-white mb-2">Thank you!</h3>
-                  <p className="text-white/70">We will be in touch shortly.</p>
+                  <h3 className="text-2xl font-bold text-foreground mb-2">Thank you!</h3>
+                  <p className="text-foreground/70">We will be in touch shortly.</p>
                 </div>
               ) : null}
 
-              <h3 className="text-2xl font-bold text-white/90 mb-6">Book a Free Demo</h3>
+              <h3 className="text-2xl font-bold text-foreground mb-6">Book a Free Demo</h3>
               
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-sm font-medium text-white/70 mb-1.5">Full Name</label>
+                    <label className="block text-sm font-medium text-foreground/70 mb-1.5">Full Name</label>
                     <input required type="text" className="form-input w-full" placeholder="John Doe" />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-white/70 mb-1.5">Phone Number</label>
+                    <label className="block text-sm font-medium text-foreground/70 mb-1.5">Phone Number</label>
                     <input required type="tel" className="form-input w-full" placeholder="+91 XXXXX XXXXX" />
                   </div>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-sm font-medium text-white/70 mb-1.5">Email Address</label>
+                    <label className="block text-sm font-medium text-foreground/70 mb-1.5">Email Address</label>
                     <input required type="email" className="form-input w-full" placeholder="john@company.com" />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-white/70 mb-1.5">Company Name</label>
+                    <label className="block text-sm font-medium text-foreground/70 mb-1.5">Company Name</label>
                     <input type="text" className="form-input w-full" placeholder="Your Company Ltd." />
                   </div>
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-white/70 mb-1.5">Product / Service Interest</label>
-                  <select required className="form-input w-full bg-[#0a0f2c]">
+                  <label className="block text-sm font-medium text-foreground/70 mb-1.5">Product / Service Interest</label>
+                  <select required className="form-input w-full bg-card">
                     <option value="" disabled selected>Select an option</option>
                     <option>Microtechnique Accounts</option>
                     <option>HRMS & Payroll</option>
@@ -90,7 +90,7 @@ export function ContactSection() {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-white/70 mb-1.5">Message (Optional)</label>
+                  <label className="block text-sm font-medium text-foreground/70 mb-1.5">Message (Optional)</label>
                   <textarea rows={4} className="form-input w-full resize-none" placeholder="Tell us about your requirements..."></textarea>
                 </div>
 
@@ -105,7 +105,7 @@ export function ContactSection() {
           <div className="w-full lg:w-[40%] flex flex-col" style={{ gap: '24px' }}>
             
             {/* WhatsApp Card */}
-            <div className="glass rounded-2xl bg-white/[0.02] border-white/10 flex items-start" style={{ padding: '24px', gap: '16px' }}>
+            <div className="glass rounded-2xl bg-card border-border flex items-start" style={{ padding: '24px', gap: '16px' }}>
               <div className="w-12 h-12 rounded-full bg-green-500/20 flex items-center justify-center shrink-0">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M12.01 2.01001C6.49002 2.01001 2.01001 6.49001 2.01001 12.01C2.01001 13.91 2.54002 15.68 3.47002 17.21L2.01001 22.01L6.96001 20.66C8.47001 21.53 10.18 22.01 12.01 22.01C17.53 22.01 22.01 17.53 22.01 12.01C22.01 6.49001 17.53 2.01001 12.01 2.01001Z" fill="#25D366"/>
@@ -113,7 +113,7 @@ export function ContactSection() {
                 </svg>
               </div>
               <div>
-                <h4 className="text-white/90 font-semibold mb-1">WhatsApp Us</h4>
+                <h4 className="text-foreground font-semibold mb-1">WhatsApp Us</h4>
                 <p className="text-muted-foreground text-sm mb-3">+91 6355997080</p>
                 <a 
                   href="https://wa.me/916355997080?text=Hi%20Microtechnique%20IT" 
@@ -127,33 +127,33 @@ export function ContactSection() {
             </div>
 
             {/* Email Card */}
-            <div className="glass rounded-2xl bg-white/[0.02] border-white/10 flex items-start" style={{ padding: '24px', gap: '16px' }}>
+            <div className="glass rounded-2xl bg-card border-border flex items-start" style={{ padding: '24px', gap: '16px' }}>
               <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
                 <Mail className="w-5 h-5 text-primary" />
               </div>
               <div>
-                <h4 className="text-white/90 font-semibold mb-1">Email Us</h4>
-                <a href="mailto:info@microtechniqueit.com" className="text-muted-foreground text-sm hover:text-white transition-colors">
+                <h4 className="text-foreground font-semibold mb-1">Email Us</h4>
+                <a href="mailto:info@microtechniqueit.com" className="text-muted-foreground text-sm hover:text-foreground transition-colors">
                   {companyInfo.email}
                 </a>
               </div>
             </div>
 
             {/* Address & Map Card */}
-            <div className="glass rounded-2xl bg-white/[0.02] border-white/10 flex flex-col" style={{ padding: '24px', gap: '16px' }}>
+            <div className="glass rounded-2xl bg-card border-border flex flex-col" style={{ padding: '24px', gap: '16px' }}>
               <div className="flex items-start" style={{ gap: '16px' }}>
                 <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center shrink-0">
                   <MapPin className="w-5 h-5 text-accent" />
                 </div>
                 <div>
-                  <h4 className="text-white/90 font-semibold mb-1">Visit Our Office</h4>
+                  <h4 className="text-foreground font-semibold mb-1">Visit Our Office</h4>
                   <p className="text-muted-foreground text-sm leading-relaxed">
                     {companyInfo.address}
                   </p>
                 </div>
               </div>
               
-              <div className="w-full aspect-[16/9] rounded-xl overflow-hidden border border-white/10 mt-2">
+              <div className="w-full aspect-[16/9] rounded-xl overflow-hidden border border-border mt-2">
                 <iframe 
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3720.1891744688337!2d72.78611231539288!3d21.17067998592624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04d9addfcee21%3A0xfbf3e5d7ca0a14e3!2sStar%20World%20Complex!5e0!3m2!1sen!2sin!4v1625000000000!5m2!1sen!2sin" 
                   width="100%" 

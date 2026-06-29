@@ -19,10 +19,10 @@ export function FloatingWhatsApp() {
         </svg>
 
         {/* Tooltip */}
-        <div className="absolute right-full mr-4 top-1/2 -translate-y-1/2 px-3 py-1.5 bg-[#0a0f2c] text-white text-sm font-medium rounded-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap border border-white/10 shadow-lg">
+        <div className="absolute right-full mr-4 top-1/2 -translate-y-1/2 px-3 py-1.5 bg-card text-foreground text-sm font-medium rounded-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap border border-border shadow-lg">
           Chat with us
           {/* Arrow */}
-          <div className="absolute top-1/2 -right-1 -translate-y-1/2 w-2 h-2 bg-[#0a0f2c] border-t border-r border-white/10 rotate-45" />
+          <div className="absolute top-1/2 -right-1 -translate-y-1/2 w-2 h-2 bg-card border-t border-r border-border rotate-45" />
         </div>
       </a>
       

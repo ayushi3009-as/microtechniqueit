@@ -85,7 +85,7 @@ function AnimatedCounter({ value, suffix }: { value: number, suffix: string }) {
   const displayValue = value % 1 !== 0 ? count.toFixed(1) : Math.round(count);
 
   return (
-    <span ref={nodeRef} className="font-bold text-2xl text-white">
+    <span ref={nodeRef} className="font-bold text-2xl text-foreground">
       {displayValue}{suffix}
     </span>
   );
@@ -143,7 +143,7 @@ export function CaseStudiesPreview() {
               key={idx}
               variants={cardVariants as any}
               whileHover={{ y: -8 }}
-              className="card group flex flex-col h-full bg-white/[0.02] border-white/10 hover:border-white/20 transition-all duration-300 relative overflow-hidden"
+              className="card group flex flex-col h-full bg-card border-border hover:border-border transition-all duration-300 relative overflow-hidden"
             >
               {/* Top Gradient Bar */}
               <div className={`h-1.5 w-full bg-gradient-to-r ${study.color}`} />
@@ -154,23 +154,23 @@ export function CaseStudiesPreview() {
                   <span className="text-xs font-semibold tracking-wider uppercase text-muted-foreground mb-2 block">
                     {study.industry}
                   </span>
-                  <h3 className="text-2xl font-bold text-white/90">
+                  <h3 className="text-2xl font-bold text-foreground">
                     {study.company}
                   </h3>
                 </div>
 
                 {/* Before / After */}
                 <div className="space-y-4 mb-8 flex-1">
-                  <div className="bg-white/5 border border-white/5 rounded-xl p-4 flex gap-3 items-start">
+                  <div className="bg-card/50 border border-border/50 rounded-xl p-4 flex gap-3 items-start">
                     <study.before.icon className="w-5 h-5 text-muted-foreground shrink-0 mt-0.5" />
                     <div>
-                      <div className="text-xs text-white/40 uppercase font-semibold mb-1 tracking-wider">Before</div>
-                      <div className="text-sm text-white/70 leading-relaxed">{study.before.text}</div>
+                      <div className="text-xs text-muted-foreground uppercase font-semibold mb-1 tracking-wider">Before</div>
+                      <div className="text-sm text-foreground/70 leading-relaxed">{study.before.text}</div>
                     </div>
                   </div>
                   
                   <div className="flex justify-center -my-2 relative z-10">
-                    <div className="w-8 h-8 rounded-full bg-[#0a0f2c] border border-white/10 flex items-center justify-center">
+                    <div className="w-8 h-8 rounded-full bg-card border border-border flex items-center justify-center">
                       <ArrowRight className="w-4 h-4 text-primary rotate-90" />
                     </div>
                   </div>
@@ -179,7 +179,7 @@ export function CaseStudiesPreview() {
                     <study.after.icon className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                     <div>
                       <div className="text-xs text-primary/70 uppercase font-semibold mb-1 tracking-wider">After</div>
-                      <div className="text-sm text-white/90 leading-relaxed">{study.after.text}</div>
+                      <div className="text-sm text-foreground leading-relaxed">{study.after.text}</div>
                     </div>
                   </div>
                 </div>
@@ -187,7 +187,7 @@ export function CaseStudiesPreview() {
                 {/* Metrics */}
                 <div className="grid grid-cols-2 gap-3 mb-8">
                   {study.metrics.map((metric, mIdx) => (
-                    <div key={mIdx} className="bg-white/5 rounded-lg p-3 border border-white/5">
+                    <div key={mIdx} className="bg-card/50 rounded-lg p-3 border border-border/50">
                       <AnimatedCounter value={metric.value} suffix={metric.suffix} />
                       <div className="text-xs text-muted-foreground mt-1">{metric.label}</div>
                     </div>
@@ -195,7 +195,7 @@ export function CaseStudiesPreview() {
                 </div>
 
                 {/* Footer Link */}
-                <div className="mt-auto pt-4 border-t border-white/10 flex items-center text-sm font-semibold text-primary group-hover:text-accent transition-colors">
+                <div className="mt-auto pt-4 border-t border-border flex items-center text-sm font-semibold text-primary group-hover:text-accent transition-colors">
                   Read Full Story <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </div>
               </div>

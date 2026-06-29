@@ -74,7 +74,7 @@ export function ProcessSection() {
         <div ref={containerRef} className="relative max-w-4xl mx-auto">
           
           {/* Vertical Line Background */}
-          <div className="absolute left-[24px] md:left-1/2 top-0 bottom-0 w-[2px] bg-white/5 md:-translate-x-1/2" />
+          <div className="absolute left-[24px] md:left-1/2 top-0 bottom-0 w-[2px] bg-card/50 md:-translate-x-1/2" />
           
           {/* Animated Vertical Line */}
           <motion.div 
@@ -101,22 +101,22 @@ export function ProcessSection() {
                   <div className="hidden md:block w-1/2" />
 
                   {/* Dot/Icon on Timeline */}
-                  <div className="absolute left-0 md:left-1/2 md:-translate-x-1/2 flex items-center justify-center w-12 h-12 rounded-full bg-[#050816] border-[3px] border-primary shadow-[0_0_20px_rgba(37,99,235,0.4)] z-20">
+                  <div className="absolute left-0 md:left-1/2 md:-translate-x-1/2 flex items-center justify-center w-12 h-12 rounded-full bg-background border-[3px] border-primary shadow-[0_0_20px_rgba(37,99,235,0.4)] z-20">
                     <span className="text-lg">{step.icon}</span>
                   </div>
 
                   {/* Content Card */}
                   <div className={`w-full md:w-1/2 pl-16 md:pl-0 ${isEven ? 'md:pr-16 md:text-right' : 'md:pl-16'}`}>
-                    <div className={`glass rounded-2xl relative group hover:bg-white/[0.08] transition-colors border border-white/10 hover:border-primary/30 flex items-center ${isEven ? 'flex-row' : 'flex-row-reverse'}`} style={{ padding: '24px', gap: '24px' }}>
+                    <div className={`glass rounded-2xl relative group hover:bg-white/[0.08] transition-colors border border-border hover:border-primary/30 flex items-center ${isEven ? 'flex-row' : 'flex-row-reverse'}`} style={{ padding: '24px', gap: '24px' }}>
                       
                       {/* Step Number */}
-                      <div className="text-6xl font-black text-white/10 shrink-0 select-none pointer-events-none">
+                      <div className="text-6xl font-black text-muted-foreground/30 shrink-0 select-none pointer-events-none">
                         0{idx + 1}
                       </div>
                       
                       {/* Text Content */}
                       <div className="flex-1">
-                        <h3 className={`text-xl font-bold text-white mb-2 relative z-10 ${isEven ? 'text-right' : 'text-left'}`}>
+                        <h3 className={`text-xl font-bold text-foreground mb-2 relative z-10 ${isEven ? 'text-right' : 'text-left'}`}>
                           {step.title}
                         </h3>
                         <p className={`text-muted-foreground text-sm leading-relaxed relative z-10 ${isEven ? 'text-right' : 'text-left'}`}>

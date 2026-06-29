@@ -132,7 +132,7 @@ export function IndustrySolutions() {
                      style={{ backgroundImage: `linear-gradient(to bottom right, var(--color-background), ${ind.shadow})` }} />
                 
                 <div className="relative z-10">
-                  <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${ind.color} flex items-center justify-center text-white mb-6 shadow-lg transform group-hover:scale-110 transition-transform duration-300`}>
+                  <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${ind.color} flex items-center justify-center text-foreground mb-6 shadow-lg transform group-hover:scale-110 transition-transform duration-300`}>
                     <Icon size={24} strokeWidth={1.5} />
                   </div>
                   

@@ -111,17 +111,17 @@ export function WhyChooseUs() {
                 key={feature.title}
                 variants={itemVariants as any}
                 whileHover={{ y: -8 }}
-                className="card card-glow text-center flex flex-col items-center group cursor-default bg-white/[0.02] border-white/5 hover:bg-white/[0.04]"
+                className="card card-glow text-center flex flex-col items-center group cursor-default bg-card border-border/50 hover:bg-white/[0.04]"
                 style={{ padding: '32px' }}
               >
                 {/* Icon */}
-                <div className="w-14 h-14 rounded-full bg-white/5 border border-white/10 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-primary/20 group-hover:border-primary/50 transition-all duration-300 relative">
+                <div className="w-14 h-14 rounded-full bg-card/50 border border-border flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-primary/20 group-hover:border-primary/50 transition-all duration-300 relative">
                   <div className="absolute inset-0 rounded-full bg-primary/20 blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   <Icon className="w-6 h-6 text-muted-foreground group-hover:text-primary transition-colors duration-300 relative z-10" />
                 </div>
                 
                 {/* Text */}
-                <h3 className="text-lg font-bold mb-3 text-white/90 group-hover:text-white transition-colors">
+                <h3 className="text-lg font-bold mb-3 text-foreground group-hover:text-foreground transition-colors">
                   <span className="text-primary mr-1 opacity-0 group-hover:opacity-100 transition-opacity">✅</span>
                   {feature.title}
                 </h3>

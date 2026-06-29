@@ -54,9 +54,9 @@ export function TechStack() {
                 animationDelay: `${tech.delay}s`
               }}
             >
-              <div className="glass rounded-full flex items-center bg-white/[0.03] border-white/10 hover:border-primary/50 transition-colors duration-300 cursor-default hover:bg-white/[0.08] group-hover:shadow-[0_0_20px_rgba(37,99,235,0.3)]" style={{ padding: '12px 24px', gap: '12px' }}>
+              <div className="glass rounded-full flex items-center bg-white/[0.03] border-border hover:border-primary/50 transition-colors duration-300 cursor-default hover:bg-white/[0.08] group-hover:shadow-[0_0_20px_rgba(37,99,235,0.3)]" style={{ padding: '12px 24px', gap: '12px' }}>
                 <span className="text-xl group-hover:scale-110 transition-transform">{tech.icon}</span>
-                <span className="font-medium text-white/90 group-hover:text-white transition-colors">{tech.name}</span>
+                <span className="font-medium text-foreground group-hover:text-foreground transition-colors">{tech.name}</span>
               </div>
             </div>
           ))}

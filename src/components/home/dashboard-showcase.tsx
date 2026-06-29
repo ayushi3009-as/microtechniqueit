@@ -55,8 +55,8 @@ export function DashboardShowcase() {
               onClick={() => handleTabClick(idx)}
               className={`px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${
                 activeTab === idx 
-                  ? 'bg-primary text-white shadow-[0_0_15px_rgba(37,99,235,0.4)]' 
-                  : 'bg-white/5 text-muted-foreground hover:bg-white/10 hover:text-white'
+                  ? 'bg-primary text-foreground shadow-[0_0_15px_rgba(37,99,235,0.4)]' 
+                  : 'bg-card/50 text-muted-foreground hover:bg-muted hover:text-foreground'
               }`}
             >
               {tab.label}
@@ -74,17 +74,17 @@ export function DashboardShowcase() {
         >
           <div className="rotate-3d hover:transform hover:rotate-y-[0deg] hover:rotate-x-[0deg] transition-transform duration-700 ease-out">
             
-            <div className="laptop-frame bg-[#0a0f2c] p-2 aspect-[16/10] sm:aspect-[16/9]">
-              <div className="relative w-full h-full bg-[#050816] rounded overflow-hidden border border-white/10 flex">
+            <div className="laptop-frame bg-card p-2 aspect-[16/10] sm:aspect-[16/9]">
+              <div className="relative w-full h-full bg-background rounded overflow-hidden border border-border flex">
                 
                 {/* Fake Sidebar */}
-                <div className="hidden sm:flex flex-col w-48 bg-white/5 border-r border-white/10 p-4">
-                  <div className="w-24 h-6 bg-white/10 rounded mb-8" />
+                <div className="hidden sm:flex flex-col w-48 bg-card/50 border-r border-border p-4">
+                  <div className="w-24 h-6 bg-muted rounded mb-8" />
                   <div className="space-y-3">
                     {Array.from({length: 6}).map((_, i) => (
                       <div key={i} className="flex items-center gap-3">
-                        <div className="w-5 h-5 rounded bg-white/10" />
-                        <div className={`h-3 rounded bg-white/10 ${i === 0 ? 'w-20 bg-primary/40' : 'w-16'}`} />
+                        <div className="w-5 h-5 rounded bg-muted" />
+                        <div className={`h-3 rounded bg-muted ${i === 0 ? 'w-20 bg-primary/40' : 'w-16'}`} />
                       </div>
                     ))}
                   </div>
@@ -93,11 +93,11 @@ export function DashboardShowcase() {
                 {/* Main Content Area */}
                 <div className="flex-1 flex flex-col relative overflow-hidden">
                   {/* Fake Topbar */}
-                  <div className="h-14 border-b border-white/10 flex items-center justify-between px-6 bg-white/[0.02]">
-                    <div className="w-48 h-6 bg-white/5 rounded" />
+                  <div className="h-14 border-b border-border flex items-center justify-between px-6 bg-card">
+                    <div className="w-48 h-6 bg-card/50 rounded" />
                     <div className="flex items-center gap-4">
-                      <div className="w-8 h-8 rounded-full bg-white/10" />
-                      <div className="w-8 h-8 rounded-full bg-white/10" />
+                      <div className="w-8 h-8 rounded-full bg-muted" />
+                      <div className="w-8 h-8 rounded-full bg-muted" />
                     </div>
                   </div>
 
@@ -115,10 +115,10 @@ export function DashboardShowcase() {
                         {/* Header Row */}
                         <div className="flex justify-between items-end">
                           <div>
-                            <h3 className="text-xl font-bold text-white mb-1">{tabs[activeTab].label}</h3>
-                            <p className="text-sm text-white/50">Overview and key metrics</p>
+                            <h3 className="text-xl font-bold text-foreground mb-1">{tabs[activeTab].label}</h3>
+                            <p className="text-sm text-muted-foreground">Overview and key metrics</p>
                           </div>
-                          <div className={`px-4 py-2 rounded bg-gradient-to-r ${tabs[activeTab].color} text-white text-sm font-medium`}>
+                          <div className={`px-4 py-2 rounded bg-gradient-to-r ${tabs[activeTab].color} text-foreground text-sm font-medium`}>
                             Generate Report
                           </div>
                         </div>
@@ -126,8 +126,8 @@ export function DashboardShowcase() {
                         {/* Stats Row */}
                         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                           {Array.from({length: 3}).map((_, i) => (
-                            <div key={i} className="bg-white/5 border border-white/10 rounded-xl p-4">
-                              <div className="w-8 h-8 rounded bg-white/10 mb-3" />
+                            <div key={i} className="bg-card/50 border border-border rounded-xl p-4">
+                              <div className="w-8 h-8 rounded bg-muted mb-3" />
                               <div className="h-3 w-16 bg-white/20 rounded mb-2" />
                               <div className="h-6 w-24 bg-white/40 rounded" />
                             </div>
@@ -137,7 +137,7 @@ export function DashboardShowcase() {
                         {/* Charts / Main Area Row */}
                         <div className="flex-1 grid grid-cols-1 sm:grid-cols-3 gap-4">
                           {/* Main Chart */}
-                          <div className="sm:col-span-2 bg-white/5 border border-white/10 rounded-xl p-4 flex flex-col">
+                          <div className="sm:col-span-2 bg-card/50 border border-border rounded-xl p-4 flex flex-col">
                             <div className="h-4 w-32 bg-white/20 rounded mb-6" />
                             <div className="flex-1 flex items-end gap-2">
                               {Array.from({length: 12}).map((_, i) => (
@@ -151,15 +151,15 @@ export function DashboardShowcase() {
                           </div>
                           
                           {/* Side Widget */}
-                          <div className="bg-white/5 border border-white/10 rounded-xl p-4">
+                          <div className="bg-card/50 border border-border rounded-xl p-4">
                             <div className="h-4 w-24 bg-white/20 rounded mb-6" />
                             <div className="space-y-4">
                               {Array.from({length: 4}).map((_, i) => (
                                 <div key={i} className="flex items-center gap-3">
-                                  <div className="w-10 h-10 rounded-full bg-white/10" />
+                                  <div className="w-10 h-10 rounded-full bg-muted" />
                                   <div className="flex-1">
                                     <div className="h-3 w-full bg-white/20 rounded mb-1" />
-                                    <div className="h-2 w-1/2 bg-white/10 rounded" />
+                                    <div className="h-2 w-1/2 bg-muted rounded" />
                                   </div>
                                 </div>
                               ))}

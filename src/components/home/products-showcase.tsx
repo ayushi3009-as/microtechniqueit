@@ -178,7 +178,7 @@ export function ProductsShowcase() {
               </div>
 
               {/* Live Demo Button */}
-              <button className="w-full text-[13px] font-bold py-3 mt-auto rounded-xl transition-all duration-300 bg-white/5 border border-white/10 text-white/90 group-hover:bg-blue-500/15 group-hover:border-blue-500/40 group-hover:text-blue-400 group-hover:shadow-[0_0_20px_rgba(37,99,235,0.15)]">
+              <button className="w-full text-[13px] font-bold py-3 mt-auto rounded-xl transition-all duration-300 bg-card/50 border border-border text-foreground group-hover:bg-blue-500/15 group-hover:border-blue-500/40 group-hover:text-blue-400 group-hover:shadow-[0_0_20px_rgba(37,99,235,0.15)]">
                 Live Demo
               </button>
             </motion.div>
