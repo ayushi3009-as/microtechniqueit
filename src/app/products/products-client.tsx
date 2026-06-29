@@ -92,9 +92,9 @@ export default function ProductsClient() {
           }
             
           .card-bg {
-            background: rgba(255, 255, 255, 0.8);
+            background: var(--color-card);
             backdrop-filter: blur(12px);
-            border: 1px solid rgba(0, 0, 0, 0.1);
+            border: 1px solid var(--color-border);
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
           }
         `
@@ -222,7 +222,7 @@ export default function ProductsClient() {
                       ))}
                     </div>
                     
-                    <Link href={`/products/${product.slug}`} style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', padding: '0.875rem 1.5rem', backgroundColor: 'rgba(0,0,0,0.05)', border: '1px solid rgba(0,0,0,0.1)', borderRadius: '0.75rem', color: 'var(--color-foreground)', fontWeight: 600, textDecoration: 'none' }}>
+                    <Link href={`/products/${product.slug}`} style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', padding: '0.875rem 1.5rem', backgroundColor: 'var(--color-surface)', border: '1px solid var(--color-border)', borderRadius: '0.75rem', color: 'var(--color-foreground)', fontWeight: 600, textDecoration: 'none' }}>
                       Learn More
                     </Link>
                   </div>
@@ -251,7 +251,7 @@ export default function ProductsClient() {
                       </div>
                       <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
                         {product.modules?.slice(0, 3).map((mod, i) => (
-                           <div key={i} style={{ padding: '0.5rem 1rem', backgroundColor: 'rgba(0,0,0,0.05)', borderRadius: '2rem', fontSize: '0.875rem' }}>{mod.name}</div>
+                           <div key={i} style={{ padding: '0.5rem 1rem', backgroundColor: 'var(--color-surface)', borderRadius: '2rem', fontSize: '0.875rem' }}>{mod.name}</div>
                         ))}
                       </div>
                     </div>
@@ -264,7 +264,7 @@ export default function ProductsClient() {
                       <p style={{ color: 'var(--color-muted-foreground)', fontSize: '0.875rem' }}>Auto TDS, PF & ESIC</p>
                     </div>
                     
-                    <div className="card-bg hover-lift" style={{ padding: '2rem', borderRadius: '1.5rem', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', background: 'linear-gradient(135deg, #f8fafc, #f1f5f9)' }}>
+                    <div className="card-bg hover-lift" style={{ padding: '2rem', borderRadius: '1.5rem', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', background: 'var(--color-card)' }}>
                       <Link href={`/products/${product.slug}`} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1rem', color: 'var(--color-foreground)', textDecoration: 'none' }}>
                         <div style={{ width: '48px', height: '48px', borderRadius: '50%', backgroundColor: '#38bdf8', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--color-background)' }}>
                           <ArrowRight style={{ width: '24px', height: '24px' }} />
@@ -280,7 +280,7 @@ export default function ProductsClient() {
             // Product 4: Large Centered
             if (index === 3) {
               return (
-                <div key={product.id} className="centered-large" style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', textAlign: 'left', padding: '4rem', borderRadius: '2rem', background: 'radial-gradient(circle at top, rgba(30, 41, 59, 0.8), #0b1120)', border: '1px solid rgba(0,0,0,0.05)' }}>
+                <div key={product.id} className="centered-large" style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', textAlign: 'left', padding: '4rem', borderRadius: '2rem', background: 'radial-gradient(circle at top, rgba(30, 41, 59, 0.8), #0b1120)', border: '1px solid var(--color-border)' }}>
                   <div className="centered-large-inner" style={{ maxWidth: '800px', display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
                     <div style={{ padding: '0.5rem 1rem', backgroundColor: 'rgba(129, 140, 248, 0.1)', color: '#818cf8', borderRadius: '9999px', fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.05em', textTransform: 'uppercase', marginBottom: '1.5rem' }}>Specialized</div>
                     <h2 style={{ fontSize: '3rem', fontWeight: 800, marginBottom: '1.5rem', lineHeight: 1.1 }}>{product.title}</h2>
@@ -295,7 +295,7 @@ export default function ProductsClient() {
                       ))}
                     </div>
                     
-                    <Link href={`/products/${product.slug}`} style={{ padding: '1rem 2.5rem', backgroundColor: '#fff', color: 'var(--color-foreground)', borderRadius: '0.75rem', fontWeight: 600, fontSize: '1.125rem', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
+                    <Link href={`/products/${product.slug}`} style={{ padding: '1rem 2.5rem', backgroundColor: 'var(--color-card)', color: 'var(--color-foreground)', borderRadius: '0.75rem', fontWeight: 600, fontSize: '1.125rem', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
                       Discover Capabilities <ChevronRight style={{ width: '20px', height: '20px' }} />
                     </Link>
                   </div>
@@ -326,7 +326,7 @@ export default function ProductsClient() {
               { title: '24/7 Priority Support', desc: 'Local support teams available via phone, chat, and email whenever you need.' },
               { title: 'Seamless Integrations', desc: 'Connects perfectly with your existing payment gateways and hardware.' }
             ].map((item, i) => (
-              <div key={i} className="hover-lift" style={{ display: 'flex', gap: '1.25rem', padding: '1.5rem', borderRadius: '1rem', backgroundColor: 'rgba(0,0,0,0.02)', border: '1px solid rgba(0,0,0,0.05)' }}>
+              <div key={i} className="hover-lift" style={{ display: 'flex', gap: '1.25rem', padding: '1.5rem', borderRadius: '1rem', backgroundColor: 'var(--color-surface)', border: '1px solid var(--color-border)' }}>
                 <div style={{ width: '32px', height: '32px', borderRadius: '50%', backgroundColor: 'rgba(56, 189, 248, 0.1)', color: '#38bdf8', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
                   <Check style={{ width: '16px', height: '16px' }} />
                 </div>
@@ -350,7 +350,7 @@ export default function ProductsClient() {
           textAlign: 'center',
           background: 'linear-gradient(135deg, #1e1b4b 0%, #0f172a 50%, #082f49 100%)',
           boxShadow: '0 25px 50px -12px rgba(0,0,0,0.5)',
-          border: '1px solid rgba(0,0,0,0.1)',
+          border: '1px solid var(--color-border)',
           position: 'relative',
           overflow: 'hidden'
         }}>
@@ -369,7 +369,7 @@ export default function ProductsClient() {
               <button className="hover-lift" style={{ padding: '1.25rem 3rem', backgroundColor: '#38bdf8', color: 'var(--color-foreground)', borderRadius: '1rem', fontWeight: 700, fontSize: '1.125rem', border: 'none', cursor: 'pointer', display: 'inline-flex', alignItems: 'center', gap: '0.75rem', boxShadow: '0 10px 25px rgba(56, 189, 248, 0.3)' }}>
                 Start 15-Day Free Trial <ArrowRight style={{ width: '20px', height: '20px' }} />
               </button>
-              <button className="hover-lift" style={{ padding: '1.25rem 3rem', backgroundColor: 'rgba(0,0,0,0.05)', color: 'var(--color-foreground)', borderRadius: '1rem', fontWeight: 700, fontSize: '1.125rem', border: '1px solid rgba(0,0,0,0.2)', cursor: 'pointer' }}>
+              <button className="hover-lift" style={{ padding: '1.25rem 3rem', backgroundColor: 'var(--color-surface)', color: 'var(--color-foreground)', borderRadius: '1rem', fontWeight: 700, fontSize: '1.125rem', border: '1px solid rgba(0,0,0,0.2)', cursor: 'pointer' }}>
                 Schedule Demo
               </button>
             </div>

@@ -216,7 +216,7 @@ export default function PortfolioClient() {
                           <p style={{ color: 'var(--color-muted-foreground)', lineHeight: '1.7', marginBottom: '32px', fontSize: '16px' }}>{item.description}</p>
                           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
                             {item.technologies.slice(0,5).map(tech => (
-                              <span key={tech} style={{ padding: '6px 14px', background: 'rgba(255,255,255,0.05)', borderRadius: '8px', fontSize: '13px', color: '#334155', fontWeight: '600' }}>{tech}</span>
+                              <span key={tech} style={{ padding: '6px 14px', background: 'rgba(255,255,255,0.05)', borderRadius: '8px', fontSize: '13px', color: 'var(--color-muted-foreground)', fontWeight: '600' }}>{tech}</span>
                             ))}
                           </div>
                         </div>

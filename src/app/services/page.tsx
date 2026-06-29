@@ -183,7 +183,7 @@ export default function ServicesPage() {
       {/* CTA */}
       <section style={{ padding: '6rem 0' }}>
         <div className="container" style={{ maxWidth: '1320px', margin: '0 auto', padding: '0 1.5rem' }}>
-          <div style={{ position: 'relative', borderRadius: '1.5rem', overflow: 'hidden', backgroundColor: '#e0e7ff', border: '1px solid rgba(99, 102, 241, 0.1)', padding: '4rem 2rem', textAlign: 'center' }}>
+          <div style={{ position: 'relative', borderRadius: '1.5rem', overflow: 'hidden', backgroundColor: 'var(--color-card)', border: '1px solid rgba(99, 102, 241, 0.1)', padding: '4rem 2rem', textAlign: 'center' }}>
             <div className="relative z-10" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
               <h2 style={{ fontSize: '2.5rem', fontWeight: 800, color: 'var(--color-foreground)', marginBottom: '1rem', textAlign: 'center' }}>
                 Need a Custom Solution?

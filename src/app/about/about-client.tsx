@@ -231,7 +231,7 @@ export default function AboutClient() {
             <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} style={{ display: 'flex', flexWrap: 'wrap', gap: '40px', alignItems: 'center', padding: '40px', backgroundColor: 'var(--color-background)', borderRadius: '24px', border: '1px solid var(--color-border)', boxShadow: '0 4px 20px rgba(0,0,0,0.02)' }}>
               <div style={{ flex: '1 1 400px' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '16px' }}>
-                  <span style={{ fontSize: '40px', fontWeight: 800, color: '#334155', lineHeight: 1 }}>01</span>
+                  <span style={{ fontSize: '40px', fontWeight: 800, color: 'var(--color-muted-foreground)', lineHeight: 1 }}>01</span>
                   <h2 style={{ fontSize: '32px', fontWeight: 700, color: 'var(--color-foreground)', margin: 0 }}>Mission</h2>
                 </div>
                 <p style={{ fontSize: '16px', lineHeight: '1.7', color: 'var(--color-muted-foreground)' }}>
@@ -248,7 +248,7 @@ export default function AboutClient() {
             {/* Vision Row */}
             <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} style={{ padding: '40px', backgroundColor: 'var(--color-background)', borderRadius: '24px', border: '1px solid var(--color-border)', boxShadow: '0 4px 20px rgba(0,0,0,0.02)', marginTop: '24px' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '16px' }}>
-                <span style={{ fontSize: '40px', fontWeight: 800, color: '#334155', lineHeight: 1 }}>02</span>
+                <span style={{ fontSize: '40px', fontWeight: 800, color: 'var(--color-muted-foreground)', lineHeight: 1 }}>02</span>
                 <h2 style={{ fontSize: '32px', fontWeight: 700, color: 'var(--color-foreground)', margin: 0 }}>Vision</h2>
               </div>
               <p style={{ fontSize: '16px', lineHeight: '1.7', color: 'var(--color-muted-foreground)', maxWidth: '900px' }}>

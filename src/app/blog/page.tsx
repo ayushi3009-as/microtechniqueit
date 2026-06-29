@@ -104,7 +104,7 @@ export default function BlogPage() {
           transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
           position: relative;
           z-index: 2;
-          border: 1px solid rgba(0,0,0,0.1);
+          border: 1px solid var(--color-border);
         }
 
         .blog-hero-img:hover {

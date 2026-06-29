@@ -26,9 +26,9 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
 
   if (!service) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-slate-50">
+      <div className="min-h-screen flex items-center justify-center bg-section-alt">
         <div className="text-center">
-          <h1 className="text-4xl font-heading font-bold text-slate-900 mb-4">Service Not Found</h1>
+          <h1 className="text-4xl font-heading font-bold text-foreground mb-4">Service Not Found</h1>
           <Link href="/services" className="text-indigo-600 hover:underline">View all services</Link>
         </div>
       </div>
@@ -39,9 +39,9 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
   const ext = getServiceExtension(slug);
 
   return (
-    <div className="bg-slate-50 min-h-screen text-slate-900 font-sans">
+    <div className="bg-section-alt min-h-screen text-foreground font-sans">
       {/* 1. HERO - Split Layout */}
-      <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden bg-white">
+      <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden bg-background">
         {/* Subtle mesh background */}
         <div className="absolute inset-0 z-0 opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(at 0% 0%, #4f46e5 0px, transparent 50%), radial-gradient(at 100% 100%, #3b82f6 0px, transparent 50%)' }} />
         
@@ -51,22 +51,22 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
             {/* Left Content */}
             <div className="max-w-full lg:max-w-2xl">
               <nav className="flex items-center gap-2 text-sm text-slate-500 mb-8 font-medium">
-                <Link href="/" className="hover:text-slate-900 transition-colors">Home</Link>
+                <Link href="/" className="hover:text-foreground transition-colors">Home</Link>
                 <span>/</span>
-                <Link href="/services" className="hover:text-slate-900 transition-colors">Services</Link>
+                <Link href="/services" className="hover:text-foreground transition-colors">Services</Link>
                 <span>/</span>
-                <span className="text-slate-900">{service.shortTitle}</span>
+                <span className="text-foreground">{service.shortTitle}</span>
               </nav>
 
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-bold bg-indigo-50 text-indigo-600 mb-6">
                 Enterprise Grade
               </div>
               
-              <h1 className="text-5xl md:text-6xl lg:text-7xl break-words font-extrabold leading-[1.1] text-slate-900 mb-6 tracking-tight text-balance">
+              <h1 className="text-5xl md:text-6xl lg:text-7xl break-words font-extrabold leading-[1.1] text-foreground mb-6 tracking-tight text-balance">
                 {service.title}
               </h1>
               
-              <p className="text-xl text-slate-600 leading-relaxed mb-10 max-w-xl">
+              <p className="text-xl text-muted-foreground leading-relaxed mb-10 max-w-xl">
                 {service.description}
               </p>
               
@@ -74,7 +74,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                 <Link href="/contact" className="premium-btn-primary flex items-center justify-center gap-2 px-8 py-4 rounded-xl text-white font-semibold text-lg transition-all hover:-translate-y-1">
                   Get Started <ArrowRight className="w-5 h-5" />
                 </Link>
-                <Link href="/portfolio" className="premium-btn-secondary flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-white border border-slate-200 text-slate-900 font-semibold text-lg transition-all hover:bg-slate-50 hover:-translate-y-1 shadow-sm">
+                <Link href="/portfolio" className="premium-btn-secondary flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-background border border-border text-foreground font-semibold text-lg transition-all hover:bg-section-alt hover:-translate-y-1 shadow-sm">
                   View Portfolio
                 </Link>
               </div>
@@ -94,7 +94,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                 
                 {/* Floating UI Elements */}
                 {ext.floatingLabels.map((label: string, i: number) => (
-                  <div key={i} className={`absolute bg-white/90 backdrop-blur-md px-4 py-2 rounded-xl shadow-xl border border-slate-100 font-semibold text-slate-900 text-sm floating-element delay-` + (i*200)}
+                  <div key={i} className={`absolute bg-background/90 backdrop-blur-md px-4 py-2 rounded-xl shadow-xl border border-slate-100 font-semibold text-foreground text-sm floating-element delay-` + (i*200)}
                        style={{ 
                          top: (20 + i*25) + '%', 
                          [i%2===0 ? 'left' : 'right']: i%2===0 ? '-10%' : '-5%' 
@@ -109,23 +109,23 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
       </section>
 
       {/* 2. SUCCESS METRICS */}
-      <section className="py-12 bg-white border-b border-slate-100">
+      <section className="py-12 bg-background border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 divide-x divide-slate-100">
             <div className="text-center px-4">
-              <div className="text-4xl font-extrabold text-slate-900 mb-2">200+</div>
+              <div className="text-4xl font-extrabold text-foreground mb-2">200+</div>
               <div className="text-slate-500 font-medium uppercase tracking-wider text-sm">Projects</div>
             </div>
             <div className="text-center px-4">
-              <div className="text-4xl font-extrabold text-slate-900 mb-2">150+</div>
+              <div className="text-4xl font-extrabold text-foreground mb-2">150+</div>
               <div className="text-slate-500 font-medium uppercase tracking-wider text-sm">Clients</div>
             </div>
             <div className="text-center px-4">
-              <div className="text-4xl font-extrabold text-slate-900 mb-2">99.9%</div>
+              <div className="text-4xl font-extrabold text-foreground mb-2">99.9%</div>
               <div className="text-slate-500 font-medium uppercase tracking-wider text-sm">SLA Uptime</div>
             </div>
             <div className="text-center px-4">
-              <div className="text-4xl font-extrabold text-slate-900 mb-2">5+</div>
+              <div className="text-4xl font-extrabold text-foreground mb-2">5+</div>
               <div className="text-slate-500 font-medium uppercase tracking-wider text-sm">Years Exp.</div>
             </div>
           </div>
@@ -133,20 +133,20 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
       </section>
 
       {/* 3. WHAT WE DELIVER (Features) */}
-      <section className="py-20 lg:py-32 bg-slate-50">
+      <section className="py-20 lg:py-32 bg-section-alt">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 mb-6 tracking-tight">What We Deliver</h2>
+            <h2 className="text-4xl md:text-5xl font-extrabold text-foreground mb-6 tracking-tight">What We Deliver</h2>
             <p className="text-xl text-slate-500">{service.longDescription}</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {service.features.map((feature, i) => (
-              <div key={i} className="premium-card bg-white p-8 rounded-3xl border border-slate-200 shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:border-indigo-600/30 group">
-                <div className="w-14 h-14 rounded-2xl bg-slate-50 flex items-center justify-center mb-6 group-hover:bg-indigo-50 transition-colors border border-slate-100">
+              <div key={i} className="premium-card bg-background p-8 rounded-3xl border border-border shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:border-indigo-600/30 group">
+                <div className="w-14 h-14 rounded-2xl bg-section-alt flex items-center justify-center mb-6 group-hover:bg-indigo-50 transition-colors border border-slate-100">
                   <Check className="w-6 h-6 text-indigo-600" />
                 </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-3 leading-snug">{feature}</h3>
+                <h3 className="text-xl font-bold text-foreground mb-3 leading-snug">{feature}</h3>
                 <p className="text-slate-500 leading-relaxed">Enterprise-grade capabilities ensuring high performance and scalability.</p>
               </div>
             ))}
@@ -155,20 +155,20 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
       </section>
 
       {/* 4. WHY CHOOSE & TECH STACK */}
-      <section className="py-20 lg:py-32 bg-white">
+      <section className="py-20 lg:py-32 bg-background">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 lg:gap-24">
             {/* Left: Why Choose */}
             <div>
-              <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 mb-8 tracking-tight">Why Choose Us</h2>
+              <h2 className="text-4xl md:text-5xl font-extrabold text-foreground mb-8 tracking-tight">Why Choose Us</h2>
               <div className="space-y-6">
                 {service.benefits.map((benefit, i) => (
-                  <div key={i} className="flex gap-5 p-6 rounded-3xl bg-slate-50 border border-slate-100 transition-all hover:bg-white hover:shadow-lg hover:border-indigo-600/20">
-                    <div className="w-12 h-12 rounded-xl bg-white shadow-sm flex items-center justify-center shrink-0 border border-slate-100">
+                  <div key={i} className="flex gap-5 p-6 rounded-3xl bg-section-alt border border-slate-100 transition-all hover:bg-background hover:shadow-lg hover:border-indigo-600/20">
+                    <div className="w-12 h-12 rounded-xl bg-background shadow-sm flex items-center justify-center shrink-0 border border-slate-100">
                       <Zap className="w-5 h-5 text-indigo-600" />
                     </div>
                     <div>
-                      <h4 className="text-lg font-bold text-slate-900 mb-2">{benefit}</h4>
+                      <h4 className="text-lg font-bold text-foreground mb-2">{benefit}</h4>
                       <p className="text-slate-500">Strategic advantages designed to give your business a competitive edge.</p>
                     </div>
                   </div>
@@ -178,16 +178,16 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
 
             {/* Right: Tech Stack */}
             <div>
-              <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 mb-8 tracking-tight">Technology Stack</h2>
+              <h2 className="text-4xl md:text-5xl font-extrabold text-foreground mb-8 tracking-tight">Technology Stack</h2>
               <div className="space-y-8">
                 {ext.techStackGroups.map((group: any, i: number) => (
-                  <div key={i} className="bg-slate-50 p-8 rounded-3xl border border-slate-100">
+                  <div key={i} className="bg-section-alt p-8 rounded-3xl border border-slate-100">
                     <h4 className="text-sm font-bold uppercase tracking-widest text-slate-500 mb-6 flex items-center gap-2">
                       <Code2 className="w-4 h-4" /> {group.category}
                     </h4>
                     <div className="flex flex-wrap gap-3">
                       {group.items.map((tech: string, j: number) => (
-                        <span key={j} className="px-4 py-2 bg-white rounded-xl text-sm font-bold text-slate-900 border border-slate-200 shadow-sm hover:border-indigo-600 hover:shadow-indigo-500/20 shadow-lg transition-all cursor-default">
+                        <span key={j} className="px-4 py-2 bg-background rounded-xl text-sm font-bold text-foreground border border-border shadow-sm hover:border-indigo-600 hover:shadow-indigo-500/20 shadow-lg transition-all cursor-default">
                           {tech}
                         </span>
                       ))}
@@ -201,18 +201,18 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
       </section>
 
       {/* 5. PROCESS TIMELINE */}
-      <section className="py-20 lg:py-32 bg-slate-50">
+      <section className="py-20 lg:py-32 bg-section-alt">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-20">
-            <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 mb-6 tracking-tight">Our Process</h2>
+            <h2 className="text-4xl md:text-5xl font-extrabold text-foreground mb-6 tracking-tight">Our Process</h2>
             <p className="text-xl text-slate-500">A battle-tested methodology ensuring predictable delivery and enterprise quality.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative process-grid">
             {ext.process.slice(0,4).map((step: any, i: number) => (
-              <div key={i} className="relative z-10 bg-white p-8 rounded-3xl border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all">
+              <div key={i} className="relative z-10 bg-background p-8 rounded-3xl border border-border shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all">
                 <div className="text-6xl font-extrabold text-slate-100 absolute top-4 right-6 -z-10">{step.id}</div>
-                <h4 className="text-xl font-bold text-slate-900 mb-3">{step.title}</h4>
+                <h4 className="text-xl font-bold text-foreground mb-3">{step.title}</h4>
                 <p className="text-slate-500">{step.desc}</p>
               </div>
             ))}
@@ -221,14 +221,14 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
       </section>
 
       {/* 6. COMPARISON TABLE */}
-      <section className="py-20 lg:py-32 bg-white">
+      <section className="py-20 lg:py-32 bg-background">
         <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-4xl md:text-5xl font-extrabold text-center text-slate-900 mb-16 tracking-tight">Why Choose Us vs Others</h2>
+          <h2 className="text-4xl md:text-5xl font-extrabold text-center text-foreground mb-16 tracking-tight">Why Choose Us vs Others</h2>
           
-          <div className="bg-white rounded-3xl border border-slate-200 shadow-2xl overflow-hidden">
+          <div className="bg-background rounded-3xl border border-border shadow-2xl overflow-hidden">
             <table className="w-full text-left border-collapse">
               <thead>
-                <tr className="bg-slate-50 border-b border-slate-200">
+                <tr className="bg-section-alt border-b border-border">
                   <th className="p-6 text-slate-500 font-semibold text-lg w-1/3">Feature</th>
                   <th className="p-6 text-indigo-600 font-bold text-xl w-1/3">Microtechnique</th>
                   <th className="p-6 text-slate-400 font-semibold text-lg w-1/3">Standard Agencies</th>
@@ -236,8 +236,8 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
               </thead>
               <tbody className="divide-y divide-slate-100">
                 {ext.comparison.map((comp: any, i: number) => (
-                  <tr key={i} className="hover:bg-slate-50/50 transition-colors">
-                    <td className="p-6 font-semibold text-slate-900">{comp.feature}</td>
+                  <tr key={i} className="hover:bg-section-alt/50 transition-colors">
+                    <td className="p-6 font-semibold text-foreground">{comp.feature}</td>
                     <td className="p-6 font-bold text-emerald-500 flex items-center gap-2"><Check className="w-5 h-5" /> {comp.us}</td>
                     <td className="p-6 text-slate-500">{comp.others}</td>
                   </tr>
@@ -285,13 +285,13 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
       </section>
 
       {/* 8. FAQ */}
-      <section className="py-20 lg:py-32 bg-white">
+      <section className="py-20 lg:py-32 bg-background">
         <div className="max-w-4xl mx-auto px-6">
-          <h2 className="text-4xl md:text-5xl font-extrabold text-center text-slate-900 mb-16 tracking-tight">Frequently Asked Questions</h2>
+          <h2 className="text-4xl md:text-5xl font-extrabold text-center text-foreground mb-16 tracking-tight">Frequently Asked Questions</h2>
           <div className="space-y-4">
             {ext.faqs.map((faq: any, i: number) => (
-              <details key={i} className="group bg-slate-50 rounded-3xl border border-slate-200 open:border-indigo-600/30 transition-colors">
-                <summary className="flex justify-between items-center font-bold text-lg text-slate-900 cursor-pointer list-none p-6 md:p-8">
+              <details key={i} className="group bg-section-alt rounded-3xl border border-border open:border-indigo-600/30 transition-colors">
+                <summary className="flex justify-between items-center font-bold text-lg text-foreground cursor-pointer list-none p-6 md:p-8">
                   {faq.q}
                   <span className="transition group-open:rotate-180">
                     <ChevronDown className="w-5 h-5 text-slate-500" />
@@ -307,16 +307,16 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
       </section>
 
       {/* 9. RELATED SERVICES */}
-      <section className="py-20 lg:py-32 bg-slate-50">
+      <section className="py-20 lg:py-32 bg-section-alt">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 mb-12 tracking-tight">Related Services</h2>
+          <h2 className="text-4xl md:text-5xl font-extrabold text-foreground mb-12 tracking-tight">Related Services</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {relatedServices.map((s) => (
-              <Link key={s.slug} href={'/services/' + s.slug} className="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm hover:shadow-2xl hover:-translate-y-2 hover:border-indigo-600/30 transition-all group">
-                <div className="w-14 h-14 rounded-2xl bg-slate-50 flex items-center justify-center mb-6 border border-slate-100">
-                  <Monitor className="w-6 h-6 text-slate-900 group-hover:text-indigo-600 transition-colors" />
+              <Link key={s.slug} href={'/services/' + s.slug} className="bg-background p-8 rounded-3xl border border-border shadow-sm hover:shadow-2xl hover:-translate-y-2 hover:border-indigo-600/30 transition-all group">
+                <div className="w-14 h-14 rounded-2xl bg-section-alt flex items-center justify-center mb-6 border border-slate-100">
+                  <Monitor className="w-6 h-6 text-foreground group-hover:text-indigo-600 transition-colors" />
                 </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-3">{s.title}</h3>
+                <h3 className="text-xl font-bold text-foreground mb-3">{s.title}</h3>
                 <p className="text-slate-500 mb-6 line-clamp-2">{s.description}</p>
                 <span className="inline-flex items-center gap-2 text-indigo-600 font-bold">Explore Service <ArrowRight className="w-4 h-4" /></span>
               </Link>
@@ -326,7 +326,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
       </section>
 
       {/* 10. FINAL CTA */}
-      <section className="py-20 lg:py-32 bg-white">
+      <section className="py-20 lg:py-32 bg-background">
         <div className="max-w-7xl mx-auto px-6">
           <div className="relative rounded-3xl overflow-hidden bg-slate-900 p-12 lg:p-20 text-center border border-slate-800 shadow-2xl">
             <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20"></div>

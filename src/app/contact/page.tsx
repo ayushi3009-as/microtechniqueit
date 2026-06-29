@@ -228,7 +228,7 @@ export default function ContactPage() {
           .input-wrap textarea {
             width: 100%;
             background: #f8fafc;
-            border: 1px solid rgba(0, 0, 0, 0.1);
+            border: 1px solid var(--color-border);
             border-radius: 18px;
             color: #0f172a;
             font-size: 1rem;

@@ -69,7 +69,7 @@ export default function CaseStudiesPage() {
           font-size: 14px; 
           font-weight: 500; 
           margin-bottom: 24px; 
-          border: 1px solid rgba(0,0,0,0.1); 
+          border: 1px solid var(--color-border); 
           backdrop-filter: blur(10px);
         }
         .cs-hero-title { 
@@ -103,7 +103,7 @@ export default function CaseStudiesPage() {
           height: auto; 
           border-radius: 24px; 
           box-shadow: 0 40px 80px rgba(0,0,0,0.6); 
-          border: 1px solid rgba(0,0,0,0.1); 
+          border: 1px solid var(--color-border); 
           transform: rotateY(-5deg) rotateX(5deg);
           transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1); 
         }
@@ -172,7 +172,7 @@ export default function CaseStudiesPage() {
           height: 60px; 
           border-radius: 30px; 
           background: #ffffff; 
-          border: 1px solid rgba(0,0,0,0.1); 
+          border: 1px solid var(--color-border); 
           display: flex; 
           align-items: center; 
           justify-content: center; 
@@ -377,7 +377,7 @@ export default function CaseStudiesPage() {
           color: #0f172a; 
           margin-bottom: 24px; 
           align-self: flex-start; 
-          border: 1px solid rgba(0,0,0,0.1);
+          border: 1px solid var(--color-border);
           backdrop-filter: blur(10px);
         }
         .cs-card-title { 
