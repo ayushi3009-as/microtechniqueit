@@ -29,7 +29,7 @@ export const faqs: readonly Faq[] = [
     id: 'faq-gen-04',
     question: 'How can I get in touch with your team?',
     answer:
-      'You can reach us by phone at +91 6355997080, by email at info@microtechniqueit.com, or by filling out the contact form on our website. For support queries, email support@microtechniqueit.com. We typically respond within 2 business hours.',
+      'You can reach us by phone at +91 6355997080, by email at info@Microtechnique IT.com, or by filling out the contact form on our website. For support queries, email support@Microtechnique IT.com. We typically respond within 2 business hours.',
     category: 'General',
   },
   {

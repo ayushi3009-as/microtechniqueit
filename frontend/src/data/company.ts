@@ -8,8 +8,8 @@ export const companyInfo: CompanyInfo = {
     'Microtechnique IT & Communication Solutions is a Surat-based technology powerhouse that engineers bespoke digital infrastructure for ambitious enterprises. Since 2020 we have delivered 200+ mission-critical projects--spanning custom ERP/accounting platforms, e-commerce ecosystems, mobile applications, and full-spectrum digital marketing--empowering businesses across healthcare, finance, retail, manufacturing, and the diamond industry to operate faster, smarter, and more profitably.',
   founded: 2020,
   phone: '+91 6355997080',
-  email: 'info@microtechniqueit.com',
-  supportEmail: 'support@microtechniqueit.com',
+  email: 'info@Microtechnique IT.com',
+  supportEmail: 'support@Microtechnique IT.com',
   address:
     'Office No. G-40, Star World Complex, Green City Road, Near Bhagwan Circle, Pal Gam, Surat -- 394510',
   city: 'Surat',
@@ -17,7 +17,7 @@ export const companyInfo: CompanyInfo = {
   country: 'India',
   postalCode: '394510',
   mapUrl: 'https://maps.google.com/?q=Star+World+Complex+Pal+Gam+Surat',
-  website: 'https://microtechniqueit.com',
+  website: 'https://Microtechnique IT.com',
   stats: [
     { label: 'Projects Delivered', value: 200, suffix: '+' },
     { label: 'Happy Clients', value: 150, suffix: '+' },

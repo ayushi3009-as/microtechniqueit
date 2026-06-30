@@ -133,7 +133,7 @@ export function ContactSection() {
               </div>
               <div>
                 <h4 className="text-foreground font-semibold mb-1">Email Us</h4>
-                <a href="mailto:info@microtechniqueit.com" className="text-muted-foreground text-sm hover:text-foreground transition-colors">
+                <a href="mailto:info@Microtechnique IT.com" className="text-muted-foreground text-sm hover:text-foreground transition-colors">
                   {companyInfo.email}
                 </a>
               </div>

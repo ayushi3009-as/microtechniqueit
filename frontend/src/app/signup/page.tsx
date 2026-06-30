@@ -83,7 +83,7 @@ export default function SignupPage() {
         <div className="card p-8 md:p-10 shadow-2xl backdrop-blur-xl bg-card/80 border border-border/50">
           <div className="text-center mb-8">
             <Link href="/" className="inline-flex items-center gap-2 mb-6">
-              <span className="text-2xl font-bold font-heading gradient-text">MicrotechniqueIT</span>
+              <span className="text-2xl font-bold font-heading gradient-text">Microtechnique IT</span>
             </Link>
             <h1 className="text-2xl font-bold mb-2">Create an account</h1>
             <p className="text-sm text-muted-foreground">Join our partner network today</p>

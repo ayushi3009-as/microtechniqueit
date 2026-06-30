@@ -474,12 +474,12 @@ export default function ContactPage() {
 
         {/* Glass Contact Cards */}
         <section className="glass-cards-grid">
-          <a href="mailto:info@microtechniqueit.com" className="glass-contact-card">
+          <a href="mailto:info@Microtechnique IT.com" className="glass-contact-card">
             <div className="icon-box">
               <Mail size={28} strokeWidth={1.5} />
             </div>
             <h3 className="contact-card-title">Email Us</h3>
-            <p className="contact-card-value">info@microtechniqueit.com</p>
+            <p className="contact-card-value">info@Microtechnique IT.com</p>
             <p className="contact-card-desc">We respond within 24 hours</p>
           </a>
           
@@ -501,7 +501,7 @@ export default function ContactPage() {
             <p className="contact-card-desc">Surat, Gujarat 394510, India</p>
           </div>
 
-          <a href="mailto:support@microtechniqueit.com" className="glass-contact-card">
+          <a href="mailto:support@Microtechnique IT.com" className="glass-contact-card">
             <div className="icon-box">
               <Clock size={28} strokeWidth={1.5} />
             </div>
@@ -619,7 +619,7 @@ export default function ContactPage() {
               '@type': 'Organization',
               name: 'Microtechnique IT & Communication Solutions',
               telephone: '+91-6355997080',
-              email: 'info@microtechniqueit.com',
+              email: 'info@Microtechnique IT.com',
               address: {
                 '@type': 'PostalAddress',
                 streetAddress: 'Office No. G-40, Star World Complex',

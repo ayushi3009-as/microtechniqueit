@@ -74,7 +74,7 @@ export default function Sidebar({ user, isOpen, onToggle }: { user: UserProfile,
     >
       <div className="h-16 flex items-center justify-between px-6 border-b border-border/50">
         <Link href="/" className="font-bold text-lg gradient-text truncate">
-          MicrotechniqueIT
+          Microtechnique IT
         </Link>
         <button onClick={onToggle} className="lg:hidden text-muted-foreground hover:text-foreground">
           <X className="w-5 h-5" />

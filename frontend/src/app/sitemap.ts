@@ -6,7 +6,7 @@ import { blogPosts } from '@/data/blog-posts';
 import { caseStudies } from '@/data/case-studies';
 import { careers } from '@/data/careers';
 
-const BASE = 'https://microtechniqueit.com';
+const BASE = 'https://Microtechnique IT.com';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = [

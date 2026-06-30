@@ -72,14 +72,14 @@ export function Footer() {
           <div className="flex-1 max-w-md">
             <Link href="/" className="flex items-center gap-3 mb-5" style={{ textDecoration: 'none' }}>
               <Image
-                src="/logo.jpeg"
-                alt="MicrotechniqueIT"
+                src="/logo.png"
+                alt="Microtechnique IT"
                 width={40}
                 height={40}
                 className="rounded-lg"
               />
               <span className="text-xl font-bold font-heading gradient-text">
-                MicrotechniqueIT
+                Microtechnique IT
               </span>
             </Link>
 

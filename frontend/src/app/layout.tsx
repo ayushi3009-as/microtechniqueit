@@ -12,7 +12,7 @@ import { SplashScreen } from '@/components/splash-screen';
 import Script from 'next/script';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://microtechniqueit.com'),
+  metadataBase: new URL('https://Microtechnique IT.com'),
   title: {
     default: 'Microtechnique IT — Enterprise Software Development & Digital Transformation',
     template: '%s | Microtechnique IT',
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_IN',
-    url: 'https://microtechniqueit.com',
+    url: 'https://Microtechnique IT.com',
     siteName: 'Microtechnique IT',
     title: 'Microtechnique IT — Enterprise Software Development & Digital Transformation',
     description:
@@ -74,11 +74,11 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: 'https://microtechniqueit.com',
+    canonical: 'https://Microtechnique IT.com',
   },
   icons: {
-    icon: '/logo.jpeg',
-    apple: '/logo.jpeg',
+    icon: '/logo.png',
+    apple: '/logo.png',
   },
 };
 
@@ -105,14 +105,14 @@ export default function RootLayout({
                 '@type': 'Organization',
                 name: 'Microtechnique IT & Communication Solutions',
                 alternateName: 'Microtechnique IT',
-                url: 'https://microtechniqueit.com',
-                logo: 'https://microtechniqueit.com/logo.jpeg',
+                url: 'https://Microtechnique IT.com',
+                logo: 'https://Microtechnique IT.com/logo.png',
                 foundingDate: '2020',
                 contactPoint: {
                   '@type': 'ContactPoint',
                   telephone: '+91-6355997080',
                   contactType: 'customer service',
-                  email: 'info@microtechniqueit.com',
+                  email: 'info@Microtechnique IT.com',
                   areaServed: 'IN',
                   availableLanguage: ['English', 'Hindi'],
                 },

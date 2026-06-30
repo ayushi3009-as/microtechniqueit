@@ -217,7 +217,7 @@ export default function ServicesPage() {
                 '@type': 'Service',
                 name: service.title,
                 description: service.description,
-                url: `https://microtechniqueit.com/services/${service.slug}`,
+                url: `https://Microtechnique IT.com/services/${service.slug}`,
                 provider: {
                   '@type': 'Organization',
                   name: 'Microtechnique IT',

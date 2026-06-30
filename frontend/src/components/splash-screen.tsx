@@ -57,7 +57,7 @@ export function SplashScreen() {
               }}
               className="text-4xl md:text-6xl font-bold font-heading tracking-tight text-white mb-2"
             >
-              MicrotechniqueIT
+              Microtechnique IT
             </motion.div>
             
             <motion.div

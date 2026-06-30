@@ -15,13 +15,13 @@ export default function IndustriesPage() {
         '@type': 'ListItem',
         position: 1,
         name: 'Home',
-        item: 'https://microtechniqueit.com/',
+        item: 'https://Microtechnique IT.com/',
       },
       {
         '@type': 'ListItem',
         position: 2,
         name: 'Industries',
-        item: 'https://microtechniqueit.com/industries',
+        item: 'https://Microtechnique IT.com/industries',
       },
     ],
   };

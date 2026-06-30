@@ -16,13 +16,13 @@ export default function CaseStudiesPage() {
     "@type": "CollectionPage",
     "name": "Case Studies — Real Results, Real Impact",
     "description": "Discover how Microtechnique IT has helped businesses achieve measurable results through technology.",
-    "url": "https://microtechniqueit.com/case-studies",
+    "url": "https://Microtechnique IT.com/case-studies",
     "mainEntity": {
       "@type": "ItemList",
       "itemListElement": caseStudies.map((study, index) => ({
         "@type": "ListItem",
         "position": index + 1,
-        "url": `https://microtechniqueit.com/case-studies/${study.slug}`
+        "url": `https://Microtechnique IT.com/case-studies/${study.slug}`
       }))
     }
   };
