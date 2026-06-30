@@ -11,7 +11,6 @@ import { Role } from '@/lib/types';
 export default function LoginPage() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [role, setRole] = useState<Role>(Role.WORKING_PARTNER);
   const [error, setError] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const router = useRouter();
@@ -26,7 +25,7 @@ export default function LoginPage() {
       const res = await fetch(process.env.NEXT_PUBLIC_API_URL + '/auth/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, password, role }),
+        body: JSON.stringify({ email, password }),
       });
 
       const data = await res.json();
@@ -43,6 +42,8 @@ export default function LoginPage() {
         router.push('/dashboard/admin');
       } else if (data.user.role === Role.CHANNEL_PARTNER) {
         router.push('/dashboard/channel-partner');
+      } else if (data.user.role === Role.CLIENT) {
+        router.push('/dashboard/client');
       } else {
         router.push('/dashboard/working-partner');
       }
@@ -84,26 +85,7 @@ export default function LoginPage() {
             </div>
           )}
 
-          <div className="mb-6 flex p-1 bg-background/50 rounded-lg border border-border/50">
-            <button 
-              onClick={() => setRole(Role.WORKING_PARTNER)}
-              className={`flex-1 py-1.5 text-xs font-medium rounded-md transition-all ${role === Role.WORKING_PARTNER ? 'bg-primary text-primary-foreground shadow' : 'text-muted-foreground hover:text-foreground'}`}
-            >
-              Employee
-            </button>
-            <button 
-              onClick={() => setRole(Role.CHANNEL_PARTNER)}
-              className={`flex-1 py-1.5 text-xs font-medium rounded-md transition-all ${role === Role.CHANNEL_PARTNER ? 'bg-primary text-primary-foreground shadow' : 'text-muted-foreground hover:text-foreground'}`}
-            >
-              Channel Partner
-            </button>
-            <button 
-              onClick={() => setRole(Role.SUPER_ADMIN)}
-              className={`flex-1 py-1.5 text-xs font-medium rounded-md transition-all ${role === Role.SUPER_ADMIN ? 'bg-primary text-primary-foreground shadow' : 'text-muted-foreground hover:text-foreground'}`}
-            >
-              Admin
-            </button>
-          </div>
+
 
           <form className="space-y-5" onSubmit={handleLogin}>
             <div className="space-y-1.5">

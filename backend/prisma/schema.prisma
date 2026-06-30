@@ -10,6 +10,7 @@ enum Role {
   WORKING_PARTNER
   CHANNEL_PARTNER
   SUPER_ADMIN
+  CLIENT
 }
 
 enum ProjectStatus {
@@ -33,6 +34,16 @@ enum PaymentStatus {
   CANCELLED
 }
 
+enum PaymentMode {
+  CASH
+  UPI
+  BANK_TRANSFER
+  CHEQUE
+  CREDIT_CARD
+  DEBIT_CARD
+  OTHER
+}
+
 model User {
   id            String   @id @default(cuid())
   email         String   @unique
@@ -46,11 +57,14 @@ model User {
   employeeId    String?
   department    String?
   isActive      Boolean  @default(true)
-  createdAt     DateTime @default(now())
-  updatedAt     DateTime @updatedAt
+  createdAt              DateTime @default(now())
+  updatedAt              DateTime @updatedAt
+  resetPasswordOtp       String?
+  resetPasswordOtpExpiry DateTime?
 
   // Relations
   assignedProjects Project[]  @relation("AssignedTo")
+  clientProjects   Project[]  @relation("ClientOf")
   referrals        Referral[] @relation("ReferredBy")
   payments         Payment[]  @relation("PaidTo")
 
@@ -67,12 +81,16 @@ model Project {
   status      ProjectStatus @default(PENDING)
   deadline    DateTime?
   totalAmount Float         @default(0)
+  empCommissionAmount Float?
+  empCommissionStatus PaymentStatus?
   createdAt   DateTime      @default(now())
   updatedAt   DateTime      @updatedAt
 
   // Relations
   assignedToId String?
   assignedTo   User?     @relation("AssignedTo", fields: [assignedToId], references: [id])
+  clientId     String?
+  client       User?     @relation("ClientOf", fields: [clientId], references: [id])
   referral     Referral? @relation("FromReferral")
   payments     Payment[] @relation("ProjectPayments")
 
@@ -108,13 +126,15 @@ model Referral {
 }
 
 model Payment {
-  id          String        @id @default(cuid())
-  amount      Float
-  description String?
-  status      PaymentStatus @default(PENDING)
-  paidAt      DateTime?
-  createdAt   DateTime      @default(now())
-  updatedAt   DateTime      @updatedAt
+  id              String        @id @default(cuid())
+  amount          Float
+  description     String?
+  status          PaymentStatus @default(PENDING)
+  paymentMode     PaymentMode?
+  percentagePaid  Float?        @default(0)
+  paidAt          DateTime?
+  createdAt       DateTime      @default(now())
+  updatedAt       DateTime      @updatedAt
 
   // Relations
   paidToId  String

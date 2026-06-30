@@ -39,6 +39,7 @@ export default function WorkingPartnerProjects() {
                 <th className="px-6 py-4 font-medium">Status</th>
                 <th className="px-6 py-4 font-medium">Deadline</th>
                 <th className="px-6 py-4 font-medium">Value</th>
+                <th className="px-6 py-4 font-medium">My Commission</th>
               </tr>
             </thead>
             <tbody>
@@ -59,13 +60,27 @@ export default function WorkingPartnerProjects() {
                     {project.deadline ? new Date(project.deadline).toLocaleDateString() : 'No deadline'}
                   </td>
                   <td className="px-6 py-4 font-medium">
-                    ₹{project.totalAmount.toLocaleString()}
+                    ₹{project.totalAmount?.toLocaleString() || 0}
+                  </td>
+                  <td className="px-6 py-4">
+                    {project.empCommissionAmount ? (
+                      <div>
+                        <div className="font-bold text-green-500">
+                          ₹{project.empCommissionAmount.toLocaleString()}
+                        </div>
+                        <div className="text-xs mt-1">
+                          <StatusBadge status={project.empCommissionStatus || 'PENDING'} />
+                        </div>
+                      </div>
+                    ) : (
+                      <span className="text-muted-foreground text-xs italic">N/A</span>
+                    )}
                   </td>
                 </tr>
               ))}
               {projects.length === 0 && (
                 <tr>
-                  <td colSpan={5} className="px-6 py-8 text-center text-muted-foreground">
+                  <td colSpan={6} className="px-6 py-8 text-center text-muted-foreground">
                     No projects found.
                   </td>
                 </tr>

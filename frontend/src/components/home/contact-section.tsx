@@ -73,8 +73,8 @@ export function ContactSection() {
 
                 <div>
                   <label className="block text-sm font-medium text-foreground/70 mb-1.5">Product / Service Interest</label>
-                  <select required className="form-input w-full bg-card">
-                    <option value="" disabled selected>Select an option</option>
+                  <select required defaultValue="" className="form-input w-full bg-card">
+                    <option value="" disabled>Select an option</option>
                     <option>Microtechnique Accounts</option>
                     <option>HRMS & Payroll</option>
                     <option>ERP Solution</option>

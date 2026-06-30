@@ -53,6 +53,8 @@ export default function WorkingPartnerPayments() {
                 <th className="px-6 py-4 font-medium">Description</th>
                 <th className="px-6 py-4 font-medium">Status</th>
                 <th className="px-6 py-4 font-medium">Amount</th>
+                <th className="px-6 py-4 font-medium">Mode</th>
+                <th className="px-6 py-4 font-medium">% Paid</th>
               </tr>
             </thead>
             <tbody>
@@ -73,11 +75,17 @@ export default function WorkingPartnerPayments() {
                   <td className="px-6 py-4 font-bold">
                     ₹{payment.amount.toLocaleString()}
                   </td>
+                  <td className="px-6 py-4 text-muted-foreground">
+                    {payment.paymentMode ? payment.paymentMode.replace(/_/g, ' ') : '—'}
+                  </td>
+                  <td className="px-6 py-4 text-muted-foreground">
+                    {payment.percentagePaid != null ? `${payment.percentagePaid}%` : '—'}
+                  </td>
                 </tr>
               ))}
               {payments.length === 0 && (
                 <tr>
-                  <td colSpan={5} className="px-6 py-8 text-center text-muted-foreground">
+                  <td colSpan={7} className="px-6 py-8 text-center text-muted-foreground">
                     No payments found.
                   </td>
                 </tr>

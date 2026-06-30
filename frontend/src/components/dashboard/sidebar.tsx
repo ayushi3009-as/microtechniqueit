@@ -13,7 +13,8 @@ import {
   Settings,
   LogOut,
   X,
-  FileText
+  FileText,
+  LayoutGrid
 } from 'lucide-react';
 import { useAuth, UserProfile } from '@/lib/auth-context';
 
@@ -34,20 +35,28 @@ const getNavItems = (role: Role): NavItem[] => {
       ];
     case Role.CHANNEL_PARTNER:
       return [
-        { name: 'Overview', href: '/dashboard/channel-partner', icon: LayoutDashboard },
         { name: 'Submit Referral', href: '/dashboard/channel-partner/refer', icon: Send },
         { name: 'My Referrals', href: '/dashboard/channel-partner/referrals', icon: FileText },
         { name: 'Earnings', href: '/dashboard/channel-partner/earnings', icon: CreditCard },
+        { name: 'My Projects', href: '/dashboard/channel-partner/projects', icon: Briefcase },
         { name: 'Profile', href: '/dashboard/channel-partner/profile', icon: User },
       ];
     case Role.SUPER_ADMIN:
       return [
         { name: 'Overview', href: '/dashboard/admin', icon: LayoutDashboard },
-        { name: 'Users', href: '/dashboard/admin/users', icon: Users },
+        { name: 'Employees', href: '/dashboard/admin/employees', icon: Users },
+        { name: 'Clients', href: '/dashboard/admin/clients', icon: Users },
+        { name: 'Partners', href: '/dashboard/admin/partners', icon: Users },
         { name: 'Projects', href: '/dashboard/admin/projects', icon: Briefcase },
         { name: 'Referrals', href: '/dashboard/admin/referrals', icon: FileText },
         { name: 'Payments', href: '/dashboard/admin/payments', icon: CreditCard },
         { name: 'Settings', href: '/dashboard/admin/settings', icon: Settings },
+      ];
+    case Role.CLIENT:
+      return [
+        { name: 'Projects', href: '/dashboard/client/projects', icon: LayoutGrid },
+        { name: 'Payments', href: '/dashboard/client/payments', icon: CreditCard },
+        { name: 'Profile', href: '/dashboard/client/profile', icon: User },
       ];
     default:
       return [];

@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect, useCallback, useRef } from 'react';
+import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useTheme } from 'next-themes';
@@ -102,8 +103,11 @@ export function Header() {
   const [mounted, setMounted] = useState(false);
   const dropdownTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const { theme, setTheme } = useTheme();
+  const pathname = usePathname();
 
   useEffect(() => { setMounted(true); }, []);
+
+
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -117,6 +121,8 @@ export function Header() {
   }, [mobileOpen]);
 
   const closeMobile = useCallback(() => setMobileOpen(false), []);
+
+  if (pathname?.startsWith('/dashboard') || pathname === '/login' || pathname === '/forgot-password') return null;
 
   const openDropdown = (key: string) => {
     if (dropdownTimeoutRef.current) clearTimeout(dropdownTimeoutRef.current);

@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { useAuth } from '@/lib/auth-context';
 import StatusBadge from '@/components/dashboard/status-badge';
 import { Loader2, Check, X, DollarSign, Edit } from 'lucide-react';
+import ExportButtons from '@/components/dashboard/export-buttons';
 
 export default function AdminReferrals() {
   const { token } = useAuth();
@@ -12,12 +13,15 @@ export default function AdminReferrals() {
   
   const [processingId, setProcessingId] = useState<string | null>(null);
   
+  const [employees, setEmployees] = useState([]);
   // State for inline forms
   const [activeForm, setActiveForm] = useState<{ id: string, type: 'ACCEPT' | 'REJECT' | 'COMMISSION' } | null>(null);
   const [formData, setFormData] = useState({
     finalPrice: '',
     commissionAmount: '',
-    adminNotes: ''
+    empCommissionAmount: '',
+    adminNotes: '',
+    assignedToId: ''
   });
 
   const fetchReferrals = async () => {
@@ -37,6 +41,14 @@ export default function AdminReferrals() {
 
   useEffect(() => {
     fetchReferrals();
+    if (token) {
+      fetch(process.env.NEXT_PUBLIC_API_URL + '/admin/users?role=WORKING_PARTNER', {
+        headers: { Authorization: `Bearer ${token}` }
+      })
+      .then(res => res.json())
+      .then(data => setEmployees(data.users || []))
+      .catch(console.error);
+    }
   }, [token]);
 
   const handleAction = async (id: string, action: string, data: any) => {
@@ -60,14 +72,34 @@ export default function AdminReferrals() {
     }
   };
 
-  const handleAcceptSubmit = (e: React.FormEvent, id: string) => {
+  const handleAcceptSubmit = async (e: React.FormEvent, id: string) => {
     e.preventDefault();
-    handleAction(id, 'ACCEPT', {
-      status: 'ACCEPTED',
-      finalPrice: formData.finalPrice,
-      commissionAmount: formData.commissionAmount,
-      adminNotes: formData.adminNotes
-    });
+    setProcessingId(id);
+    try {
+      const res = await fetch(process.env.NEXT_PUBLIC_API_URL + `/referrals/${id}/accept`, {
+        method: 'POST',
+        headers: { 
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${token}` 
+        },
+        body: JSON.stringify({
+          finalPrice: formData.finalPrice,
+          commissionAmount: formData.commissionAmount,
+          empCommissionAmount: formData.empCommissionAmount,
+          adminNotes: formData.adminNotes,
+          assignedToId: formData.assignedToId
+        })
+      });
+      const data = await res.json();
+      setActiveForm(null);
+      await fetchReferrals();
+      alert(`Successfully created Client & Project! Default Password: ${data.defaultPassword}`);
+    } catch (err) {
+      console.error(err);
+      alert('Action failed');
+    } finally {
+      setProcessingId(null);
+    }
   };
 
   const handleRejectSubmit = (e: React.FormEvent, id: string) => {
@@ -82,7 +114,27 @@ export default function AdminReferrals() {
 
   return (
     <div className="space-y-6">
-      <h1 className="text-2xl font-bold">Manage Referrals</h1>
+      <div className="flex items-center justify-between">
+        <h1 className="text-2xl font-bold">Manage Referrals</h1>
+        <div className="flex items-center gap-3">
+          <ExportButtons 
+            data={referrals}
+            filename="Referrals_List"
+            columns={[
+              { header: 'Customer', accessor: (r) => r.customerName },
+              { header: 'Company', accessor: (r) => r.customerCompany || '-' },
+              { header: 'Phone', accessor: (r) => r.customerPhone || '-' },
+              { header: 'Referred By', accessor: (r) => r.referredBy ? `${r.referredBy.firstName} ${r.referredBy.lastName}` : '-' },
+              { header: 'Product', accessor: (r) => r.productInterest || '-' },
+              { header: 'Budget', accessor: (r) => r.budgetRange || '-' },
+              { header: 'Status', accessor: (r) => r.status },
+              { header: 'Final Price', accessor: (r) => r.finalPrice ? `Rs ${r.finalPrice}` : '-' },
+              { header: 'Commission', accessor: (r) => r.commissionAmount ? `Rs ${r.commissionAmount}` : '-' },
+              { header: 'Comm Status', accessor: (r) => r.commissionStatus || '-' }
+            ]}
+          />
+        </div>
+      </div>
       
       <div className="card border border-border/50 rounded-xl overflow-hidden bg-card">
         <div className="overflow-x-auto">
@@ -137,13 +189,13 @@ export default function AdminReferrals() {
                         {(ref.status === 'SUBMITTED' || ref.status === 'UNDER_REVIEW') && activeForm?.id !== ref.id && (
                           <div className="flex gap-2">
                             <button 
-                              onClick={() => { setActiveForm({ id: ref.id, type: 'ACCEPT' }); setFormData({ finalPrice: '', commissionAmount: '', adminNotes: '' }); }}
+                              onClick={() => { setActiveForm({ id: ref.id, type: 'ACCEPT' }); setFormData({ finalPrice: '', commissionAmount: '', empCommissionAmount: '', adminNotes: '', assignedToId: '' }); }}
                               className="p-2 bg-green-500/10 text-green-500 rounded hover:bg-green-500/20 transition-colors" title="Accept"
                             >
                               <Check className="w-4 h-4" />
                             </button>
                             <button 
-                              onClick={() => { setActiveForm({ id: ref.id, type: 'REJECT' }); setFormData({ finalPrice: '', commissionAmount: '', adminNotes: '' }); }}
+                              onClick={() => { setActiveForm({ id: ref.id, type: 'REJECT' }); setFormData({ finalPrice: '', commissionAmount: '', empCommissionAmount: '', adminNotes: '', assignedToId: '' }); }}
                               className="p-2 bg-red-500/10 text-red-500 rounded hover:bg-red-500/20 transition-colors" title="Reject"
                             >
                               <X className="w-4 h-4" />
@@ -165,8 +217,15 @@ export default function AdminReferrals() {
                           <form onSubmit={(e) => handleAcceptSubmit(e, ref.id)} className="bg-background/80 p-3 rounded border border-border/50 text-xs w-64 -ml-40 absolute z-10 shadow-xl backdrop-blur">
                             <h4 className="font-medium mb-2">Accept Referral</h4>
                             <input required type="number" placeholder="Final Price (₹)" value={formData.finalPrice} onChange={e => setFormData(f => ({...f, finalPrice: e.target.value}))} className="w-full mb-2 p-1.5 rounded border border-border bg-background" />
-                            <input required type="number" placeholder="Commission Amount (₹)" value={formData.commissionAmount} onChange={e => setFormData(f => ({...f, commissionAmount: e.target.value}))} className="w-full mb-2 p-1.5 rounded border border-border bg-background" />
+                            <input required type="number" placeholder="Partner Commission (₹)" value={formData.commissionAmount} onChange={e => setFormData(f => ({...f, commissionAmount: e.target.value}))} className="w-full mb-2 p-1.5 rounded border border-border bg-background" />
+                            <input type="number" placeholder="Emp Commission (₹) (optional)" value={formData.empCommissionAmount} onChange={e => setFormData(f => ({...f, empCommissionAmount: e.target.value}))} className="w-full mb-2 p-1.5 rounded border border-border bg-background" />
                             <textarea placeholder="Notes (optional)" value={formData.adminNotes} onChange={e => setFormData(f => ({...f, adminNotes: e.target.value}))} className="w-full mb-2 p-1.5 rounded border border-border bg-background resize-none h-12" />
+                            <select required value={formData.assignedToId} onChange={e => setFormData(f => ({...f, assignedToId: e.target.value}))} className="w-full mb-2 p-1.5 rounded border border-border bg-background">
+                              <option value="">Assign to Employee</option>
+                              {employees.map((emp: any) => (
+                                <option key={emp.id} value={emp.id}>{emp.firstName} {emp.lastName}</option>
+                              ))}
+                            </select>
                             <div className="flex gap-2">
                               <button type="submit" className="flex-1 bg-green-500 text-white rounded py-1">Save</button>
                               <button type="button" onClick={() => setActiveForm(null)} className="flex-1 bg-muted rounded py-1">Cancel</button>

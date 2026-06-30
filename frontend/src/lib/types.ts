@@ -2,6 +2,7 @@ export enum Role {
   WORKING_PARTNER = 'WORKING_PARTNER',
   CHANNEL_PARTNER = 'CHANNEL_PARTNER',
   SUPER_ADMIN = 'SUPER_ADMIN',
+  CLIENT = 'CLIENT',
 }
 
 export enum ProjectStatus {
@@ -23,4 +24,14 @@ export enum PaymentStatus {
   PENDING = 'PENDING',
   PAID = 'PAID',
   CANCELLED = 'CANCELLED',
+}
+
+export enum PaymentMode {
+  CASH = 'CASH',
+  UPI = 'UPI',
+  BANK_TRANSFER = 'BANK_TRANSFER',
+  CHEQUE = 'CHEQUE',
+  CREDIT_CARD = 'CREDIT_CARD',
+  DEBIT_CARD = 'DEBIT_CARD',
+  OTHER = 'OTHER',
 }

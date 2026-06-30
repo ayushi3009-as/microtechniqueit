@@ -40,9 +40,13 @@ export default function AdminOverview() {
         <div className="card border border-border/50 rounded-xl overflow-hidden bg-card p-6">
           <h2 className="text-lg font-semibold mb-4">Quick Links</h2>
           <div className="grid grid-cols-2 gap-4">
-            <Link href="/dashboard/admin/users" className="p-4 rounded-lg border border-border/50 bg-background/50 hover:bg-muted/50 transition-colors flex flex-col items-center justify-center text-center gap-2">
+            <Link href="/dashboard/admin/employees" className="p-4 rounded-lg border border-border/50 bg-background/50 hover:bg-muted/50 transition-colors flex flex-col items-center justify-center text-center gap-2">
               <Users className="w-6 h-6 text-primary" />
-              <span className="font-medium">Manage Users</span>
+              <span className="font-medium">Manage Employees</span>
+            </Link>
+            <Link href="/dashboard/admin/clients" className="p-4 rounded-lg border border-border/50 bg-background/50 hover:bg-muted/50 transition-colors flex flex-col items-center justify-center text-center gap-2">
+              <Users className="w-6 h-6 text-primary" />
+              <span className="font-medium">Manage Clients</span>
             </Link>
             <Link href="/dashboard/admin/referrals" className="p-4 rounded-lg border border-border/50 bg-background/50 hover:bg-muted/50 transition-colors flex flex-col items-center justify-center text-center gap-2">
               <FileText className="w-6 h-6 text-primary" />

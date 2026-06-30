@@ -1,5 +1,6 @@
 'use client';
 
+import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Send } from 'lucide-react';
@@ -54,6 +55,9 @@ const socialLinks = [
 ];
 
 export function Footer() {
+  const pathname = usePathname();
+  if (pathname?.startsWith('/dashboard') || pathname === '/login' || pathname === '/forgot-password') return null;
+
   return (
     <footer
       style={{ backgroundColor: 'var(--color-card)', borderTop: '1px solid var(--color-border)' }}
