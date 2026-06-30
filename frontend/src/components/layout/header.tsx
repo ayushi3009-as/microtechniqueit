@@ -159,7 +159,7 @@ export function Header() {
             {/* ── Logo ── */}
             <Link href="/" className="flex items-center gap-3 shrink-0">
               <Image src="/logo.png" alt="Microtechnique IT" width={64} height={64} className="rounded-xl object-contain" />
-              <span className="text-xl font-bold font-heading gradient-text">Microtechnique IT</span>
+              <span className="text-xl font-bold font-heading" style={{ color: '#9333ea' }}>Microtechnique IT</span>
             </Link>
 
             {/* ── Desktop Navigation ── */}

@@ -78,7 +78,7 @@ export function Footer() {
                 height={40}
                 className="rounded-lg"
               />
-              <span className="text-xl font-bold font-heading gradient-text">
+              <span className="text-xl font-bold font-heading" style={{ color: '#9333ea' }}>
                 Microtechnique IT
               </span>
             </Link>

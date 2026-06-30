@@ -55,7 +55,8 @@ export function SplashScreen() {
                 ease: [0.16, 1, 0.3, 1],
                 delay: 0.2
               }}
-              className="text-4xl md:text-6xl font-bold font-heading tracking-tight text-white mb-2"
+              className="text-4xl md:text-6xl font-bold font-heading tracking-tight mb-2"
+              style={{ color: '#9333ea' }}
             >
               Microtechnique IT
             </motion.div>
